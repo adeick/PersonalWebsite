@@ -1,0 +1,61 @@
+html {
+    background-color: darkgray;
+  }
+h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 60px;    
+    line-height: 1px;
+    letter-spacing: 1px;
+    color: black;
+
+}
+p {
+    color: grey;
+    font-family: 'Poppins', sans-serif;
+  }
+ul {
+    width: 90px;
+    border: 2px solid black;
+    border-radius: .5em;
+    font-family: 'Poppins', sans-serif;
+}
+img {
+  height: 130px;
+  width: 130px;
+  display: block;
+  margin: 0 auto;
+}
+.navbar{
+  top: 0;
+  position: fixed;
+  z-index: 2; /* Stay on top */
+  font-family: 'Poppins', sans-serif;
+  font-size: 30px;
+  border: 2px solid black;
+  border-radius: .5em;
+  left: 180px;
+  line-height: 0;
+}
+.sidebar{
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 160px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; 
+  left: 0;
+  background-color: #111; /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding: 10px;
+  font-size: 20px;
+  font-family: 'Poppins', sans-serif;
+  color: lightgray;
+}
+.content{
+  background-color: rgb(21, 32, 32);
+  margin: 100px 160px 0; /* Match sidebar and Navbar */
+  padding: 30px 30px;
+}
+#GitHub {
+    color:lightblue;
+    font-size: 20px;    
+}
