@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Box, Stack, Icon, IconButton, Flex } from '@chakra-ui/core';
+import { Box, Stack, Icon, IconButton, Flex, Image } from '@chakra-ui/core';
 import { MdPermIdentity } from "react-icons/md";
 import { FiMap } from "react-icons/fi";
 
@@ -9,27 +9,34 @@ class Sidebar extends Component {
     
     render() {
       return (
-        <Flex 
-          border="1px solid #E8EAED"
-          boxshadow="0 2px 4px rgba(0,0,0,0.3)"
-          bg="#FF6347"
-          w="9%"
+        <>
+          
+        <Box className="Sidebar"
+          bg="#4299E1"
+          w="20%"
           h="100%"
           position="absolute"
           top="50%"
-          left="0"
-          transform="translate(-50%, -50%)"
+          left="8%"
           p={4}
           color="black"
-          zIndex={98}
-          padding="20px"
+          zIndex={70}
+          padding="0px"
+          display="inline-block"
         >
          {/* <Stack>
             <Icon name="phone" position="absolute" right="5" top="20%" size="25%" color="yellow.500" />
             <Icon name="bell" position="absolute" right="5" top="0" size="30%" color="yellow.500" />
          </Stack> */}
         {/* Would like to use the IconButtons below instead of Icons above */}
-          
+          <Image
+          h="25%"
+          w="100%"
+          src="/images/iowastate.jpg"
+          alt="iowastate"
+          objectFit="cover"
+          zIndex={99}
+           />
           <IconButton
             variant="solid"
             variantColor="gray"
@@ -37,8 +44,8 @@ class Sidebar extends Component {
             fontSize="30px"
             icon={MdPermIdentity}
             size="lg"
-            right="10px"
-            top="80px"
+            right="50%"
+            top="20%"
             border-radius="0.95rem"
             position="absolute"
           />
@@ -54,7 +61,8 @@ class Sidebar extends Component {
             border-radius="0.95rem"
             position="absolute"
           />
-        </Flex>
+        </Box>
+        </>
       );
     }
   }

@@ -26,8 +26,10 @@
     "emotion-theming": "^10.0.27",
     "next": "9.5.2",
     "react": "16.13.1",
+    "react-burger-menu": "^2.7.1",
     "react-dom": "16.13.1",
     "react-icons": "^3.11.0",
+    "react-lottie": "^1.2.3",
     "react-map-gl": "^5.2.7"
   },
   "devDependencies": {

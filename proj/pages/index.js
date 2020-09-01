@@ -1,44 +1,35 @@
-import Head from 'next/head'
-import Layout, { siteTitle } from '../components/layout'
-import utilStyles from '../styles/utils.module.css'
-import { getSortedPostsData } from '../lib/posts'
+import React from 'react';
+import NextLink from 'next/link';
+import Sidebar from '../components/Sidebar';
+import SideMenu from '../components/sidemenu';
 
-export async function getStaticProps() {
-  const allPostsData = getSortedPostsData()
-  return {
-    props: {
-      allPostsData
-    }
-  }
-}
+import {
+  Image,
+  Box,
+  FormControl,
+  FormLabel,
+  Input,
+  FormHelperText,
+  Button,
+  ButtonGroup,
+  Drawer
+} from '@chakra-ui/core';
+import UncontrolledLottie from '../components/UncontrolledLottie';
 
-export default function Home({ allPostsData }) {
-  return (
-    <Layout home>
-      <Head>
-        <title>Andrew's Website</title>
-      </Head>
-      <section className="Home">
-        <h1>HOME</h1>
-        {/* <p>
-          (This is a sample website - you’ll be building a site like this on{' '}
-          <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
-        </p> */}
-      </section>
-      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>Blog</h2>
-        <ul className={utilStyles.list}>
-          {allPostsData.map(({ id, date, title }) => (
-            <li className={utilStyles.listItem} key={id}>
-              {title}
-              <br />
-              {id}
-              <br />
-              {date}
-            </li>
-          ))}
-        </ul>
-      </section>
-    </Layout>
-  )
-}
+const Index = () => (
+  <div id="Website">
+    <title>Andrew's Website</title>
+    <SideMenu />
+    <div id="page-wrap">
+      <h1>Home</h1>
+    </div>
+    
+    {/* <Box bg="blue.300" h="100vh" w="80vw" position="static" display="inline-block" className="Background">
+      <h1>
+        Home
+      </h1>
+    </Box> */}
+  </div>
+);
+
+export default Index;
