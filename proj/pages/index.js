@@ -1,25 +1,25 @@
 import Head from 'next/head'
 import Layout, { siteTitle } from '../components/layout'
 import utilStyles from '../styles/utils.module.css'
-// import { getSortedPostsData } from '../lib/posts'
+import { getSortedPostsData } from '../lib/posts'
 
-// export async function getStaticProps() {
-//   const allPostsData = getSortedPostsData()
-//   return {
-//     props: {
-//       allPostsData
-//     }
-//   }
-// }
+export async function getStaticProps() {
+  const allPostsData = getSortedPostsData()
+  return {
+    props: {
+      allPostsData
+    }
+  }
+}
 
 export default function Home({ allPostsData }) {
   return (
     <Layout home>
       <Head>
-        <title>{siteTitle}</title>
+        <title>Andrew's Website</title>
       </Head>
-      <section className={utilStyles.headingMd}>
-        <p>The quintessential local guide - made and maintained by students.</p>
+      <section className="Home">
+        <h1>HOME</h1>
         {/* <p>
           (This is a sample website - you’ll be building a site like this on{' '}
           <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)

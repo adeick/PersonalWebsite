@@ -1,19 +1,45 @@
 {
-  "name": "learn-starter",
+  "name": "locampus",
   "version": "0.1.0",
+  "description": "LoCampus is a social media platform that enables students to review locations on their campuses and receive rewards for where they have traveled.",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git.linux.iastate.edu/cs309/fall2020/hv_10.git"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "lint": "eslint . --ext .json --ext .js",
+    "test": "jest",
     "start": "next start"
   },
+  "keywords": [
+    "location",
+    "hv_10",
+    "campus"
+  ],
   "dependencies": {
     "@chakra-ui/core": "^0.8.0",
     "@emotion/core": "^10.0.35",
     "@emotion/styled": "^10.0.27",
     "emotion-theming": "^10.0.27",
-    "next": "9.3.5",
+    "next": "9.5.2",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "react-icons": "^3.11.0",
+    "react-map-gl": "^5.2.7"
+  },
+  "devDependencies": {
+    "eslint": "^7.7.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.6",
+    "eslint-plugin-react-hooks": "^4.1.0",
+    "jest": "^26.4.2",
+    "prettier": "2.1.1"
   }
 }
