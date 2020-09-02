@@ -20,8 +20,7 @@ class GiraffeLottie extends Component {
     return(
       <div>
           <Lottie options={giraffeOptions}
-          height={240}
-          width={320}
+          width="100%"
         />
       </div>
     )

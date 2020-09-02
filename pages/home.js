@@ -6,12 +6,8 @@ import Sidebar from '../components/Sidebar';
 
 const Home = () => (
   <>
-    <Sidebar />
-    <Box size="md" m="auto">
-      <Heading>Welcome Home</Heading>
-      <Image src="/images/logo_heads.png" alt="LoCampus" />
-    </Box>
-    <Map />
+    <meta http-equiv="refresh"
+        content="0; url = http://localhost:3000/" />  
   </>
 );
 

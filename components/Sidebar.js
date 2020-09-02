@@ -3,6 +3,7 @@ import { Box, Stack, Icon, IconButton, Flex, Image, Text, Link } from '@chakra-u
 import { MdPermIdentity } from "react-icons/md";
 import { FiMap } from "react-icons/fi";
 import GiraffeLottie from './GiraffeLottie';
+import Sidebox from './Sidebox';
 
 
 
@@ -38,48 +39,14 @@ class Sidebar extends Component {
           display="inline-block"
           borderRadius="5px 50px 5px 5px"
         >
-          <Stack spacing={6}>
-            <Box
-              bg="#CEEDFF"
-              w="100%"
-              h="80%"
-              position="relative"
-              top="100px"
-              padding="20px"
-              margin="0px"
-            >
-              <Text fontSize={32} fontFamily="Lexend Deca">
-                Home
-              </Text>
-            </Box>
-            <Box
-              bg="#CEEDFF"
-              w="100%"
-              h="80%"
-              position="relative"
-              top="100px"
-              padding="20px"
-              margin="0px"
-            >
-              <Link href="https://github.com/adeick" isExternal>
-                <Text fontSize={32} fontFamily="Lexend Deca">
-                  GitHub
-                </Text>
-              </Link>  
-            </Box>
-            <Box
-              bg="#CEEDFF"
-              w="100%"
-              h="80%"
-              position="relative"
-              top="100px"
-              padding="20px"
-              margin="0px"
-            >
-              <Text fontSize={32} fontFamily="Lexend Deca">
-                Resume
-              </Text>
-            </Box>
+          <Stack spacing={300}>
+            <Sidebox text="Home" icon="/images/vader2.png"
+              fallback="https://listimg.pinclipart.com/picdir/s/141-1413807_darth-vader-icon-darth-vader-emoji-whatsapp-clipart.png"/>
+            <a href="https://github.com/adeick" target="_blank">
+              <Sidebox text="GitHub" />
+            </a>  
+            <Sidebox text="Resume" />
+            <Sidebox text="Stuff I Like" />
           </Stack>
          {/* <Stack>
             <Icon name="phone" position="absolute" right="5" top="20%" size="25%" color="yellow.500" />
