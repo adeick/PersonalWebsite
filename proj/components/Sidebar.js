@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Box, Stack, Icon, IconButton, Flex, Image, Text } from '@chakra-ui/core';
+import { Box, Stack, Icon, IconButton, Flex, Image, Text, Link } from '@chakra-ui/core';
 import { MdPermIdentity } from "react-icons/md";
 import { FiMap } from "react-icons/fi";
 import GiraffeLottie from './GiraffeLottie';
@@ -61,9 +61,11 @@ class Sidebar extends Component {
               padding="20px"
               margin="0px"
             >
-              <Text fontSize={32} fontFamily="Lexend Deca">
-                Resume
-              </Text>
+              <Link href="https://github.com/adeick" isExternal>
+                <Text fontSize={32} fontFamily="Lexend Deca">
+                  GitHub
+                </Text>
+              </Link>  
             </Box>
             <Box
               bg="#CEEDFF"
@@ -75,7 +77,7 @@ class Sidebar extends Component {
               margin="0px"
             >
               <Text fontSize={32} fontFamily="Lexend Deca">
-                GitHub
+                Resume
               </Text>
             </Box>
           </Stack>
