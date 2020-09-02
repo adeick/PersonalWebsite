@@ -11,7 +11,7 @@ class Sidebar extends Component {
     
     render() {
       return (
-        <Box bg="blue.300" h="100vh" w="15vw" left="0" position="fixed" display="inline-block" className="Background" zIndex={1}>
+        <Box bg="blue.400" h="100vh" w="15vw" left="0" position="fixed" display="inline-block" className="Background" zIndex={1}>
 
         <Box 
           className="GiraffeBox"
@@ -26,7 +26,7 @@ class Sidebar extends Component {
           <GiraffeLottie />
         </Box>      
         <Box name="Sidebar"
-          bg="#4299E1"
+          bg="blue.500"
           w="15%"
           h="75%"
           position="fixed"
