@@ -12,23 +12,20 @@ import {
   FormHelperText,
   Button,
   ButtonGroup,
-  Drawer
+  Drawer,
+  Text
 } from '@chakra-ui/core';
-import UncontrolledLottie from '../components/UncontrolledLottie';
+//import UncontrolledLottie from '../components/UncontrolledLottie';
 
 const Index = () => (
   <div id="Website">
     <title>Andrew's Website</title>
-    <SideMenu />
-    <div id="page-wrap">
-      <h1>Home</h1>
-    </div>
-    
-    {/* <Box bg="blue.300" h="100vh" w="80vw" position="static" display="inline-block" className="Background">
-      <h1>
-        Home
-      </h1>
-    </Box> */}
+    <Sidebar />
+      <Box bg="blue.200" h="100vh" w="85vw" right="0" position="fixed" display="inline-block" className="Background" padding="200px">
+        <Text fontSize={128} fontFamily="Lexend Deca">
+          Home
+        </Text>
+      </Box>
   </div>
 );
 

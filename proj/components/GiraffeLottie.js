@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import Lottie from 'react-lottie'
 import giraffe from '../public/lotties/giraffe.json'
 
-class UncontrolledLottie extends Component {
+class GiraffeLottie extends Component {
 
 
   render(){
@@ -20,12 +20,12 @@ class UncontrolledLottie extends Component {
     return(
       <div>
           <Lottie options={giraffeOptions}
-          height={150}
-          width={150}
+          height={240}
+          width={320}
         />
       </div>
     )
   }
 }
 
-export default UncontrolledLottie
+export default GiraffeLottie
