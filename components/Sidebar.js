@@ -39,9 +39,10 @@ class Sidebar extends Component {
           display="inline-block"
           borderRadius="5px 50px 5px 5px"
         >
-          <Stack spacing={300}>
+          <Stack spacing={300} position='relative'>
             <Sidebox text="Home" icon="/images/vader2.png"
               fallback="https://listimg.pinclipart.com/picdir/s/141-1413807_darth-vader-icon-darth-vader-emoji-whatsapp-clipart.png"/>
+            
             <a href="https://github.com/adeick" target="_blank">
               <Sidebox text="GitHub" />
             </a>  

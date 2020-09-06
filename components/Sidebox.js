@@ -37,12 +37,11 @@ class Sidebox extends Component {
     }
       return (
 
-            <Box
+            <Flex
               bg="blue.200"
-              w="100%"
-              h="80%"
+              w="100%" h="100px"
               position="relative"
-              top="100px"
+              top="60px"
               padding="20px"
               borderY="2px solid"
               my="10px"
@@ -50,11 +49,11 @@ class Sidebox extends Component {
               //onMouseLeave={() => mouseOut()}
               
             >
-             <Text fontSize={32} fontFamily="Lexend Deca" display="inline-block">
+             <Text fontSize={[0,0,16,32]} fontFamily="Lexend Deca" display="inline-block">
                 {this.props.text}
             </Text>
              {image}
-            </Box>
+            </Flex>
       );
     }
   }
