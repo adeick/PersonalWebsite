@@ -39,7 +39,8 @@ class Sidebox extends Component {
 
             <Flex
               bg="blue.200"
-              w="100%" h="100px"
+              w="100%" 
+              //h="13%"
               position="relative"
               top="60px"
               padding="20px"
