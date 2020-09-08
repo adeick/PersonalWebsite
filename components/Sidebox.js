@@ -33,28 +33,36 @@ class Sidebox extends Component {
     let image;
     if(this.props.icon){
         image = <Image src={this.props.icon} fallbackSrc={this.props.fallback} title={this.props.text}
-        h="80%" display="inline" position="absolute" right="10%" top="10%" />
+        margin="auto" w="80%"/>
     }
       return (
-
-            <Flex
-              bg="blue.200"
-              w="100%" 
-              //h="13%"
-              position="relative"
-              top="60px"
-              padding="20px"
-              borderY="2px solid"
-              my="10px"
-              //onMouseOver={this.mouseOver}
-              //onMouseLeave={() => mouseOut()}
-              
-            >
-             <Text fontSize={[0,0,16,32]} fontFamily="Lexend Deca" display="inline-block">
-                {this.props.text}
-            </Text>
-             {image}
+        <Flex
+            as="a"
+            href={this.props.href}
+            target={this.props.target}
+            bg="blue.200"
+            w="100%" 
+            h="80px"
+            position="relative"
+            top="60px"
+            borderY="2px solid"
+            //onMouseOver={this.mouseOver}
+            //onMouseLeave={() => mouseOut()}
+            
+          >
+            <Flex pl={[0,0, 2, 6]} h="100%" w={[0,0,0.5,0.7,]} position="relative" display="inline" vertical-align="middle" alignItems="center" margin="auto" objectPosition="50% 50%">
+            {/* {this.props.text} */}
+              <Text fontSize={[0,0,13,26]} fontFamily="Lexend Deca" display="inline-block" transform="translateY(50%)">
+                  {this.props.text}
+              </Text>
             </Flex>
+            <Flex w={['100%', '100%', .5, .3]} display="inline" alignItems="center" justify="center" position="relative"
+               margin="auto" padding="0" maxHeight="100%" >
+              {image}
+            </Flex>
+            
+            
+          </Flex>   
       );
     }
   }
