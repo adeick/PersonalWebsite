@@ -8,7 +8,19 @@ import Sidebox from './Sidebox';
 
 
 class Sidebar extends Component {
+    constructor(props){
+      super(props);
+      this.state = {
+        windowSize: 0
+      };
+    }
     
+
+    componentDidMount(){
+      this.setState({windowSize: window.outerWidth});
+      window.addEventListener('resize', () => this.setState({windowSize: window.outerWidth}));    
+    }
+  
     render() {
       return (
         <Box bg="blue.400" h="100vh" w="15vw" left="0" position="fixed" display="inline-block" className="Background" zIndex={1}>
@@ -22,8 +34,14 @@ class Sidebar extends Component {
           left="0px"
           position="fixed"
           zIndex={99}
+          padding="10px"
           >
-          <GiraffeLottie />
+            {
+            this.state.windowSize < 635 ? 
+              <Image src="/images/giraffe.png" alt="Giraffe" w="100%" position="relative" top="8%"/>
+            :       
+              <GiraffeLottie />
+            }
         </Box>      
         <Box name="Sidebar"
           bg="blue.500"
