@@ -2,34 +2,24 @@ import React, { Component } from 'react';
 import { Box, Stack, Icon, IconButton, Flex, Image, Text, Link } from '@chakra-ui/core';
 
 class Sidebox extends Component {
-    // constructor(props){
-    //     super(props);
-    //     this.state = {
-    //         backgroundColor: "blue.200"
-    //     }
-    //     this.mouseOver = this.mouseOver.bind(this);
-    //     this.mouseOut = this.mouseOut.bind(this);
-    // }
-    // mouseOver(){
-    //     alert('Mouse');
-    //     this.setState(state =>({
-    //         backgroundColor: "blue.300"
-    //     }));
-    // }
-    // function mouseOut(e){
-    //     this.setState(state =>({
-    //         backgroundColor: "blue.200"
-    //     }));
-    // }
+    constructor(props){
+        super(props);
+        this.state = {
+            backgroundColor: "blue.200"
+        }
+    }
+    handleMouseOver = () => {
+        this.setState({
+            backgroundColor: "blue.300"
+        });
+    }
+    handleMouseLeave = () => {
+        this.setState({
+            backgroundColor: "blue.200"
+        });
+    }
 
     render() {
-    // let text = this.props.link ? 
-    // <Link href={this.props.link} isExternal={this.props.isExternal}>
-    //     <Text fontSize={32} fontFamily="Lexend Deca" display="inline-block">
-    //         {this.props.text}
-    //     </Text>
-    // </Link>
-    // :
     let image;
     if(this.props.icon){
         image = <Image src={this.props.icon} fallbackSrc={this.props.fallback} title={this.props.text}
@@ -40,14 +30,14 @@ class Sidebox extends Component {
             as="a"
             href={this.props.href}
             target={this.props.target}
-            bg="blue.200"
+            bg={this.state.backgroundColor}
             w="100%" 
             h="80px"
             position="relative"
             top="60px"
             borderY="2px solid"
-            //onMouseOver={this.mouseOver}
-            //onMouseLeave={() => mouseOut()}
+            onMouseOver={this.handleMouseOver}
+            onMouseLeave={this.handleMouseLeave}
             
           >
             <Flex pl={[0,0, 2, 6]} h="100%" w={[0,0,0.5,0.7,]} position="relative" display="inline" vertical-align="middle" alignItems="center" margin="auto" objectPosition="50% 50%">
