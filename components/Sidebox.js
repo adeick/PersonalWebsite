@@ -5,17 +5,17 @@ class Sidebox extends Component {
     constructor(props){
         super(props);
         this.state = {
-            backgroundColor: "blue.200"
+            isHovering: false
         }
     }
     handleMouseOver = () => {
         this.setState({
-            backgroundColor: "blue.300"
+            isHovering: true
         });
     }
     handleMouseLeave = () => {
         this.setState({
-            backgroundColor: "blue.200"
+            isHovering: false
         });
     }
 
@@ -23,14 +23,14 @@ class Sidebox extends Component {
     let image;
     if(this.props.icon){
         image = <Image src={this.props.icon} fallbackSrc={this.props.fallback} title={this.props.text}
-        margin="auto" w="80%"/>
+        margin="auto" w={this.state.isHovering ? "80%" : "70%"}/>
     }
       return (
         <Flex
             as="a"
             href={this.props.href}
             target={this.props.target}
-            bg={this.state.backgroundColor}
+            bg={this.state.isHovering ? "blue.300" : "blue.200"}
             w="100%" 
             h="80px"
             position="relative"

@@ -64,7 +64,7 @@ class Sidebar extends Component {
             <Sidebox text="GitHub" href="https://github.com/adeick" target="_blank" icon="/images/whitecat.png"/>
 
             <Sidebox text="Resume" href="./resume" icon="/images/clipboard.png"/>
-            <Sidebox text="Favorites" href="./favorites"/>
+            <Sidebox text="Favorites" href="./favorites" icon="/images/testtube.png"/>
           </Stack>
          {/* <Stack>
             <Icon name="phone" position="absolute" right="5" top="20%" size="25%" color="yellow.500" />
