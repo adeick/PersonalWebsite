@@ -61,7 +61,7 @@ class Sidebar extends Component {
             <Sidebox text="Home" icon="/images/vader2.png" href='/'
               fallback="https://listimg.pinclipart.com/picdir/s/141-1413807_darth-vader-icon-darth-vader-emoji-whatsapp-clipart.png"/>
             
-            <Sidebox text="GitHub" href="https://github.com/adeick" target="_blank" icon="/images/whitecat.png"/>
+            <Sidebox text="GitHub" href="https://github.com/adeick" target="_blank" icon="/images/purplecat.png"/>
 
             <Sidebox text="Resume" href="./resume" icon="/images/clipboard.png"/>
             <Sidebox text="Favorites" href="./favorites" icon="/images/testtube.png"/>

@@ -21,8 +21,8 @@ const Index = () => (
   <div id="Website">
     <title>Andrew's Website</title>
     <Sidebar />
-      <Box bg="blue.100" h="100vh" w="85vw" right="0" position="fixed" display="inline-block" className="Background" padding={["20px", "20px", "100px", "200px"]}>
-        <Text fontSize={128} fontFamily="Lexend Deca">
+      <Box bg="blue.100" h="100vh" w="85vw" right="0" position="fixed" display="inline-block" className="Background" padding={["50px", "50px", "100px", "200px"]}>
+        <Text fontSize={[100, 100, 128, 128]} fontFamily="Lexend Deca">
           Home
         </Text>
       </Box>
