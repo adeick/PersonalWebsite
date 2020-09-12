@@ -63,7 +63,7 @@ class Sidebar extends Component {
             
             <Sidebox text="GitHub" href="https://github.com/adeick" target="_blank" icon="/images/whitecat.png"/>
 
-            <Sidebox text="Resume" href="./resume"/>
+            <Sidebox text="Resume" href="./resume" icon="/images/clipboard.png"/>
             <Sidebox text="Favorites" href="./favorites"/>
           </Stack>
          {/* <Stack>
