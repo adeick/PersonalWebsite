@@ -15,7 +15,7 @@ import {
 
 
 function CustomError({ statusCode }) {
-    //if(statusCode == 404){
+    if(statusCode == 404 || statusCode == 200){
         return(
         <Flex bg="blue.900" h="100vh" w="100%" alignContent="center" justifyContent="center" p="0" m="0">
           <Stack shouldWrapChildren align="center">
@@ -32,21 +32,21 @@ function CustomError({ statusCode }) {
             
         </Flex>
         );
-    //}
-    // else{
-        // return (
-        // <figure>
-        //     <img
-        //     alt="Showing a properly cat according the status code"
-        //     width="100%"
-        //     src={`https://http.cat/${statusCode}`}
-        //     />
-        //     <figcaption>
-        //     <h1>{statusCode}</h1>
-        //     </figcaption>
-        // </figure>
-        // );
-    //}
+    }
+    else{
+        return (
+        <figure>
+            <img
+            alt="Showing a properly cat according the status code"
+            width="100%"
+            src={`https://http.cat/${statusCode}`}
+            />
+            <figcaption>
+            <h1>{statusCode}</h1>
+            </figcaption>
+        </figure>
+        );
+    }
     
   }
   
