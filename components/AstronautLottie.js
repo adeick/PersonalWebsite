@@ -20,7 +20,7 @@ class AstronautLottie extends Component {
     return(
       <div>
           <Lottie options={astronautOptions}
-          width="55%"
+          width="55%" isClickToPauseDisabled={true}
         />
       </div>
     )

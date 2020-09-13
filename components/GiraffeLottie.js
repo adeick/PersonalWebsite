@@ -20,7 +20,7 @@ class GiraffeLottie extends Component {
     return(
       <div>
           <Lottie options={giraffeOptions}
-          width="100%"
+          width="100%" isClickToPauseDisabled={true}
         />
       </div>
     )
