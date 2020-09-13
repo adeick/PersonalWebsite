@@ -15,7 +15,7 @@ import {
 
 
 function CustomError({ statusCode }) {
-    if(statusCode == 404){
+    //if(statusCode == 404){
         return(
         <Flex bg="blue.900" h="100vh" w="100%" alignContent="center" justifyContent="center" p="0" m="0">
           <Stack shouldWrapChildren align="center">
@@ -32,8 +32,8 @@ function CustomError({ statusCode }) {
             
         </Flex>
         );
-    }
-    else{
+    //}
+    // else{
         // return (
         // <figure>
         //     <img
@@ -46,7 +46,7 @@ function CustomError({ statusCode }) {
         //     </figcaption>
         // </figure>
         // );
-    }
+    //}
     
   }
   
