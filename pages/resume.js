@@ -1,7 +1,8 @@
 import React from 'react';
 import NextLink from 'next/link';
 import Sidebar from '../components/Sidebar';
-import SideMenu from '../components/sidemenu';
+import { Document, Page } from 'react-pdf';
+// import resume from './ResumeFall2020.pdf'
 
 import {
   Image,
@@ -22,8 +23,11 @@ const Resume = () => (
     <Sidebar />
       <Box bg="blue.100" h="100vh" w="85vw" right="0" position="fixed" display="inline-block" className="Background" padding={["20px", "20px", "100px", "200px"]}>
         <Text fontSize={128} fontFamily="Lexend Deca">
-            Resume Page
+            Resume
         </Text>
+        {/* <Document file={resume}>
+          <Page pageNumber={1} />
+        </Document> */}
       </Box>
   </div>
 );
