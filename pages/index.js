@@ -30,7 +30,7 @@ const Index = () => (
           <br /> 
           I am a Software Engineer at Iowa State, looking for a challenging
           internship where I can learn new skills. Currently, my interests are in Virtual Reality, 
-          Front-End Development, and Machine Learning.
+          Front-End Development, and Machine Learning. 
         </Text>
       </Box>
   </div>
