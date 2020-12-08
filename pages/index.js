@@ -1,7 +1,6 @@
 import React from 'react';
 import NextLink from 'next/link';
 import Sidebar from '../components/Sidebar';
-import SideMenu from '../components/sidemenu';
 
 import {
   Image,
