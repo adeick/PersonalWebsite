@@ -15,7 +15,7 @@ import {
   ButtonGroup,
   Drawer,
   Text
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 
 const Resume = () => (
   <div id="Website" h="500%">

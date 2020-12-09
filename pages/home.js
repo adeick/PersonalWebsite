@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image, Box, Heading } from '@chakra-ui/core';
+import { Image, Box, Heading } from '@chakra-ui/react';
 import Map from '../components/Map';
 import Sidebar from '../components/Sidebar';
 
