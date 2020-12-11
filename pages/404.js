@@ -10,7 +10,7 @@ import {
   Flex,
   Stack,
   Text
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 
 function Custom404() {
         return(

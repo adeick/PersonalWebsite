@@ -13,7 +13,7 @@ import {
   ButtonGroup,
   Drawer,
   Text
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 //import UncontrolledLottie from '../components/UncontrolledLottie';
 
 const Comics = () => (
