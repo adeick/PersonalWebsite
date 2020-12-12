@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Box, Stack, Icon, IconButton, Flex, Image, Text, Link } from '@chakra-ui/core';
+import { Box, Stack, Icon, IconButton, Flex, Image, Text, Link } from '@chakra-ui/react';
 
 class Sidebox extends Component {
     constructor(props){

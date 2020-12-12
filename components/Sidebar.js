@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { Box, Stack, Icon, IconButton, Flex, Image, Text, Link } from '@chakra-ui/core';
-import { MdPermIdentity } from "react-icons/md";
-import { FiMap } from "react-icons/fi";
+import { Box, Stack, Icon, IconButton, Flex, Image, Text, Link } from '@chakra-ui/react';
+// import { MdPermIdentity } from "react-icons/md";
+// import { FiMap } from "react-icons/fi";
 import GiraffeLottie from './GiraffeLottie';
 import Sidebox from './Sidebox';
 

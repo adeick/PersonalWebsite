@@ -1,7 +1,15 @@
-import { theme as chakraTheme } from '@chakra-ui/core';
+import { extendTheme } from '@chakra-ui/react';
+import { createBreakpoints } from "@chakra-ui/theme-tools"
 
-const theme = {
-  ...chakraTheme,
+
+const breakpoints = createBreakpoints({
+  sm: "400px",
+  md: "620px",
+  lg: "62em",
+  xl: "80em",
+});
+
+const theme = extendTheme({
   fonts: {
     body: 'Lexend Deca, sans-serif',
     heading: 'Lexend Deca, sans-serif',
@@ -12,10 +20,7 @@ const theme = {
     medium: 600,
     bold: 700,
   },
-  breakpoints: ['400px', '620px', '62em', '80em'],
-  icons: {
-    ...chakraTheme.icons,
-  },
-};
+  breakpoints,
+});
 
 export default theme;
