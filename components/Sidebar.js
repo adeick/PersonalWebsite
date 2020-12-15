@@ -23,7 +23,7 @@ class Sidebar extends Component {
   
     render() {
       return (
-        <Box bg="blue.400" h="100vh" w="15vw" left="0" position="fixed" display="inline-block" className="Background" zIndex={1}>
+        <Box bg="blue.400" h="100vh" w="15vw" left="0" p="0" position="fixed" display="inline-block" className="Background" zIndex={1}>
 
         <Box 
           className="GiraffeBox"
@@ -45,7 +45,7 @@ class Sidebar extends Component {
         </Box>      
         <Box name="Sidebar"
           bg="blue.500"
-          w="15%"
+          w="15vw"
           h="75%"
           position="fixed"
           bottom="0"
@@ -55,7 +55,7 @@ class Sidebar extends Component {
           padding="0px"
           margin="0px"
           display="inline-block"
-          borderRadius="5px 50px 5px 5px"
+          borderRadius="0 50px 5px 0"
         >
           <Stack spacing={30} position='relative' height='100%' shouldWrapChildren>
             <Sidebox text="Home" icon="/images/vader2.png" href='/'

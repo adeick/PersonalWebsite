@@ -1,14 +1,13 @@
-// UncontrolledLottie.jsx
 import React, { Component } from 'react'
 import Lottie from 'react-lottie'
-import astronaut from '../public/lotties/astronaut404.json'
+import astronaut from '../public/lotties/bb8.json'
 
-class AstronautLottie extends Component {
+class BB8Lottie extends Component {
 
 
   render(){
 
-    const astronautOptions = {
+    const droidOptions = {
       loop: true,
       autoplay: true,
       animationData: astronaut,
@@ -19,12 +18,12 @@ class AstronautLottie extends Component {
 
     return(
       <div>
-          <Lottie options={astronautOptions}
-          width={this.props.w} isClickToPauseDisabled={true}
+          <Lottie options={droidOptions}
+          width={400} isClickToPauseDisabled={true}
         />
       </div>
     )
   }
 }
 
-export default AstronautLottie;
+export default BB8Lottie;

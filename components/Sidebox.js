@@ -31,14 +31,15 @@ class Sidebox extends Component {
             href={this.props.href}
             target={this.props.target}
             bg={this.state.isHovering ? "blue.300" : "blue.200"}
-            w="100%" 
+            w={this.state.isHovering ? "102%" : "100%"}
             h="80px"
             position="relative"
             top="60px"
             borderY="2px solid"
+            borderRight="2px solid"
             onMouseOver={this.handleMouseOver}
             onMouseLeave={this.handleMouseLeave}
-            
+            borderRadius="0px 20px 20px 0px"
           >
             <Flex pl={[0,0, 2, 6]} h="100%" w={[0,0,0.5,0.7,]} position="relative" display="inline" vertical-align="middle" alignItems="center" margin="auto" objectPosition="50% 50%">
             {/* {this.props.text} */}

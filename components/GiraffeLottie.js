@@ -27,4 +27,4 @@ class GiraffeLottie extends Component {
   }
 }
 
-export default GiraffeLottie
+export default GiraffeLottie;
