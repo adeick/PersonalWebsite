@@ -55,7 +55,7 @@ class Sidebar extends Component {
           padding="0px"
           margin="0px"
           display="inline-block"
-          borderRadius="0 50px 5px 0"
+          borderRadius="0 10px 5px 0"
         >
           <Stack spacing={30} position='relative' height='100%' shouldWrapChildren>
             <Sidebox text="Home" icon="/images/vader2.png" href='/'
