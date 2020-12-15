@@ -17,7 +17,7 @@ const Favorites = () => (
   <div id="Website">
     <title>Andrew's Website</title>
     <Sidebar />
-    <Box bg="blue.100" w="87vw" right="-3vw" position="absolute" display="inline-block" className="Background" pt="6%" textAlign={["center", "center", "left", "left"]}>
+    <Box bg="blue.100" w="88vw" right="-3vw" position="absolute" display="inline-block" className="Background" pt="6%" textAlign={["center", "center", "left", "left"]}>
       <Text as="b" fontSize={["30px", "50px", "60px", "80px"]} fontFamily="Lexend Deca" mb="10px" mx={["20px", "20px", "40px", "80px"]}>
       Things I Like
       </Text>
