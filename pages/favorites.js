@@ -24,8 +24,8 @@ const Favorites = () => (
 
       <Flex padding="3%" h="100%" w="85vw" wrap="wrap" justifyContent="center">
         <Accordion allowToggle w="100%">
-          <AccordionItem w="100%">
-            <AccordionButton borderBottom="2px solid">
+          <AccordionItem mb="20px">
+            <AccordionButton borderY="4px solid">
               <Box flex="1" textAlign="center">
                 <Text fontSize={["15px", "30px", "30px", "40px"]} fontFamily="Lexend Deca" my="10px" mx={["20px", "20px", "40px", "80px"]}>
                 Entertainment
@@ -42,8 +42,8 @@ const Favorites = () => (
             </AccordionPanel>
           </AccordionItem>
 
-          <AccordionItem>
-            <AccordionButton borderBottom="2px solid">
+          <AccordionItem mb="20px">
+            <AccordionButton borderY="4px solid">
               <Box flex="1" textAlign="center">
                 <Text fontSize={["15px", "30px", "30px", "40px"]} fontFamily="Lexend Deca" my="10px" mx={["20px", "20px", "40px", "80px"]}>
                 Technologies
@@ -55,15 +55,16 @@ const Favorites = () => (
               <Flex pb={4} justifyContent="center" w="100%" wrap="wrap">
               <FavoritesBox href="https://lottiefiles.com/popular" src="https://airbnb.io/lottie/images/logo.webp" alt="Lottie"/>
               <FavoritesBox href="https://chakra-ui.com/" src="https://img.stackshare.io/service/12421/rzylUjaf_400x400.jpg" alt="Chakra"/> 
+              <FavoritesBox href="https://unity.com/" src="https://fadigeorge.files.wordpress.com/2010/02/unity_01.jpg" alt="Unity"/> 
               </Flex>
             </AccordionPanel>
           </AccordionItem>
 
           <AccordionItem>
-            <AccordionButton borderBottom="2px solid">
+            <AccordionButton borderY="4px solid">
               <Box flex="1" textAlign="center">
                 <Text fontSize={["15px", "30px", "30px", "40px"]} fontFamily="Lexend Deca" my="10px" mx={["20px", "20px", "40px", "80px"]}>
-                Miscellaneous
+                Interests
                 </Text>  
               </Box>
               <AccordionIcon />
