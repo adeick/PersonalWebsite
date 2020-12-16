@@ -14,6 +14,7 @@ class FavoritesBox extends Component {
             borderRadius="35px" 
             m="30px" 
             position="relative"
+            onClick={this.props.onClick}
             > 
                 <Image src={this.props.src}
                     alt={this.props.alt}  boxSize="250px"
@@ -34,7 +35,7 @@ class FavoritesBox extends Component {
                 justifyContent="center"
                 alignItems="center"
                 >
-                    <Text fontSize={[25, 25, 40, 40]} fontFamily="Russo One">
+                    <Text fontSize={28} fontFamily="Russo One" color="black">
                         {this.props.alt}
                     </Text>
                 </Flex>

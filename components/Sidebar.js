@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Box, Stack, Icon, IconButton, Flex, Image, Text, Link } from '@chakra-ui/react';
+import React, { Component, useState, useEffect } from 'react';
+import { Box, Stack, Icon, IconButton, Flex, Image, Text, Link, useColorMode, useColorModeValue,} from '@chakra-ui/react';
 // import { MdPermIdentity } from "react-icons/md";
 // import { FiMap } from "react-icons/fi";
 import GiraffeLottie from './GiraffeLottie';
@@ -7,23 +7,22 @@ import Sidebox from './Sidebox';
 
 
 
-class Sidebar extends Component {
-    constructor(props){
-      super(props);
-      this.state = {
-        windowSize: 0
-      };
-    }
-    
+const Sidebar = () => {
+  const [windowSize, setWindowSize] = useState(0);
 
-    componentDidMount(){
-      this.setState({windowSize: window.outerWidth});
-      window.addEventListener('resize', () => this.setState({windowSize: window.outerWidth}));    
-    }
+    useEffect(() => {
+      setWindowSize(window.outerWidth);
+      window.addEventListener('resize', () => setWindowSize(window.outerWidth));    
+      // return (() => {
+      //   window.removeEventListener('resize');
+      // });
+    },[windowSize]);
   
-    render() {
+
+
       return (
-        <Box bg="blue.400" h="100vh" w="15vw" left="0" p="0" position="fixed" display="inline-block" className="Background" zIndex={1}>
+        <Box bg={useColorModeValue("blue.400", "gray.600")} h="100vh" w="15vw" left="0" p="0" position="fixed" display="inline-block" className="Background" zIndex={1}> 
+        
 
         <Box 
           className="GiraffeBox"
@@ -37,14 +36,14 @@ class Sidebar extends Component {
           padding="10px"
           >
             {
-            this.state.windowSize < 635 ? 
+            windowSize < 635 ? 
               <Image src="/images/giraffe.png" alt="Giraffe" w="100%" position="relative" top="8%"/>
             :       
               <GiraffeLottie />
             }
         </Box>      
         <Box name="Sidebar"
-          bg="blue.500"
+          bg={useColorModeValue("blue.500", "red.600")}
           w="15vw"
           h="75%"
           position="fixed"
@@ -58,7 +57,7 @@ class Sidebar extends Component {
           borderRadius="0 10px 5px 0"
         >
           <Stack spacing={30} position='relative' height='100%' shouldWrapChildren>
-            <Sidebox text="Home" icon="/images/vader2.png" href='/'
+            <Sidebox text="Home" icon={useColorModeValue("/images/mandalorian.png", "/images/vader2.png")} href='/'
               fallback="https://listimg.pinclipart.com/picdir/s/141-1413807_darth-vader-icon-darth-vader-emoji-whatsapp-clipart.png"/>
             
             <Sidebox text="GitHub" href="https://github.com/adeick" target="_blank" icon="/images/purplecat.png"/>
@@ -82,7 +81,6 @@ class Sidebar extends Component {
            </Box>
         </Box>
       );
-    }
   }
 
   export default Sidebar;
