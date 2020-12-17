@@ -1,23 +1,24 @@
 import React, { Component } from 'react';
-import { Image, Center, Square, Circle , Flex, Text} from "@chakra-ui/react"
+import { Image, Center, Square, Circle , Flex, Text, Tooltip} from "@chakra-ui/react"
 
-class FavoritesBox extends Component {
-    render() {
-        return (
+FavoritesBox = (props) => {
+    return (
+        <Tooltip label={props.tooltip} aria-label={props.alt}> 
+        {/* Change to Collapse */}
             <Square //Box 1
             w="250px"
             h="250px"
             as="a"
-            href={this.props.href}
+            href={props.href}
             target="_blank"
-            bg={this.props.bg}
+            bg={props.bg}
             borderRadius="35px" 
             m="30px" 
             position="relative"
-            onClick={this.props.onClick}
+            onClick={props.onClick}
             > 
-                <Image src={this.props.src}
-                    alt={this.props.alt}  boxSize="250px"
+                <Image src={props.src}
+                    alt={props.alt}  boxSize="250px"
                     borderRadius="30px" fit="cover"
                     borderColor="black"
                     borderWidth="5px"
@@ -36,12 +37,12 @@ class FavoritesBox extends Component {
                 alignItems="center"
                 >
                     <Text fontSize={28} fontFamily="Russo One" color="black">
-                        {this.props.alt}
+                        {props.alt}
                     </Text>
                 </Flex>
             </Square>
-        )
-    }
+        </Tooltip>
+    )
 }
 
 export default FavoritesBox;

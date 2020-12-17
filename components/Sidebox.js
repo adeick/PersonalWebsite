@@ -8,7 +8,7 @@ const Sidebox = (props) => {
     let image;
     if(props.icon){
         image = <Image src={props.icon} fallbackSrc={props.fallback} title={props.text}
-        margin="auto" w={isHovering ? "80%" : "70%"}/>
+        margin="auto" w={isHovering ? ["80%","58%","80%","80%"] : ["70%","50%","70%","70%"]}/>
     }
       return (
         <Flex
