@@ -83,8 +83,8 @@ const Favorites = () => {
                   {/* Lottie */}
                 <FavoritesBox  start="technologies" src="https://airbnb.io/lottie/images/logo.webp" alt="Lottie" tooltip="Lotties are animations that you can use in your project!">
                   <VStack>
-                    <Text fontSize={["16px", "18px", "21px", "25px"]} fontFamily="Lexend Deca" my="10px" mx={["20px", "20px", "40px", "80px"]} align="left">
-                      I use Lottie to find free, quality animations to show on my website. They are easy to use, and can be interactive as well. I highly recommend checking out their gallery!
+                    <Text fontSize={["13px", "15px", "20px", "20px"]} fontFamily="Lexend Deca" my="10px" mx={["20px", "20px", "40px", "80px"]} align="left">
+                      Lottie Files is the original home of Jerome the Giraffe and several of the other animations scattered around my website. Most Lotties are free, and quite easy to use. Highly recommend checking out their gallery!
                     </Text>
                     <Button pl="0" as="a" href="https://lottiefiles.com/popular" target="_blank" colorScheme="teal" leftIcon={<Box w="50px" play={isHoveringStar}><StarLottie/></Box>}
                     onMouseOver={() => setHoveringStar(true)}
