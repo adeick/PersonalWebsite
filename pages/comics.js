@@ -12,7 +12,8 @@ import {
   Button,
   ButtonGroup,
   Drawer,
-  Text
+  Text,
+  useColorModeValue,
 } from '@chakra-ui/react';
 //import UncontrolledLottie from '../components/UncontrolledLottie';
 
@@ -20,7 +21,7 @@ const Comics = () => (
   <div id="Website">
     <title>Andrew's Website</title>
     <Sidebar />
-      <Box bg="blue.100" h="100vh" w="85vw" right="0" position="fixed" display="inline-block" className="Background" padding={["50px", "50px", "100px", "200px"]}>
+      <Box bg={useColorModeValue("blue.100", "gray.900")} h="100vh" w="85vw" right="0" position="fixed" display="inline-block" className="Background" padding={["50px", "50px", "100px", "200px"]}>
         <Text fontSize={[100, 100, 128, 128]} fontFamily="Lexend Deca">
           Comics
         </Text>
