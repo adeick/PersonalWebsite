@@ -100,7 +100,7 @@ const Favorites = () => {
                     </Stack>
                   </VStack>
                 </FavoritesBox>
-                <FavoritesBox  start="technologies" src="https://cdn.worldvectorlogo.com/logos/next-js.svg" alt="NextJS">
+                <FavoritesBox  start="technologies" src="https://cdn.worldvectorlogo.com/logos/next-js.svg" alt="Next">
                   <VStack>  
                     <Text fontSize={["16px", "18px", "21px", "25px"]} fontFamily="Lexend Deca" my="10px" mx={["20px", "20px", "40px", "80px"]} align="left">
                       Next.JS is a Front-End framework that complements React. It uses Server-Side Rendering, and is easily deployed with Vercel.

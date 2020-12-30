@@ -1,5 +1,5 @@
 import React, { Component, useEffect } from 'react';
-import { Image, Center, VStack, Box, Square, Circle , Collapse, Flex, Text, Tooltip, useDisclosure, useColorModeValue} from "@chakra-ui/react";
+import { Image, Center, VStack, Button, Box, Square, Circle , Collapse, Flex, Text, Tooltip, useDisclosure, useColorModeValue} from "@chakra-ui/react";
 
 import scrollIntoView from 'scroll-into-view-if-needed';
 
@@ -64,7 +64,16 @@ const FavoritesBox = (props) => {
         <Collapse in={isOpen} animateOpacity direction="bottom" w="100%">
             <Flex h={64} w="70vw" bg={useColorModeValue("gray.300", "gray.700")} position="relative" top="0px" 
             borderRadius="30px 30px 30px 30px" border="5px black solid" justifyContent="center" alignItems="center">
-                {props.children}
+                {props.children ? props.children : 
+                <VStack>
+                <Text fontSize={["25px", "25px", "35px", "45px"]} fontFamily="Lexend Deca" my="10px" mx={["20px", "20px", "40px", "80px"]} align="left">
+                    Description Coming Soon!
+                </Text>
+                <Button as="a" href={props.href} target="_blank">
+                    {props.alt}
+                </Button>
+                </VStack>
+                }
             </Flex>
         </Collapse>
         </VStack>
