@@ -144,8 +144,18 @@ const Favorites = () => {
                   {/* Marvel Stuff */}
                 </FavoritesBox>
 
-                <FavoritesBox start="entertainment" href="https://xkcd.com/1288/" src="https://imgs.xkcd.com/comics/substitutions.png" alt="XKCD">
-                  {/* XKCD */}
+                <FavoritesBox start="entertainment" href="https://xkcd.com/1288/" src="https://imgs.xkcd.com/comics/substitutions.png" alt="XKCD" h={[64,64,80,80]}>
+                  <Stack direction={["column", "column", "row", "row"]} spacing={0} alignItems="center">  
+                    <Text fontSize={["10px", "11px", "16px", "18px"]} fontFamily="Lexend Deca" my="10px" mx={["20px", "20px", "20px", "40px"]} align="center" w={["80%", "80%", "40%", "40%"]}>
+                      XKCD is an enormously addictive web comic strip. Don't get sucked in! 
+                    </Text>
+                  <VStack>
+                    <Image src={useBreakpointValue({base: "https://imgs.xkcd.com/comics/purity.png", md:"https://imgs.xkcd.com/comics/inexplicable.png"})} alt="Just some programming joke" w={["90%","75%","90%","95%"]}/>
+                    <Button as="a" href="https://redux.js.org/" target="_blank" colorScheme="purple">
+                      Need More XKCD
+                    </Button>
+                  </VStack> 
+                  </Stack>
                 </FavoritesBox>
                 </Flex>
               </AccordionPanel>

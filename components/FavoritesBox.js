@@ -62,7 +62,7 @@ const FavoritesBox = (props) => {
                 </Flex>
             </Square>
         <Collapse in={isOpen} animateOpacity direction="bottom" w="100%">
-            <Flex h={64} w="70vw" bg={useColorModeValue("gray.300", "gray.700")} position="relative" top="0px" 
+            <Flex h={props.h ? props.h : 64} w="70vw" bg={useColorModeValue("gray.300", "gray.700")} position="relative" top="0px" 
             borderRadius="30px 30px 30px 30px" border="5px black solid" justifyContent="center" alignItems="center">
                 {props.children ? props.children : 
                 <VStack>
