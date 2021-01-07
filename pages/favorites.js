@@ -266,7 +266,7 @@ const Favorites = () => {
           {
           colorMode === "dark" 
           ? 
-          <Image my={["4em","8em"]} w={["70%", "60%", "50%", "40%"]} src="https://static.wikia.nocookie.net/disney/images/b/ba/Death_Star-RO_U_Visual_Guide.png/revision/latest?cb=20170104184600"
+          <Image my={["4em","8em"]} w={["70%", "60%", "50%", "40%"]} src="/images/Death_Star.png"
           alt=""/>
           :
           <BB8Lottie/>
