@@ -6,8 +6,9 @@ import BB8Lottie from '../components/BB8Lottie';
 import ArrowLottie from '../components/ArrowLottie';
 import StarLottie from '../components/StarLottie';
 
+import { FaEmpire, FaJediOrder } from "react-icons/fa";
 
-import { Box, Flex, Text, Center, Square, Circle, Button, VStack, HStack, Stack, Spacer,
+import { Box, Flex, Text, Center, Square, Circle, Button, VStack, HStack, Stack, Spacer, Image,
   Accordion,
   AccordionItem,
   AccordionButton,
@@ -25,12 +26,30 @@ import { Box, Flex, Text, Center, Square, Circle, Button, VStack, HStack, Stack,
   DrawerContent,
   DrawerCloseButton,
   useBreakpointValue,
+  Popover,
+  PopoverTrigger,
+  PopoverContent,
+  PopoverArrow,
+  PopoverCloseButton,
+  PopoverBody,
+  PopoverHeader,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton,
 } from "@chakra-ui/react";
+
+import { ArrowForwardIcon } from "@chakra-ui/icons";
+import NavigationDrawer from '../components/NavigationDrawer';
 
 const Favorites = () => {
   const { colorMode, toggleColorMode } = useColorMode();  
   const [isHoveringStar, setHoveringStar] = useState("false");
-  const { isOpen, onOpen, onClose } = useDisclosure()
+  const {isOpen: isDrawerOpen, onOpen: onDrawerOpen, onClose: onDrawerClose} = useDisclosure();
+  const {isOpen: isModalOpen, onOpen: onModalOpen, onClose: onModalClose} = useDisclosure();
 
 
   return(
@@ -55,10 +74,72 @@ const Favorites = () => {
               </AccordionButton>
               <AccordionPanel>
                 <Flex pb={4} justifyContent="center" w="100%" wrap="wrap">
-                <FavoritesBox start="entertainment" href="https://www.starwars.com/databank" src="https://images.wallpapersden.com/image/download/star-wars-the-mandalorian-4k-minimalist_a21tbG2UmZqaraWkpJRnZWltrWdlaW0.jpg" alt="Star Wars">
-                  {/* Star Wars Stuff */}
+                <FavoritesBox start="entertainment"  src="https://images.wallpapersden.com/image/download/star-wars-the-mandalorian-4k-minimalist_a21tbG2UmZqaraWkpJRnZWltrWdlaW0.jpg" alt="Star Wars">
+                <VStack>
+                    <Text fontSize={["13px", "15px", "20px", "22px"]} fontFamily="Lexend Deca" my="10px" mx={["20px", "20px", "40px", "80px"]} align="left">
+                      Star Wars is the tale of an epic journey through an enormous galaxy. Plus lightsabers. What more could you ask for?
+                    </Text>
+
+                    <Stack direction={["column", "row"]} spacing={["12px", "24px"]}>
+                      <Button as="a" href="https://www.starwars.com/databank" target="_blank">
+                        Star Wars Databank
+                      </Button>
+                      <Button rightIcon={<ArrowForwardIcon />} bg={useColorModeValue("green.300","red.700")} onClick={onModalOpen}
+                      _hover={{bg: useColorModeValue("green.400", "red.800")}} _active={{bg: useColorModeValue("green.500", "red.900"), transform: "scale(0.98)"}}>
+                          Begin My Journey
+                      </Button>
+
+                      <Modal isOpen={isModalOpen} onClose={onModalClose}>
+                        <ModalOverlay />
+                        <ModalContent>
+                          <ModalHeader>
+                            {colorMode === "light" ?
+                            <HStack>
+                            <FaJediOrder/> 
+                            <Text>
+                              Padawan
+                            </Text>
+                            </HStack>
+                            :
+                                      //"https://static.wikia.nocookie.net/starwars/images/a/ac/Republic_Emblem_%28unification_wars%29.svg/revision/latest?cb=20080311202138" 
+                            <HStack>
+                            <FaEmpire/>
+                            <Text as="b" color="red.800" fontSize="30px">
+                              Apprentice
+                            </Text>
+                            </HStack>
+                            }
+                          </ModalHeader>
+                          <ModalCloseButton />
+                          <ModalBody>
+                            Do or do not. There is no try.
+                            <br/><br/>
+                            You have no current assignments.
+                            
+                          </ModalBody>
+                        </ModalContent>
+                      </Modal>
+                      
+                      {/* <Popover placement="right">
+                          <PopoverTrigger>
+                            <Button rightIcon={<ArrowForwardIcon />} bg={useColorModeValue("green.300","red.700")} 
+                            _hover={{bg: useColorModeValue("green.400", "red.800")}} _active={{bg: useColorModeValue("green.500", "red.900"), transform: "scale(0.98)"}}>
+                                Begin My Journey
+                            </Button>
+                          </PopoverTrigger>
+                          <PopoverContent minW="0" w="10em" maxWidth="10rem"> 
+                            <PopoverArrow/>
+                            <PopoverCloseButton/>
+                            <PopoverHeader fontWeight="semibold">Padawan</PopoverHeader>
+                            <PopoverBody>
+                              Do or do not. There is no try. Come back later.
+                            </PopoverBody>
+                          </PopoverContent>
+                      </Popover> */}
+                    </Stack>
+
+                  </VStack>
                 </FavoritesBox>
-                
                 <FavoritesBox start="entertainment" href="https://www.marvel.com/articles" src="https://3.bp.blogspot.com/-MZ2WEgcPcoo/WvFoyQSeLwI/AAAAAAAAF1I/8-nMb4EXoQQ6dugaq8j53SVoo_1ZX08GwCLcBGAs/s00/Thanos-With-Gauntlet-Infinity-Stones-02.jpg" alt="Marvel">
                   {/* Marvel Stuff */}
                 </FavoritesBox>
@@ -121,26 +202,10 @@ const Favorites = () => {
                       Next JS
                     </Button>
 
-                    <Button colorScheme="blue" onClick={onOpen}>
+                    <Button colorScheme="blue" onClick={onDrawerOpen}>
                       View Pages
                     </Button>
-                    <Drawer placement={useBreakpointValue({base: "bottom", md: "right"})} onClose={onClose} isOpen={isOpen} size="xs"//Change placement to switch between right and bottom
-                    >
-                      <DrawerOverlay>
-                        <DrawerContent borderRadius={useBreakpointValue({base: "30px 30px 0 0", md: "20px 0 0 0"})}>
-                          <DrawerHeader borderBottomWidth="1px">
-                          <Text fontFamily="Russo One" fontSize="35px">Navigation 🪐</Text>
-                          </DrawerHeader>
-                          <DrawerBody>
-                            <Text fontFamily="Audiowide" fontSize="20px" as="a" href='/'>🏠 Home</Text> <br/>
-                            <Text fontFamily="Audiowide" fontSize="20px" as="a" href='/resume'>📰 Resume</Text> <br/>
-                            <Text fontFamily="Audiowide" fontSize="20px" as="a" href='/favorites'>⭐ Favorites</Text> <br/>
-                            <Text fontFamily="Audiowide" fontSize="20px" as="a" href='/it-was-worth-a-try'>🚧 Construction</Text>
-                          </DrawerBody>
-                        </DrawerContent>
-                      </DrawerOverlay>
-                    </Drawer>
-
+                    <NavigationDrawer onClose={onDrawerClose} isOpen={isDrawerOpen}/>
                     </Stack>
                   </VStack>
                 </FavoritesBox>
@@ -188,7 +253,14 @@ const Favorites = () => {
               </AccordionPanel>
             </AccordionItem>
           </Accordion>
+          {
+          colorMode === "dark" 
+          ? 
+          <Image my={["4em","8em"]} w={["70%", "60%", "50%", "40%"]} src="https://static.wikia.nocookie.net/disney/images/b/ba/Death_Star-RO_U_Visual_Guide.png/revision/latest?cb=20170104184600"
+          alt=""/>
+          :
           <BB8Lottie/>
+          }
         </Flex>
       </Box>
     </div>

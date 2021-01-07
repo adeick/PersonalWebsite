@@ -10,12 +10,14 @@ import Sidebox from './Sidebox';
 const Sidebar = () => {
   const [windowSize, setWindowSize] = useState(0);
 
+  
     useEffect(() => {
       setWindowSize(window.outerWidth);
-      window.addEventListener('resize', () => setWindowSize(window.outerWidth));    
-      // return (() => {
-      //   window.removeEventListener('resize');
-      // });
+      let resize = function(){ setWindowSize(window.outerWidth)};
+      window.addEventListener('resize', resize, false);    
+      return (() => {
+        window.removeEventListener('resize', resize, false);
+      });
     },[windowSize]);
   
 
