@@ -57,8 +57,9 @@ const Favorites = () => {
   return(
     <div id="Website">
       <title>Andrew's Website</title>
+      <Box w="200vw" h="100%"position="fixed" zIndex={-1} bg={useColorModeValue("blue.100", "gray.900")}/>
       <Sidebar />
-      <Box bg={useColorModeValue("blue.100", "gray.900")} w="85vw" right="0vw" position="absolute" display="inline-block" className="Background" pt="6%" textAlign={["center", "center", "left", "left"]}>
+      <Box bg={useColorModeValue("blue.100", "gray.900")} w="calc(85vw + var(--scrollbar-width))" right="0px" position="absolute" display="inline-block" className="Background" pt="6%" textAlign={["center", "center", "left", "left"]}>
         <Text as="b" fontSize={["30px", "50px", "60px", "80px"]} fontFamily="Lexend Deca" mb="10px" mx={["20px", "20px", "40px", "80px"]}>
         Things I Like
         </Text>
@@ -133,7 +134,7 @@ const Favorites = () => {
                     <HStack>                    
                     <Popover direction="top" zIndex={99} closeOnBlur={false}>
                       <PopoverTrigger>
-                        <Button h="6em" w="6em" p="0" _active={{bg: useColorModeValue("green.500", "red.900"), transform: "scale(0.98)"}} onClick={marvelSlide.onToggle}>
+                        <Button zIndex={99} h="6em" w="6em" p="0" _active={{bg: useColorModeValue("green.500", "red.900"), transform: "scale(0.98)"}} onClick={marvelSlide.onToggle}>
                           <Image w="6em" src="/images/gauntlet.png"  transform="rotate(30deg)" _hover={{transform: "rotate(0deg)"}}/>
                         </Button>
                       </PopoverTrigger>
