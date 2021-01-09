@@ -132,26 +132,38 @@ const Favorites = () => {
                         Marvel was on its' last legs when it created 2008's Iron Man. Since then, it has exploded back, creating a total of 23 movies in the 'Marvel Cinematic Universe'.
                     </Text>
                     <HStack>                    
-                    <Popover direction="top" zIndex={99} closeOnBlur={false}>
+                    <Popover direction="top" closeOnBlur={true}>
+                    {({ isOpen, onClose }) => (
+                      <>
                       <PopoverTrigger>
-                        <Button zIndex={99} h="6em" w="6em" p="0" _active={{bg: useColorModeValue("green.500", "red.900"), transform: "scale(0.98)"}} onClick={marvelSlide.onToggle}>
-                          <Image w="6em" src="/images/gauntlet.png"  transform="rotate(30deg)" _hover={{transform: "rotate(0deg)"}}/>
+                        <Button rounded="full" h="6em" w="6em" p="0"  _active={{transform: "scale(0.9)"}} onClick={marvelSlide.onToggle}>
+                          <Image rounded="full" w="6em" src="/images/gauntlet.png"  transform={isOpen ? "rotate(0deg)" : "rotate(30deg)"} _hover={{transform: "rotate(0deg)"}}/>
                         </Button>
                       </PopoverTrigger>
                       <Portal>
-                        <PopoverContent zIndex={99}>
+                        <PopoverContent>
                           <PopoverArrow />
-                          <PopoverHeader>Infinity Menu</PopoverHeader>
+                          <PopoverHeader h="62px" _hover={{h:"70px"}} display="flex" justifyContent="center"><Text as="b" fontFamily="Goldman" fontSize="30px" >Infinity Menu</Text></PopoverHeader>
                           <PopoverCloseButton />
-                          <PopoverBody zIndex={99}>
-                          <br/><br/><br/><br/>
-                          <Button as="a" href="https://www.marvel.com/characters" target="_blank">
-                              Marvel
-                          </Button>
+                          <PopoverBody display="flex" justifyContent="center" p="0px">
+                          <VStack w='100%' mx="0" px="0px" spacing="1px">
+                          <Flex justifyContent="center" w="100%" h="42px" rounded="md" transform="scale(1.02)" _hover={{zIndex:1, h:"50px", transform:"scale(1.07)", border:"5px solid black", bg:    "red.400"}}   bg="red.500"><HStack alignContent="left"><Text color="black" as="b">Reality Stone</Text><Text color="gray.700">Not Found</Text></HStack></Flex>
+                          <Flex justifyContent="center" w="100%" h="42px" rounded="md" transform="scale(1.02)" _hover={{zIndex:1, h:"50px", transform:"scale(1.07)", border:"5px solid black", bg:   "blue.500"}}  bg="blue.600"><HStack alignContent="left"><Text color="black" as="b">  Space Stone</Text><Text color="gray.700">Not Found</Text></HStack></Flex>
+                          <Flex justifyContent="center" w="100%" h="42px" rounded="md" transform="scale(1.02)" _hover={{zIndex:1, h:"50px", transform:"scale(1.07)", border:"5px solid black", bg:  "green.500"}} bg="green.400"><HStack alignContent="left"><Text color="black" as="b">   Time Stone</Text><Text color="gray.700">Not Found</Text></HStack></Flex>
+                          <Flex justifyContent="center" w="100%" h="42px" rounded="md" transform="scale(1.02)" _hover={{zIndex:1, h:"50px", transform:"scale(1.07)", border:"5px solid black", bg: "orange.300"}}bg="orange.400"><HStack alignContent="left"><Text color="black" as="b">   Soul Stone</Text><Text color="gray.700">Not Found</Text></HStack></Flex>
+                          <Flex justifyContent="center" w="100%" h="42px" rounded="md" transform="scale(1.02)" _hover={{zIndex:1, h:"50px", transform:"scale(1.07)", border:"5px solid black", bg: "yellow.300"}}bg="yellow.400"><HStack alignContent="left"><Text color="black" as="b">   Mind Stone</Text><Text color="gray.700">Not Found</Text></HStack></Flex>
+                          <Flex justifyContent="center" w="100%" h="42px" rounded="md" transform="scale(1.02)" _hover={{zIndex:1, h:"50px", transform:"scale(1.07)", border:"5px solid black", bg: "purple.500"}}bg="purple.600"><HStack alignContent="left"><Text color="black" as="b">  Power Stone</Text><Text color="gray.700">Not Found</Text></HStack></Flex>
+                          </VStack>
                           </PopoverBody>
-                          <PopoverFooter>Infinity Gauntlet made possible from viewers like you. Thank you.</PopoverFooter>
+                          <PopoverFooter h="57px" _hover={{h:"65px"}} justifyContent="center" display="flex">
+                          <Button as="a" href="https://www.marvel.com/characters" target="_blank">
+                              Marvel Characters
+                          </Button>
+                          </PopoverFooter>
                         </PopoverContent>
                       </Portal>
+                      </>
+                    )}
                     </Popover>
                     {/* <SlideFade in={marvelSlide.isOpen} style={{ zIndex: 50 }}>
                       <Box  
