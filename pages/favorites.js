@@ -8,7 +8,7 @@ import StarLottie from '../components/StarLottie';
 
 import { FaEmpire, FaJediOrder } from "react-icons/fa";
 
-import { Box, Flex, Text, Center, Square, Circle, Button, VStack, HStack, Stack, Spacer, Image,
+import { Box, Flex, Text, Center, Square, Circle, Button, VStack, HStack, Stack, Spacer, Image, SlideFade, Portal,
   Accordion,
   AccordionItem,
   AccordionButton,
@@ -33,6 +33,7 @@ import { Box, Flex, Text, Center, Square, Circle, Button, VStack, HStack, Stack,
   PopoverCloseButton,
   PopoverBody,
   PopoverHeader,
+  PopoverFooter,
   Modal,
   ModalOverlay,
   ModalContent,
@@ -48,8 +49,9 @@ import NavigationDrawer from '../components/NavigationDrawer';
 const Favorites = () => {
   const { colorMode, toggleColorMode } = useColorMode();  
   const [isHoveringStar, setHoveringStar] = useState("false");
-  const {isOpen: isDrawerOpen, onOpen: onDrawerOpen, onClose: onDrawerClose} = useDisclosure();
-  const {isOpen: isModalOpen, onOpen: onModalOpen, onClose: onModalClose} = useDisclosure();
+  const navDrawer = useDisclosure();
+  const starWarsModal = useDisclosure();
+  const marvelSlide = useDisclosure();
 
 
   return(
@@ -84,14 +86,14 @@ const Favorites = () => {
                       <Button as="a" href="https://www.starwars.com/databank" target="_blank">
                         Star Wars Databank
                       </Button>
-                      <Button rightIcon={<ArrowForwardIcon />} bg={useColorModeValue("green.300","red.700")} onClick={onModalOpen}
+                      <Button rightIcon={<ArrowForwardIcon />} bg={useColorModeValue("green.300","red.700")} onClick={starWarsModal.onOpen}
                       _hover={{bg: useColorModeValue("green.400", "red.800")}} _active={{bg: useColorModeValue("green.500", "red.900"), transform: "scale(0.98)"}}>
                           Begin My Journey
                       </Button>
 
-                      <Modal isOpen={isModalOpen} onClose={onModalClose}>
+                      <Modal isOpen={starWarsModal.isOpen} onClose={starWarsModal.onClose}>
                         <ModalOverlay />
-                        <ModalContent>
+                        <ModalContent> 
                           <ModalHeader>
                             {colorMode === "light" ?
                             <HStack>
@@ -119,31 +121,70 @@ const Favorites = () => {
                           </ModalBody>
                         </ModalContent>
                       </Modal>
-                      
-                      {/* <Popover placement="right">
-                          <PopoverTrigger>
-                            <Button rightIcon={<ArrowForwardIcon />} bg={useColorModeValue("green.300","red.700")} 
-                            _hover={{bg: useColorModeValue("green.400", "red.800")}} _active={{bg: useColorModeValue("green.500", "red.900"), transform: "scale(0.98)"}}>
-                                Begin My Journey
-                            </Button>
-                          </PopoverTrigger>
-                          <PopoverContent minW="0" w="10em" maxWidth="10rem"> 
-                            <PopoverArrow/>
-                            <PopoverCloseButton/>
-                            <PopoverHeader fontWeight="semibold">Padawan</PopoverHeader>
-                            <PopoverBody>
-                              Do or do not. There is no try. Come back later.
-                            </PopoverBody>
-                          </PopoverContent>
-                      </Popover> */}
                     </Stack>
 
                   </VStack>
                 </FavoritesBox>
-                <FavoritesBox start="entertainment" href="https://www.marvel.com/articles" src="https://3.bp.blogspot.com/-MZ2WEgcPcoo/WvFoyQSeLwI/AAAAAAAAF1I/8-nMb4EXoQQ6dugaq8j53SVoo_1ZX08GwCLcBGAs/s00/Thanos-With-Gauntlet-Infinity-Stones-02.jpg" alt="Marvel">
-                  {/* Marvel Stuff */}
+                <FavoritesBox start="entertainment"  src="https://3.bp.blogspot.com/-MZ2WEgcPcoo/WvFoyQSeLwI/AAAAAAAAF1I/8-nMb4EXoQQ6dugaq8j53SVoo_1ZX08GwCLcBGAs/s00/Thanos-With-Gauntlet-Infinity-Stones-02.jpg" alt="Marvel">
+                  <VStack>
+                    <Text fontSize={["13px", "15px", "20px", "20px"]} fontFamily="Lexend Deca" my="10px" mx={["20px", "20px", "40px", "80px"]} align="left">
+                        Marvel was on its' last legs when it created 2008's Iron Man. Since then, it has exploded back, creating a total of 23 movies in the 'Marvel Cinematic Universe'.
+                    </Text>
+                    <HStack>                    
+                    <Popover direction="top" zIndex={99} closeOnBlur={false}>
+                      <PopoverTrigger>
+                        <Button h="6em" w="6em" p="0" _active={{bg: useColorModeValue("green.500", "red.900"), transform: "scale(0.98)"}} onClick={marvelSlide.onToggle}>
+                          <Image w="6em" src="/images/gauntlet.png"  transform="rotate(30deg)" _hover={{transform: "rotate(0deg)"}}/>
+                        </Button>
+                      </PopoverTrigger>
+                      <Portal>
+                        <PopoverContent zIndex={99}>
+                          <PopoverArrow />
+                          <PopoverHeader>Infinity Menu</PopoverHeader>
+                          <PopoverCloseButton />
+                          <PopoverBody zIndex={99}>
+                          <br/><br/><br/><br/>
+                          <Button as="a" href="https://www.marvel.com/characters" target="_blank">
+                              Marvel
+                          </Button>
+                          </PopoverBody>
+                          <PopoverFooter>Infinity Gauntlet made possible from viewers like you. Thank you.</PopoverFooter>
+                        </PopoverContent>
+                      </Portal>
+                    </Popover>
+                    {/* <SlideFade in={marvelSlide.isOpen} style={{ zIndex: 50 }}>
+                      <Box  
+                        p="40px"
+                        mx="30vw"
+                        color="white"
+                        mt="4"
+                        bg="teal.500"
+                        rounded="md"
+                        shadow="md"
+                        position="static"
+                        w="35vw"
+                        h="55vh"
+                      >
+                        Test
+                      </Box>
+                    </SlideFade>                     */}
+                    </HStack>
+                  </VStack>
                 </FavoritesBox>
 
+                    {/* <Popover placement="top" zIndex={90}>
+                          <PopoverTrigger>
+
+                          </PopoverTrigger>
+                          <PopoverContent> 
+                            <PopoverArrow/>
+                            <PopoverCloseButton/>
+                            <PopoverHeader fontWeight="semibold">Infinity Menu</PopoverHeader>
+                            <PopoverBody>
+                              I am Iron Man. Placeholder Text. Etc Etc.
+                            </PopoverBody>
+                          </PopoverContent>
+                      </Popover> */}
                 <FavoritesBox start="entertainment" href="https://xkcd.com/1288/" src="https://imgs.xkcd.com/comics/substitutions.png" alt="XKCD" h={[64,64,80,80]}>
                   <Stack direction={["column", "column", "row", "row"]} spacing={0} alignItems="center">  
                     <Text fontSize={["10px", "11px", "16px", "18px"]} fontFamily="Lexend Deca" my="10px" mx={["20px", "20px", "20px", "40px"]} align="center" w={["80%", "80%", "40%", "40%"]}>
@@ -212,10 +253,10 @@ const Favorites = () => {
                       Next JS
                     </Button>
 
-                    <Button colorScheme="blue" onClick={onDrawerOpen}>
+                    <Button colorScheme="blue" onClick={navDrawer.onOpen}>
                       View Pages
                     </Button>
-                    <NavigationDrawer onClose={onDrawerClose} isOpen={isDrawerOpen}/>
+                    <NavigationDrawer onClose={navDrawer.onClose} isOpen={navDrawer.isOpen}/>
                     </Stack>
                   </VStack>
                 </FavoritesBox>

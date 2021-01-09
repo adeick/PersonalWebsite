@@ -49,7 +49,7 @@ const FavoritesBox = (props) => {
                 bg="gray.300"
                 w="100%"
                 h="35%"
-                zIndex={99}
+                zIndex={40}
                 position="absolute"
                 bottom="0"
                 borderRadius="0 0 30px 30px" 
