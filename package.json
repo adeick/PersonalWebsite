@@ -1,11 +1,11 @@
 {
-  "name": "locampus",
+  "name": "adeick.com",
   "version": "0.1.0",
-  "description": "LoCampus is a social media platform that enables students to review locations on their campuses and receive rewards for where they have traveled.",
+  "description": "This is the personal website of Andrew Deick. It is interactive, to some degree.",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git.linux.iastate.edu/cs309/fall2020/hv_10.git"
+    "url": "https://github.com/adeick/adeick.github.io"
   },
   "scripts": {
     "dev": "next dev",
@@ -15,16 +15,17 @@
     "start": "next start"
   },
   "keywords": [
-    "location",
-    "hv_10",
-    "campus"
+    "adeick",
+    "deick",
+    "andrew"
   ],
   "dependencies": {
     "@chakra-ui/icons": "^1.0.2",
-    "@chakra-ui/react": "^1.0.0",
+    "@chakra-ui/react": "^1.1.4",
     "@emotion/react": "^11.0.0",
     "@emotion/styled": "^11.0.0",
     "@react-pdf/renderer": "^1.6.11",
+    "@reduxjs/toolkit": "^1.5.0",
     "framer-motion": "^2.9.4",
     "next": "10.0.3",
     "react": "16.13.1",
@@ -34,6 +35,10 @@
     "react-lottie": "^1.2.3",
     "react-map-gl": "^5.2.7",
     "react-pdf": "^5.0.0",
+    "react-redux": "^7.2.2",
+    "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-persist": "^6.0.0",
     "scroll-into-view-if-needed": "^2.2.26"
   },
   "devDependencies": {
