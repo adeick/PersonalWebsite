@@ -1,7 +1,7 @@
 // UncontrolledLottie.jsx
 import React, { Component } from 'react'
 import Lottie from 'react-lottie'
-import giraffe from '../public/lotties/giraffe.json'
+import giraffe from '../../public/lotties/giraffe.json'
 
 class GiraffeLottie extends Component {
 

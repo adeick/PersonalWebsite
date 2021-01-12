@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
 import NextLink from 'next/link';
-import Sidebar from '../components/Sidebar';
-import FavoritesBox from '../components/FavoritesBox';
-import BB8Lottie from '../components/BB8Lottie';
-import ArrowLottie from '../components/ArrowLottie';
-import StarLottie from '../components/StarLottie';
+import Sidebar from '../src/components/Sidebar';
+import FavoritesBox from '../src/components/FavoritesBox';
+import BB8Lottie from '../src/components/BB8Lottie';
+import ArrowLottie from '../src/components/ArrowLottie';
+import StarLottie from '../src/components/StarLottie';
 
 import { FaEmpire, FaJediOrder } from "react-icons/fa";
 
@@ -44,7 +44,7 @@ import { Box, Flex, Text, Center, Square, Circle, Button, VStack, HStack, Stack,
 } from "@chakra-ui/react";
 
 import { ArrowForwardIcon } from "@chakra-ui/icons";
-import NavigationDrawer from '../components/NavigationDrawer';
+import NavigationDrawer from '../src/components/NavigationDrawer';
 
 const Favorites = () => {
   const { colorMode, toggleColorMode } = useColorMode();  

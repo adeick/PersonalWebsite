@@ -1,7 +1,7 @@
 // UncontrolledLottie.jsx
 import React, { Component } from 'react'
 import Lottie from 'react-lottie'
-import astronaut from '../public/lotties/astronaut404.json'
+import astronaut from '../../public/lotties/astronaut404.json'
 
 class AstronautLottie extends Component {
 

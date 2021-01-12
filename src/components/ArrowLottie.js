@@ -1,7 +1,7 @@
 // UncontrolledLottie.jsx
 import React, { Component } from 'react'
 import Lottie from 'react-lottie'
-import arrow from '../public/lotties/leftarrow.json'
+import arrow from '../../public/lotties/leftarrow.json'
 
 class ArrowLottie extends Component {
 

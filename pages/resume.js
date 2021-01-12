@@ -1,6 +1,6 @@
 import React from 'react';
 import NextLink from 'next/link';
-import Sidebar from '../components/Sidebar';
+import Sidebar from '../src/components/Sidebar';
 //import resume from '../public/ResumeFall2020.pdf'
 
 import {

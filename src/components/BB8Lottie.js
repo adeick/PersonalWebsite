@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Lottie from 'react-lottie'
-import astronaut from '../public/lotties/bb8.json'
+import astronaut from '../../public/lotties/bb8.json'
 
 class BB8Lottie extends Component {
 

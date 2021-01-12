@@ -1,7 +1,6 @@
 import React from 'react';
 import NextLink from 'next/link';
-import Sidebar from '../components/Sidebar';
-import AstronautLottie from '../components/AstronautLottie';
+import AstronautLottie from '../src/components/AstronautLottie';
 
 
 import {
