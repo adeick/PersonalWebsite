@@ -432,4 +432,4 @@ const Favorites = () => {
   );
 }
 
-export default Favorites;
+export default withRedux(Favorites);

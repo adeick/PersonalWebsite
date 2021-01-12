@@ -71,18 +71,18 @@ const composeEnhancers = composeWithDevTools({
   trace: true,
 });
 
-// const initializeStore = (preloadedState = initialState) => {
-//   return createStore(
-//     persistedReducer,
-//     preloadedState,
-//     composeEnhancers(applyMiddleware())
-//   );
-// };
+const initializeStore = (preloadedState = initialState) => {
+  return createStore(
+    persistedReducer,
+    preloadedState,
+    composeEnhancers(applyMiddleware())
+  );
+};
 
-const initializeStore = createStore(
-  persistedReducer,
-  composeEnhancers(applyMiddleware())
-);
+// const initializeStore = createStore(
+//   persistedReducer,
+//   composeEnhancers(applyMiddleware())
+// );
 
 const persistor = persistStore(initializeStore);
 
