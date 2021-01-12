@@ -4,7 +4,17 @@ import storage from 'redux-persist/lib/storage';
 import { composeWithDevTools } from 'redux-devtools-extension';
 
 const initialState = {
-  name: "null",
+  username: "",
+  rank: 1,
+  noOfReduxClicks: 0,
+  stones: {
+    reality: false,
+    space: false,
+    time: false,
+    soul: false,
+    mind: false,
+    power: false,    
+  }
 };
 
 const persistConfig = {
@@ -14,18 +24,23 @@ const persistConfig = {
 
 const reducer = (state = { initialState, input: {} }, action) => {
   switch (action.type) {
-    case 'SET_USER':
+    case 'SET_USERNAME':
       return {
         ...state,
-//        username: action.payload.txt,
+        username: action.payload.username,
       };
-    case 'SET_BADGE':
+    case 'INCREMENT_REDUX':
       return {
         ...state,
-        // badges: {
-        //   ...state.badges,
-        //   [action.payload.badge]: action.payload.unlocked,
-        // },
+        noOfReduxClicks: action.payload.amount,
+      };
+    case 'UNLOCK_STONE':
+      return {
+        ...state,
+        stones: {
+          ...state.stones,
+          [action.payload.stone]: true,
+        },
       };
     case 'SET_BIO':
       return {
