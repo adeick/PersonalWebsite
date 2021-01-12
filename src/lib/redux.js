@@ -6,7 +6,7 @@ import { initializeStore, persistor } from '../store';
 
 export const withRedux = (PageComponent, { ssr = true } = {}) => {
   const WithRedux = ({ initialReduxState, ...props }) => {
-    const store = getOrInitializeStore(initialReduxState);
+    // const store = getOrInitializeStore(initialReduxState);
     return (
       <Provider store={initializeStore}>
         <PersistGate persistor={persistor}>
@@ -39,10 +39,10 @@ export const withRedux = (PageComponent, { ssr = true } = {}) => {
     WithRedux.getInitialProps = async (context) => {
       // Get or Create the store with `undefined` as initialState
       // This allows you to set a custom default initialState
-       const reduxStore = getOrInitializeStore();
+      // const reduxStore = getOrInitializeStore();
 
       // Provide the store to getInitialProps of pages
-      context.reduxStore = reduxStore;
+      // context.reduxStore = reduxStore;
 
       // Run getInitialProps from HOCed PageComponent
       const pageProps =
@@ -53,7 +53,7 @@ export const withRedux = (PageComponent, { ssr = true } = {}) => {
       // Pass props to PageComponent
       return {
         ...pageProps,
-         initialReduxState: reduxStore.getState(),
+        // initialReduxState: reduxStore.getState(),
       };
     };
   }
@@ -61,17 +61,17 @@ export const withRedux = (PageComponent, { ssr = true } = {}) => {
   return WithRedux;
 };
 
-let reduxStore;
-const getOrInitializeStore = (initialState) => {
-  // Always make a new store if server, otherwise state is shared between requests
-  if (typeof window === 'undefined') {
-    return initializeStore(initialState);
-  }
+// let reduxStore;
+// const getOrInitializeStore = (initialState) => {
+//   // Always make a new store if server, otherwise state is shared between requests
+//   if (typeof window === 'undefined') {
+//     return initializeStore(initialState);
+//   }
 
-  // Create store if unavailable on the client and set it on the window object
-  if (!reduxStore) {
-    reduxStore = initializeStore(initialState);
-  }
+//   // Create store if unavailable on the client and set it on the window object
+//   if (!reduxStore) {
+//     reduxStore = initializeStore(initialState);
+//   }
 
-  return reduxStore;
-};
+//   return reduxStore;
+// };
