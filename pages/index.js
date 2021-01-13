@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import NextLink from 'next/link';
 import Sidebar from '../src/components/Sidebar';
+import fire from '../src/config/fire-conf';
 
 import {
   Image,
@@ -18,7 +19,9 @@ import {
 } from '@chakra-ui/react';
 //import UncontrolledLottie from '../components/UncontrolledLottie';
 
-const Index = () => (
+const Index = () => {
+
+  return(
   <div id="Website">
     <title>Andrew's Website</title>
     <Sidebar />
@@ -35,6 +38,6 @@ const Index = () => (
         </Text>
       </Box>
   </div>
-);
+)};
 
 export default Index;
