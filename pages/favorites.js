@@ -77,7 +77,7 @@
 //     });
 //     return { username, setUsername, noOfReduxClicks, incrementRedux, stones, unlockStone };
 // }
-// const Favorites = () => {
+ const Favorites = () => {
 //   const { username, setUsername, noOfReduxClicks, incrementRedux, stones, unlockStone } = useFavorites();
 //   const { colorMode, toggleColorMode } = useColorMode();  
 //   const [isHoveringStar, setHoveringStar] = useState("false");
@@ -430,6 +430,6 @@
 //       </Box>
 //     </div>
 //   );
-// }
+ }
 
-// export default withRedux(Favorites);
+ export default Favorites;
