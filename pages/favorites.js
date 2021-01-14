@@ -78,6 +78,7 @@
 //     return { username, setUsername, noOfReduxClicks, incrementRedux, stones, unlockStone };
 // }
  const Favorites = () => {
+   return null;
 //   const { username, setUsername, noOfReduxClicks, incrementRedux, stones, unlockStone } = useFavorites();
 //   const { colorMode, toggleColorMode } = useColorMode();  
 //   const [isHoveringStar, setHoveringStar] = useState("false");
