@@ -2,10 +2,12 @@ import { createStore, applyMiddleware, combineReducers } from "redux";
 import { createWrapper, HYDRATE } from "next-redux-wrapper";
 import thunkMiddleware from "redux-thunk";
 import counter from "./counter/reducer";
+import misc from "./misc/reducer";
 
 //COMBINING ALL REDUCERS
 const combinedReducer = combineReducers({
-  counter,
+  // counter,
+  misc,
   // OTHER REDUCERS WILL BE ADDED HERE
 });
 
@@ -29,7 +31,7 @@ const makeStore = ({ isServer }) => {
 
     const persistConfig = {
       key: "nextjs",
-      whitelist: ["counter"], // only counter will be persisted, add other reducers if needed
+      //whitelist: ["misc"], // only counter will be persisted, add other reducers if needed
       storage, // if needed, use a safer storage
     };
 

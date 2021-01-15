@@ -1,21 +1,26 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { incrementCounter, decrementCounter } from "../store/counter/action";
+// import { incrementCounter, decrementCounter, reduxClick } from "../store/counter/action";
+import { setUsername, incrementRedux, unlockStone } from "../store/misc/action";
 import Link from "next/link";
 
 function counter() {
-  const globalState = useSelector((state) => state.counter.counter);
+  //const counterState = useSelector((state) => state.counter.counter);
+  const reduxClicks = useSelector((state) => state.misc.reduxClicks);
   const dispatch = useDispatch();
 
   return (
     <>
-      <h1>GLOBAL COUNTER {globalState}</h1>
-      <button onClick={() => dispatch(incrementCounter(globalState))}>
+      <h1>GLOBAL COUNTER {reduxClicks}</h1>
+      {/* <button onClick={() => dispatch(incrementCounter(counterState))}>
         Increment +
       </button>
       {"  "}
-      <button onClick={() => dispatch(decrementCounter(globalState))}>
+      <button onClick={() => dispatch(decrementCounter(counterState))}>
         Decrement -
+      </button> */}
+      <button onClick={() => dispatch(incrementRedux(reduxClicks))}>
+        Redux Click
       </button>
       <br />
       <br />
