@@ -1,9 +1,10 @@
 import React, { Component, useState, useEffect } from 'react';
-import { Box, Stack, Icon, IconButton, Flex, Image, Text, Link, useColorMode, useColorModeValue,} from '@chakra-ui/react';
+import { Box, Stack, Icon, IconButton, Flex, Image, Text, useColorMode, useColorModeValue,} from '@chakra-ui/react';
 // import { MdPermIdentity } from "react-icons/md";
 // import { FiMap } from "react-icons/fi";
 import GiraffeLottie from './GiraffeLottie';
 import Sidebox from './Sidebox';
+import Link from "next/link"
 
 
 
@@ -59,13 +60,18 @@ const Sidebar = () => {
           borderRadius="0 10px 5px 0"
         >
           <Stack spacing={30} position='relative' height='100%' shouldWrapChildren>
-            <Sidebox text="Home" icon={useColorModeValue("/images/mandalorian.png", "/images/vader2.png")} href='/'
+            <Link href='/'><a>
+            <Sidebox text="Home" icon={useColorModeValue("/images/mandalorian.png", "/images/vader2.png")}
               fallback="https://listimg.pinclipart.com/picdir/s/141-1413807_darth-vader-icon-darth-vader-emoji-whatsapp-clipart.png"/>
+            </a></Link>
             
             <Sidebox text="GitHub" href="https://github.com/adeick" target="_blank" icon="/images/purplecat.png"/>
-
-            <Sidebox text="Resume" href="./resume" icon="/images/clipboard.png"/>
-            <Sidebox text="Favorites" href="./favorites" icon="/images/testtube.png"/>
+            <Link href='./resume'><a>
+              <Sidebox text="Resume" icon="/images/clipboard.png"/>
+            </a></Link>
+            <Link href="./favorites"><a>
+              <Sidebox text="Favorites" icon="/images/testtube.png"/>
+            </a></Link>
           </Stack>
          {/* <Stack>
             <Icon name="phone" position="absolute" right="5" top="20%" size="25%" color="yellow.500" />

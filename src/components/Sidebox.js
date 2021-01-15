@@ -12,7 +12,7 @@ const Sidebox = (props) => {
     }
       return (
         <Flex
-            as="a"
+            as='a'
             href={props.href}
             target={props.target}
             bg={useColorModeValue(isHovering ? "blue.300" : "blue.200", isHovering ? "red.500" : "red.700")}
@@ -36,8 +36,6 @@ const Sidebox = (props) => {
                margin="auto" padding="0" maxHeight="100%" >
               {image}
             </Flex>
-            
-            
           </Flex>   
       );
   }
