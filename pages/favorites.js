@@ -13,7 +13,7 @@ import { setUsername, incrementRedux, unlockStone } from "../store/misc/action";
 
 import { FaEmpire, FaJediOrder } from "react-icons/fa";
 
-import { Box, Flex, Text, Center, Square, Circle, Button, VStack, HStack, Stack, Spacer, Image, SlideFade, Portal,
+import { Box, Flex, Text, Center, Square, Circle, Button, VStack, HStack, Stack, Spacer, Image, SlideFade, Portal, Tooltip, Kbd,
   Accordion, AccordionItem, AccordionButton, AccordionPanel, AccordionIcon,
   useColorMode, useColorModeValue,
   useDisclosure, Collapse,
@@ -42,7 +42,9 @@ const Favorites = () => {
   const starWarsModal = useDisclosure();
   const marvelSlide = useDisclosure();
   const formikModal = useDisclosure();
-  const initialRef = React.useRef()
+  const unityModal = useDisclosure();
+  const formikRef = React.useRef();
+  const unityRef = React.useRef();
 
 
 
@@ -211,7 +213,7 @@ const Favorites = () => {
 {/* Lottie */}
                 <FavoritesBox  start="technologies" src="https://airbnb.io/lottie/images/logo.webp" alt="Lottie">
                   <VStack>
-                    <Text fontSize={["13px", "15px", "20px", "20px"]} fontFamily="Lexend Deca" my="10px" mx={["20px", "20px", "40px", "80px"]} align="left">
+                    <Text fontSize={["13px", "17px", "20px", "20px"]} fontFamily="Lexend Deca" my="10px" mx={["20px", "20px", "40px", "80px"]} align="left">
                       Lottie Files is the original home of Jerome the Giraffe and several of the other animations scattered around my website. Most Lotties are free, and quite easy to use. Highly recommend checking out their gallery!
                     </Text>
                     <Button pl="0" as="a" href="https://lottiefiles.com/popular" target="_blank" colorScheme="teal" leftIcon={<Box w="50px" play={isHoveringStar}><StarLottie/></Box>}
@@ -225,15 +227,15 @@ const Favorites = () => {
 {/* Chakra */}
                 <FavoritesBox start="technologies" src="https://img.stackshare.io/service/12421/rzylUjaf_400x400.jpg" alt="Chakra">
                   <VStack>
-                    <Text fontSize={["13px", "15px", "20px", "20px"]} fontFamily="Lexend Deca" my="10px" mx={["20px", "20px", "40px", "80px"]} align="left">
+                    <Text fontSize={["11px", "17px", "20px", "20px"]} fontFamily="Lexend Deca" my="10px" mx={["20px", "20px", "40px", "80px"]} align="left">
                       Chakra is a UI component library that makes Front-End development significantly easier. Its many features include responsive styles, aesthetically pleasing themes, and the ability to change color mode.
                     </Text>
-                    <Stack direction={["column", "row"]} spacing={["12px", "24px"]}>
+                    <Stack direction={["column", "row"]} spacing={["6px", "24px"]}>
                       <Button as="a" href="https://chakra-ui.com/" target="_blank">
                         Chakra UI
                       </Button>
                       <Button onClick={toggleColorMode} colorScheme={useColorModeValue("red", "cyan")}>
-                        {useColorModeValue("Dark Side", "Light Side")}
+                        {useColorModeValue("🍪 Dark Side", "🧙‍♂️ Light Side")}
                       </Button>
                     </Stack>
                   </VStack>
@@ -241,16 +243,16 @@ const Favorites = () => {
 {/* Next */}
                 <FavoritesBox start="technologies" src="https://cdn.worldvectorlogo.com/logos/next-js.svg" alt="Next">
                   <VStack>  
-                    <Text fontSize={["13px", "15px", "20px", "20px"]} fontFamily="Lexend Deca" my="10px" mx={["20px", "20px", "40px", "80px"]} align="left">
+                    <Text fontSize={["11px", "17px", "20px", "20px"]} fontFamily="Lexend Deca" my={["4px","10px"]} mx={["20px", "20px", "40px", "80px"]} align="left">
                       Next.JS is a Front-End framework that complements React. It uses Server-Side Rendering, and is easily deployed with Vercel. Additionally, it supports Page components, including pages with dynamic routes.
                     </Text>
-                    <Stack direction={["column", "row"]} spacing={["12px", "24px"]}>
+                    <Stack direction={["column", "row"]} spacing={["6px", "24px"]}>
                     <Button as="a" href="https://nextjs.org/learn/basics/create-nextjs-app?utm_source=next-site&utm_medium=nav-cta&utm_campaign=next-website" target="_blank">
                       Next JS
                     </Button>
 
                     <Button colorScheme="blue" onClick={navDrawer.onOpen}>
-                      View Pages
+                    🔍 View Pages
                     </Button>
                     <NavigationDrawer onClose={navDrawer.onClose} isOpen={navDrawer.isOpen}/>
                     </Stack>
@@ -281,7 +283,7 @@ const Favorites = () => {
 {/* Formik */}
                 <FavoritesBox start="technologies" src="https://img.stackshare.io/service/8846/preview.png" alt="Formik">
                 <VStack>  
-                    <Text fontSize={["16px", "18px", "21px", "25px"]} fontFamily="Lexend Deca" my="10px" mx={["20px", "20px", "40px", "80px"]} align="left">
+                    <Text fontSize={["13px", "17px", "20px", "20px"]} fontFamily="Lexend Deca" my="10px" mx={["20px", "20px", "40px", "80px"]} align="left">
                       Formik is a nifty addition that makes capturing input in forms easy! The form information is saved with Redux.
                     </Text>
                     <Stack direction={["column", "row"]} spacing={["12px", "24px"]}>
@@ -289,9 +291,9 @@ const Favorites = () => {
                         Formik
                       </Button>
                       <Button colorScheme="blue" onClick={formikModal.onOpen}>
-                        Change My Name 
+                      ✏️ Change Name 
                       </Button>
-                      <Modal isOpen={formikModal.isOpen} onClose={formikModal.onClose} initialFocusRef={initialRef}>
+                      <Modal isOpen={formikModal.isOpen} onClose={formikModal.onClose} initialFocusRef={formikRef}>
                         <ModalOverlay />
                         <ModalContent> 
                           <ModalHeader>
@@ -316,7 +318,7 @@ const Favorites = () => {
                                 {({ field, form }) => (
                                   <FormControl isInvalid={form.errors.name && form.touched.name}>
                                     <FormLabel htmlFor="name">Let us know your nickname here</FormLabel>
-                                    <Input {...field} id="name" placeholder="Crazy Awesome, Super Duper Nickname" />
+                                    <Input {...field} ref={formikRef} id="name" placeholder="Crazy Awesome, Super Duper Nickname" />
                                     <FormErrorMessage>{form.errors.name}</FormErrorMessage>
                                   </FormControl>
                                 )}
@@ -345,12 +347,39 @@ const Favorites = () => {
 {/* Unity */}
                 <FavoritesBox start="technologies"  src="https://fadigeorge.files.wordpress.com/2010/02/unity_01.jpg" alt="Unity">
                   <VStack>  
-                    <Text fontSize={["16px", "18px", "21px", "25px"]} fontFamily="Lexend Deca" my="10px" mx={["20px", "20px", "40px", "80px"]} align="left">
+                    <Text fontSize={["12px", "17px", "20px", "20px"]} fontFamily="Lexend Deca" my="10px" mx={["20px", "20px", "40px", "80px"]} align="left">
                       Unity is a 3D-editing software that is often used in game development, movie settings, and my personal favorite, the creation of virtual environments. It is free to use and relatively easy to learn.
                     </Text>
+                    <Stack direction={["column", "row"]} spacing={["12px", "24px"]}>
                     <Button as="a" href="https://unity.com/" target="_blank">
                       Unity
                     </Button>
+                      <Button colorScheme="teal" isDisabled={useBreakpointValue({base: true, md: false})} onClick={() => {
+                        unityModal.onOpen();
+                        setTimeout(() => {
+                          document.getElementById("rocketBoost").contentWindow.focus();
+                        }, 3000)
+                      }}>
+                          {useBreakpointValue({base: "💻 Required", md: "🚀 Play!"})}
+                      </Button>
+                    </Stack>
+                    <Modal isOpen={unityModal.isOpen} onClose={unityModal.onClose} size="xl" initialFocusRef={unityRef}>
+                        <ModalOverlay />
+                        <ModalContent> 
+                          <ModalHeader pt="2px" pb="0" mb="0">
+                            <Text fontFamily="Audiowide" fontSize="40px">Rocket Boost 🚀</Text>
+                          </ModalHeader>
+                          <ModalCloseButton />
+                          <ModalBody px="0" pt="0">
+                            {unityModal.isOpen ? <iframe id="rocketBoost" src="https://i.simmer.io/@Darth_Vader/rocket-boost?skin=smg" width="576px" height="360px" onload="this.contentWindow.focus()" ref={unityRef}></iframe> : null}
+                          </ModalBody>
+                          <ModalFooter>
+                            <Flex w="100%" justifyContent="center" m="0">
+                            <Spacer/><Text>⮪ <Kbd>A</Kbd></Text> <Spacer/> <Text>🔥🔥 <Kbd>space</Kbd> 🔥🔥</Text> <Spacer/> <Text><Kbd>D</Kbd> ⮫</Text><Spacer/>
+                            </Flex>
+                          </ModalFooter>
+                        </ModalContent>
+                      </Modal>
                   </VStack>  
                 </FavoritesBox>
                 </Flex>

@@ -65,7 +65,7 @@ const Sidebar = () => {
               fallback="https://listimg.pinclipart.com/picdir/s/141-1413807_darth-vader-icon-darth-vader-emoji-whatsapp-clipart.png"/>
             </a></Link>
             
-            <Sidebox text="GitHub" href="https://github.com/adeick" target="_blank" icon="/images/purplecat.png"/>
+            <Sidebox text="GitHub" as="a" href="https://github.com/adeick" target="_blank" icon="/images/purplecat.png"/>
             <Link href='./resume'><a>
               <Sidebox text="Resume" icon="/images/clipboard.png"/>
             </a></Link>

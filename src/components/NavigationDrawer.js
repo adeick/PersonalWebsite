@@ -23,7 +23,7 @@ const NavigationDrawer = (props) => {
                 </DrawerHeader>
                 <DrawerBody>
                 <Link href='/'><Text fontFamily="Audiowide" fontSize="20px" as="a" href='/'>🏠 Home</Text></Link> <br/>
-                <Link href='/resume'><Text fontFamily="Audiowide" fontSize="20px" as="a" href='/resume'>📰 Resume</Text></Link> <br/>
+                <Link href='/resume'><Text fontFamily="Audiowide" fontSize="20px" as="a" href='/resume'>📄 Resume</Text></Link> <br/>
                 <Link href='/favorites'><Text fontFamily="Audiowide" fontSize="20px" as="a" href='/favorites'>⭐ Favorites</Text></Link> <br/>
                 <Link href='/it-was-worth-a-try'><Text fontFamily="Audiowide" fontSize="20px" as="a" href='/it-was-worth-a-try'>🚧 Construction</Text></Link>
                 </DrawerBody>

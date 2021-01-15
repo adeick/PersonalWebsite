@@ -12,7 +12,7 @@ const Sidebox = (props) => {
     }
       return (
         <Flex
-            as='a'
+            as={props.as}
             href={props.href}
             target={props.target}
             bg={useColorModeValue(isHovering ? "blue.300" : "blue.200", isHovering ? "red.500" : "red.700")}
