@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import NextLink from 'next/link';
+import Head from 'next/head';
 import Sidebar from '../src/components/Sidebar';
 import FavoritesBox from '../src/components/FavoritesBox';
 import BB8Lottie from '../src/components/BB8Lottie';
@@ -50,7 +50,10 @@ const Favorites = () => {
 
   return(
     <div id="Website">
-      <title>Andrew's Website</title>
+      <Head>
+        <title>adeick.com - Home of... Well a Few Things</title>
+      {/* <title>ADEICK.com A Dedicated Experiment to Imitate Cookie Klicker</title> */}
+      </Head>
       <Box w="200vw" h="100%"position="fixed" zIndex={-1} bg={useColorModeValue("blue.100", "gray.900")}/>
       <Sidebar />
       <Box bg={useColorModeValue("blue.100", "gray.900")} w="calc(85vw + var(--scrollbar-width))" right="0px" position="absolute" display="inline-block" className="Background" pt="6%" textAlign={["center", "center", "left", "left"]}>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import NextLink from 'next/link';
+import Head from 'next/head'
 import Sidebar from '../src/components/Sidebar';
 import fire from '../src/config/fire-conf';
 
@@ -23,7 +23,10 @@ const Index = () => {
 
   return(
   <div id="Website">
-    <title>Andrew's Website</title>
+    <Head>
+      <title>adeick.com - Home of... Well a Few Things</title>
+    {/* <title>ADEICK.com A Dedicated Experiment to Imitate Cookie Klicker</title> */}
+    </Head>
     <Sidebar />
       <Box bg={useColorModeValue("blue.100", "gray.900")} h="100vh" w="85vw" right="0" position="fixed" display="inline-block" className="Background" 
       px={["20px", "20px", "40px", "80px"]} py="6%">
