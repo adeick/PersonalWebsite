@@ -4,13 +4,13 @@ import firebase from 'firebase';
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCtyK9E_Ov3U8Q2A9lVPdXJNYcknePPcpA",
+  apiKey: `process.env.fireBaseAPIKey`, 
   authDomain: "adeick.firebaseapp.com",
 //   databaseURL: "YOUR DATABASE URL",
   projectId: "adeick",
   storageBucket: "adeick.appspot.com",
-  messagingSenderId: "921669108328",
-  appId: "1:921669108328:web:44a884857004949718f1dd",
+  messagingSenderId: `messagingSenderID`, 
+  appId: `process.env.firebaseAppID`, 
 //   measurementId: "G-WHSX17GCW4"
 };
 try {

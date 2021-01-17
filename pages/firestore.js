@@ -69,8 +69,8 @@ const Firestore = () => {
         <HStack w="100%">
             <VStack mr="60px">
                 <Button mr="10px" isDisabled onClick={() => {
-                    setTitle("Book of Knowledge of Everything");
-                    setContent("This one hasn't been written yet.");
+                    setTitle("The Autobiography of Me");
+                    setContent("I'm not old enough to write one yet!");
                 }}>
                 Setter
                 </Button>
