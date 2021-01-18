@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps }) {
     <ChakraProvider>
       <PersistGate persistor={store.__persistor} loading={<div>Loading</div>}>
         <Head>
-          <title>adeick.com - Home of... Well a Few Things</title>
+          <title>adeick.com | Home of... a Few Things</title>
         {/* <title>ADEICK.com A Dedicated Experiment to Imitate Cookie Klicker</title> */}
         </Head>
         <Component {...pageProps} />

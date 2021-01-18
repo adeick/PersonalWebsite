@@ -33,7 +33,7 @@ const Index = () => {
         <Text fontSize={[25, 25, 40, 40]} fontFamily="Lexend Deca">
           <br /> 
           I am a Software Engineer at Iowa State, and love learning new skills. Currently, my interests are in Virtual Reality, 
-          Front-End Development, and Machine Learning. Check out <Link href='./favorites'><a><Text as="u" _hover={{as: "b"}} color={useColorModeValue("green.500", "green.300")}>Favorites</Text></a></Link> for more!
+          Front-End Development, and Machine Learning. Check out <Link href='./favorites'><a><Text as="u" color={useColorModeValue("green.500", "green.300")}>Favorites</Text></a></Link> for more!
         </Text>
       </Box>
   </div>
