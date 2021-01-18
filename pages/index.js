@@ -24,10 +24,6 @@ const Index = () => {
 
   return(
   <div id="Website">
-    <Head>
-      <title>adeick.com - Home of... Well a Few Things</title>
-    {/* <title>ADEICK.com A Dedicated Experiment to Imitate Cookie Klicker</title> */}
-    </Head>
     <Sidebar />
       <Box bg={useColorModeValue("blue.100", "gray.900")} h="100vh" w="85vw" right="0" position="fixed" display="inline-block" className="Background" 
       px={["20px", "20px", "40px", "80px"]} py="6%">
