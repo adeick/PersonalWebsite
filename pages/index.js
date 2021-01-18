@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Head from 'next/head'
 import Sidebar from '../src/components/Sidebar';
 import fire from '../src/config/fire-conf';
+import Link from 'next/link';
 
 import {
   Image,
@@ -35,9 +36,8 @@ const Index = () => {
         </Text>
         <Text fontSize={[25, 25, 40, 40]} fontFamily="Lexend Deca">
           <br /> 
-          I am a Software Engineer at Iowa State, looking for a challenging
-          internship where I can learn new skills. Currently, my interests are in Virtual Reality, 
-          Front-End Development, and Machine Learning. 
+          I am a Software Engineer at Iowa State, and love learning new skills. Currently, my interests are in Virtual Reality, 
+          Front-End Development, and Machine Learning. Check out <Link href='./favorites'><a><Text as="u" _hover={{as: "b"}} color={useColorModeValue("green.500", "green.300")}>Favorites</Text></a></Link> for more!
         </Text>
       </Box>
   </div>
