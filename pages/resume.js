@@ -20,7 +20,7 @@ import {
 
 const Resume = () => (
   <div id="Website" h="500%">
-    <Sidebar />
+  <Sidebar />
     <Box bg={useColorModeValue("blue.100", "gray.900")} h="500%" w="85vw" left="15vw" position="relative" display="inline-block" className="Background" px={["10px", "50px", "100px","200px"]}>
       <Text fontSize={[64, 64, 100, 128]} fontFamily="Lexend Deca" ml={["20px", "20px", "50px", "100px"]}>
           Resume

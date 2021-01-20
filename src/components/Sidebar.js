@@ -8,9 +8,9 @@ import Link from "next/link"
 
 
 
-const Sidebar = () => {
+const Sidebar = (props) => {
   const [windowSize, setWindowSize] = useState(0);
-
+  const NORMAL_MODE = true;
   
     useEffect(() => {
       setWindowSize(window.outerWidth);
@@ -58,21 +58,34 @@ const Sidebar = () => {
           margin="0px"
           display="inline-block"
           borderRadius="0 10px 5px 0"
-        >
-          <Stack spacing={30} position='relative' height='100%' shouldWrapChildren>
-            <Link href='/'><a>
-            <Sidebox text="Home" icon={useColorModeValue("/images/mandalorian.png", "/images/vader2.png")}
-              fallback="https://listimg.pinclipart.com/picdir/s/141-1413807_darth-vader-icon-darth-vader-emoji-whatsapp-clipart.png"/>
-            </a></Link>
-            
-            <Sidebox text="GitHub" as="a" href="https://github.com/adeick" target="_blank" icon="/images/purplecat.png"/>
-            <Link href='./resume'><a>
-              <Sidebox text="Resume" icon="/images/clipboard.png"/>
-            </a></Link>
-            <Link href="./favorites"><a>
-              <Sidebox text="Favorites" icon="/images/testtube.png"/>
-            </a></Link>
-          </Stack>
+        >            
+            {NORMAL_MODE ? //Regular Mode vs Interviewing Mode
+            <>
+              <Stack spacing={30} position='relative' height='100%' shouldWrapChildren>
+                <Link href='/'><a>
+                  <Sidebox text="Home" icon={useColorModeValue("/images/mandalorian.png", "/images/vader2.png")}/>
+                </a></Link>
+                <Link href="./favorites"><a>
+                  <Sidebox text="Favorites" icon="/images/testtube.png"/>
+                </a></Link>
+                <Sidebox isDisabled={true} text="Locked" icon="/images/lock.png"/> 
+              </Stack>
+            </>
+            : <> 
+              <Stack spacing={30} position='relative' height='100%' shouldWrapChildren>
+                <Link href='/'><a>
+                  <Sidebox text="Home" icon={useColorModeValue("/images/mandalorian.png", "/images/vader2.png")}/>
+                  </a>
+                </Link>
+                <Sidebox text="GitHub" as="a" href="https://github.com/adeick" target="_blank" icon="/images/purplecat.png"/>
+                <Link href='./resume'><a>
+                  <Sidebox text="Resume" icon="/images/clipboard.png"/>
+                </a></Link> 
+                <Link href="./favorites"><a>
+                  <Sidebox text="Favorites" icon="/images/testtube.png"/>
+                </a></Link>
+              </Stack>
+            </>}
          {/* <Stack>
             <Icon name="phone" position="absolute" right="5" top="20%" size="25%" color="yellow.500" />
             <Icon name="bell" position="absolute" right="5" top="0" size="30%" color="yellow.500" />
