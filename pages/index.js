@@ -4,7 +4,7 @@ import Sidebar from '../src/components/Sidebar';
 import fire from '../src/config/fire-conf';
 import Link from 'next/link';
 
-import { FiGithub, FiLinkedin } from 'react-icons/fi'
+import { FiGithub, FiLinkedin, FiMail } from 'react-icons/fi'
 import { RiPagesLine } from 'react-icons/ri'
 
 import {
@@ -53,15 +53,19 @@ const Index = () => {
           Resume
         </Button>
         </Link>
-        <Button as="a" href="https://www.linkedin.com/in/adeick/" target="_blank" mx="10px" colorScheme="blue" variant="solid" fontSize="20px" leftIcon={<FiLinkedin />}>
+        <Button as="a" href="https://www.linkedin.com/in/adeick/" target="_blank" mx="10px" colorScheme="twitter" variant="solid" fontSize="20px" leftIcon={<FiLinkedin />}>
           LinkedIn
+        </Button>
+        <Button as="a" href="mailto:adeick@iastate.edu" target="_blank" mx="10px" colorScheme="red" variant="solid" fontSize="20px" leftIcon={<FiMail />}>
+          Email
         </Button>
         </>
         , base:
         <>
         <IconButton href="https://github.com/adeick" target="_blank" as="a" colorScheme="purple" mx="10px" variant="solid" fontSize="20px" icon={<FiGithub />} aria-label="GitHub"/>
         <Link href="./resume"><IconButton as="a" colorScheme="teal" mx="10px" variant="solid" fontSize="20px" icon={<RiPagesLine/>} aria-label="Resume"/></Link>
-        <IconButton href="https://www.linkedin.com/in/adeick/" target="_blank" as="a" colorScheme="blue" mx="10px" variant="solid" fontSize="20px" icon={<FiLinkedin/>} aria-label="LinkedIn"/>
+        <IconButton href="https://www.linkedin.com/in/adeick/" target="_blank" as="a" colorScheme="twitter" mx="10px" variant="solid" fontSize="20px" icon={<FiLinkedin/>} aria-label="LinkedIn"/>
+        <IconButton href="mailto:adeick@iastate.edu" target="_blank" as="a" colorScheme="red" mx="10px" variant="solid" fontSize="20px" icon={<FiMail/>} aria-label="Mail"/>
         </>})}
         </Flex>
         </VStack>
