@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Head from 'next/head'
 import Sidebar from '../src/components/Sidebar';
-import fire from '../src/config/fire-conf';
 import Link from 'next/link';
 
 import { FiGithub, FiLinkedin, FiMail } from 'react-icons/fi'
@@ -12,10 +10,6 @@ import {
   Box,
   Flex,
   IconButton,
-  FormControl,
-  FormLabel,
-  Input,
-  FormHelperText,
   Button,
   ButtonGroup,
   Drawer,
@@ -65,7 +59,7 @@ const Index = () => {
         <IconButton href="https://github.com/adeick" target="_blank" as="a" colorScheme="purple" mx="10px" variant="solid" fontSize="20px" icon={<FiGithub />} aria-label="GitHub"/>
         <Link href="./resume"><IconButton as="a" colorScheme="teal" mx="10px" variant="solid" fontSize="20px" icon={<RiPagesLine/>} aria-label="Resume"/></Link>
         <IconButton href="https://www.linkedin.com/in/adeick/" target="_blank" as="a" colorScheme="twitter" mx="10px" variant="solid" fontSize="20px" icon={<FiLinkedin/>} aria-label="LinkedIn"/>
-        <IconButton href="mailto:adeick@iastate.edu" target="_blank" as="a" colorScheme="red" mx="10px" variant="solid" fontSize="20px" icon={<FiMail/>} aria-label="Mail"/>
+        <IconButton href="mailto:adeick@iastate.edu" target="_blank" as="a" colorScheme="red" mx="10px" variant="solid" fontSize="20px" icon={<FiMail/>} aria-label="Email"/>
         </>})}
         </Flex>
         </VStack>
