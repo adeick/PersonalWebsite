@@ -26,7 +26,7 @@ const Index = () => {
   return(
   <div id="Website">
     <Sidebar />
-      <Box bg={useColorModeValue("blue.100", "gray.900")} h="100vh" w="85vw" right="0" position="fixed" className="Background" 
+      <Box bg={useColorModeValue("blue.100", "gray.900")} h={window.innerHeight} w="85vw" right="0" position="fixed" className="Background" 
       px={["20px", "20px", "40px", "80px"]} py="4%">
         <VStack w="100%" h="100%" spacing="0px">
         <Text as="b" fontSize={[30, 30, 60, 80]} w="100%" fontFamily="Lexend Deca" mb="20px">
@@ -36,7 +36,7 @@ const Index = () => {
           I am a Software Engineer at Iowa State, and love learning new skills. Currently, my interests are in Virtual Reality, 
           Front-End Development, and Machine Learning. Check out <Link href='./favorites'><a><Text as="u" color={useColorModeValue("green.500", "green.300")}>Favorites</Text></a></Link> for more!
         </Text>
-        <Flex mt="20px" w="100%" bg={useColorModeValue("blue.100", "gray.900")} opacity="90%" justifyContent="center" alignItems="center" position="absolute" bottom="30px">
+        <Flex mt="20px" w="100%" bg={useColorModeValue("blue.100", "gray.900")} justifyContent="center" alignItems="center" position="absolute" bottom="0" pb="30px">
         {useBreakpointValue({md: 
         <>
         <Button as="a" href="https://github.com/adeick" target="_blank" mx="10px"colorScheme="purple" variant="solid" fontSize="20px" leftIcon={<FiGithub />}>
