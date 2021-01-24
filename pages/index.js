@@ -22,7 +22,6 @@ import {
 //import UncontrolledLottie from '../components/UncontrolledLottie';
 
 const Index = () => {
-
   return(
   <div id="Website">
     <Sidebar />

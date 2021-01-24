@@ -1,4 +1,4 @@
-import { SET_USERNAME, INCREMENT_REDUX, UNLOCK_STONE } from "./type";
+import { SET_USERNAME, INCREMENT_REDUX, UNLOCK_STONE, INCREMENT_STARWARS } from "./type";
 
 export const setUsername = (newUsername) => (dispatch) => {
 
@@ -23,3 +23,12 @@ export const unlockStone = (stoneType) => (dispatch) => {
       payload: stoneType,
     });
   };
+
+export const incrementStarWars = (currentLevel) => (dispatch) => {
+  const newLevel = currentLevel + 1;
+
+  return dispatch({
+    type: INCREMENT_STARWARS,
+    payload: newLevel,
+  });
+};

@@ -1,4 +1,4 @@
-import { SET_USERNAME, INCREMENT_REDUX, UNLOCK_STONE } from "./type";
+import { SET_USERNAME, INCREMENT_REDUX, UNLOCK_STONE, INCREMENT_STARWARS } from "./type";
 
 const initialState = {
     server: "",
@@ -12,7 +12,8 @@ const initialState = {
       soul: false,
       mind: false,
       power: false,    
-    }
+    },
+    starWarsLevel: 0,
   };
 
 // Creating my reducer
@@ -24,6 +25,8 @@ export default function reducer(state = initialState, action) {
       return { ...state, reduxClicks: action.payload };
     case UNLOCK_STONE:
       return { ...state, stones: { ...state.stones, [action.payload] : true }};
+    case INCREMENT_STARWARS: 
+      return {...state, starWarsLevel: action.payload};
     default:
       return state;
   }

@@ -9,7 +9,7 @@ import { Field, Form, Formik } from 'formik';
 
 
 import { useSelector, useDispatch } from 'react-redux';
-import { setUsername, incrementRedux, unlockStone } from "../store/misc/action";
+import { setUsername, incrementRedux, unlockStone, incrementStarWars } from "../store/misc/action";
 
 import { FaEmpire, FaJediOrder } from "react-icons/fa";
 
@@ -18,7 +18,7 @@ import { Box, Flex, Text, Center, Square, Circle, Button, VStack, HStack, Stack,
   useColorMode, useColorModeValue,
   useDisclosure, Collapse,
   //Drawer, DrawerBody, DrawerFooter, DrawerHeader, DrawerOverlay, DrawerContent, DrawerCloseButton,
-  useBreakpointValue,
+  useBreakpointValue, useToast,
   Popover, PopoverTrigger, PopoverContent, PopoverArrow, PopoverCloseButton, PopoverBody, PopoverHeader, PopoverFooter,
   Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton,
   FormControl, FormLabel, FormErrorMessage, Input,
@@ -30,10 +30,11 @@ const useFavorites = () => {
     const username = useSelector((state) => state.misc.username);
     const reduxClicks = useSelector((state) => state.misc.reduxClicks);
     const stones = useSelector((state) => state.misc.stones);
-    return { username, reduxClicks, stones };
+    const starWarsLevel = useSelector((state) => state.misc.starWarsLevel);
+    return { username, reduxClicks, stones, starWarsLevel };
 }
 const Favorites = () => {
-  const { username, reduxClicks, stones } = useFavorites();
+  const { username, reduxClicks, stones, starWarsLevel } = useFavorites();
   const dispatch = useDispatch();
 
   const { colorMode, toggleColorMode } = useColorMode();  
@@ -45,6 +46,7 @@ const Favorites = () => {
   const unityModal = useDisclosure();
   const formikRef = React.useRef();
   const unityRef = React.useRef();
+  const toast = useToast();
   const getAccordionIndex = (hash) => {
     switch(hash){
       case "#starwars": 
@@ -114,9 +116,14 @@ const Favorites = () => {
                       <Button as="a" href="https://www.starwars.com/databank" target="_blank">
                         Star Wars Databank
                       </Button>
-                      <Button rightIcon={<ArrowForwardIcon />} bg={useColorModeValue("green.300","red.700")} onClick={starWarsModal.onOpen}
+                      <Button rightIcon={<ArrowForwardIcon />} bg={useColorModeValue("green.300","red.700")} onClick={() => {
+                        starWarsModal.onOpen();
+                        if(starWarsLevel % 2 == 1){
+                          dispatch(incrementStarWars(starWarsLevel));
+                        }
+                      }}
                       _hover={{bg: useColorModeValue("green.400", "red.800")}} _active={{bg: useColorModeValue("green.500", "red.900"), transform: "scale(0.98)"}}>
-                          Begin My Journey
+                         {starWarsLevel > 0 ? "Resume My Journey" : "Begin My Journey"}
                       </Button>
 
                       <Modal isOpen={starWarsModal.isOpen} onClose={starWarsModal.onClose}>
@@ -127,7 +134,7 @@ const Favorites = () => {
                             <HStack>
                             <FaJediOrder/> 
                             <Text>
-                              Padawan
+                            {starWarsLevel > 0 ? "Jedi Knight" : "Jedi Padawan"}
                             </Text>
                             </HStack>
                             :
@@ -135,17 +142,21 @@ const Favorites = () => {
                             <HStack>
                             <FaEmpire/>
                             <Text as="b" color="red.800" fontSize="30px">
-                              Apprentice
+                              {starWarsLevel > 0 ? "Sith Lord" : "Sith Apprentice"}
                             </Text>
                             </HStack>
                             }
                           </ModalHeader>
                           <ModalCloseButton />
                           <ModalBody>
-                            Do or do not. There is no try.
+                            <Text as="i">
+                            Do or do not. There is no try. 
+                            </Text>
                             <br/><br/>
-                            You have no current assignments.
-                            
+                           {starWarsLevel < 2 ? "Mission: Find a Spacecraft. " :
+                            starWarsLevel < 4 ? "Mission: Sample Midichlorians." :
+                            "Mission: Create a Legacy."
+                            }                        
                           </ModalBody>
                         </ModalContent>
                       </Modal>
@@ -302,7 +313,13 @@ const Favorites = () => {
                       <Button colorScheme="purple" onClick={() => {
                         if(reduxClicks == 99){
                           dispatch(unlockStone("power"));
-                          //Toast
+                          toast({
+                            title: "Power Stone Unlocked!",
+                            description: "You are stronger than any mortal man.",
+                            status: "success",
+                            duration: 3000,
+                            isClosable: true,
+                          })
                         }
                         dispatch(incrementRedux(reduxClicks));
                       }}>
@@ -428,7 +445,32 @@ const Favorites = () => {
               </AccordionButton>
               <AccordionPanel>
                 <Flex pb={4} justifyContent="center" w="100%" wrap="wrap">
-                <FavoritesBox hash="#space" start="interests" href="https://www.spacex.com/human-spaceflight/" src="/images/space.jpeg" alt="Outer Space"/>
+                <FavoritesBox hash="#space" start="interests"  src="/images/space.jpeg" alt="Outer Space">
+                  <VStack>
+                    <Text fontSize={["11px", "17px", "20px", "20px"]} fontFamily="Lexend Deca" my="10px" mx={["20px", "20px", "40px", "80px"]} align="left">
+                      Space, the final frontier. There are plans to create a moon base and to mine asteroids. How cool is that!
+                    </Text>
+                    <Stack direction={["column", "row"]} spacing={["6px", "24px"]}>
+                      <Button as="a" href="https://www.spacex.com/human-spaceflight/" target="_blank">
+                        SpaceX
+                      </Button>
+                      <Button isDisabled={starWarsLevel % 2 == 1} onClick={()=>{
+                        if(starWarsLevel < 3 && starWarsLevel % 2 == 0)
+                        {
+                          dispatch(incrementStarWars(starWarsLevel));
+                        }
+                        //dispatch(unlockStone("space"));
+                      }} colorScheme="blue">
+                      {starWarsLevel == 0 ? "🛸 Build a Spaceship" :
+                       starWarsLevel == 1 ? "Spaceship Built 🛸" :
+                       starWarsLevel == 2 ? "👽 Explore the Unknown" :
+                       starWarsLevel == 3 ? "Aliens Discovered 👽" : 
+                       "Contemplate"   
+                      }
+                      </Button>
+                    </Stack>
+                  </VStack>
+                </FavoritesBox>
                 {/* <FavoritesBox href="https://scratch.mit.edu/" src="https://res.cloudinary.com/primer-cloudinary/image/upload/f_auto,q_auto/fo5kxbquaidutqbha6hz" alt="Scratch"/> */}
                 <FavoritesBox hash="#vr" start="interests" src="/images/vr.jpg" alt="Virtual Reality">
                   <VStack>  
