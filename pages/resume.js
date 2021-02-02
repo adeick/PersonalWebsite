@@ -6,15 +6,7 @@ import Sidebar from '../src/components/Sidebar';
 import {
   Image,
   Box,
-  FormControl,
-  FormLabel,
-  Input,
-  FormHelperText,
-  Button,
-  ButtonGroup,
-  Drawer,
   Text,
-  useColorMode,
   useColorModeValue,
 } from '@chakra-ui/react';
 
