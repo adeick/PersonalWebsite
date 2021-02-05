@@ -20,7 +20,6 @@ import {
   HStack,
   VStack,
 } from '@chakra-ui/react';
-//import UncontrolledLottie from '../components/UncontrolledLottie';
 
 const Firestore = () => {
 
