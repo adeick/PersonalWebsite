@@ -4,8 +4,6 @@ import AstronautLottie from '../src/components/AstronautLottie';
 
 
 import {
-  Image,
-  Box,
   Flex,
   Stack,
   Text
