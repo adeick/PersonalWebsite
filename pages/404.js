@@ -21,11 +21,13 @@ function Custom404() {
             <Text color="white" fontSize={[60, 60, 80, 80]} fontFamily="Lexend Deca" display="block" pt="0" mt="0">
                 You look lost.
             </Text>
-            <a href="/">
+            <NextLink href="/">
+            <a>
               <Text as="u" color="blue.600" fontSize={[30, 30, 40, 40]} fontFamily="Lexend Deca" display="block">
                   Take me back home
               </Text>  
             </a>
+            </NextLink>
           </Stack>
             
         </Flex>
