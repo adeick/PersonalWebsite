@@ -13,7 +13,7 @@ import { setUsername, incrementRedux, unlockStone, incrementStarWars } from "../
 
 import { FaEmpire, FaJediOrder } from "react-icons/fa";
 
-import { Box, Flex, Text, Center, Square, Circle, Button, VStack, HStack, Stack, Spacer, Image, SlideFade, Portal, Tooltip, Kbd,
+import { Box, Flex, Text, Button, VStack, HStack, Stack, Spacer, Image, SlideFade, Portal, Tooltip, Kbd,
   Accordion, AccordionItem, AccordionButton, AccordionPanel, AccordionIcon,
   useColorMode, useColorModeValue,
   useDisclosure, Collapse,
