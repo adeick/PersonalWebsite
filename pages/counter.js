@@ -12,13 +12,6 @@ function counter() {
   return (
     <>
       <h1>GLOBAL COUNTER {reduxClicks}</h1>
-      {/* <button onClick={() => dispatch(incrementCounter(counterState))}>
-        Increment +
-      </button>
-      {"  "}
-      <button onClick={() => dispatch(decrementCounter(counterState))}>
-        Decrement -
-      </button> */}
       <button onClick={() => dispatch(incrementRedux(reduxClicks))}>
         Redux Click
       </button>
