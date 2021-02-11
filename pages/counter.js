@@ -5,7 +5,6 @@ import { setUsername, incrementRedux, unlockStone } from "../store/misc/action";
 import Link from "next/link";
 
 function counter() {
-  //const counterState = useSelector((state) => state.counter.counter);
   const reduxClicks = useSelector((state) => state.misc.reduxClicks);
   const dispatch = useDispatch();
 
