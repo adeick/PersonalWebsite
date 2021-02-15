@@ -34,14 +34,14 @@ const IG = () => {
           IG-88, the Assassin Bot        
         </Text>
         <Stack direction={useBreakpointValue({base: "column", md:"row"})} p="0">
-          {useBreakpointValue({md: <Image w={["50px", "50px", "150px", "150px"]} src="/images/IG88.png" alt=""/>, base: null})}
+          {useBreakpointValue({md: <Image w={["0px", "0px", "150px", "150px"]} src="/images/IG88.png" alt=""/>, base: null})}
 
           <Text fontSize={[15, 15, 20, 20]} fontFamily="Lexend Deca">
             IG-88 is a spunky Discord bot with a fast processor and an even faster trigger finger. The only thing more accurate than his aim is his sarcasm, dispensed in heavy doses.
             Besides entertaining us, he has a number of useful abilities: generating random numbers, initiating polls, and saving information into his database of a brain. (SQLite) <br/><br/>
             Don't confuse him with IG-11.
           </Text>
-          {useBreakpointValue({base: <Center><Image mt="30px" w={["130px", "200px", "200px", "200px"]} src="/images/IG88.png" alt=""/></Center>, md: null, lg: null, xl: null})}
+          {useBreakpointValue({base: <Center><Image mt="30px" w={["130px", "200px", "0px", "0px"]} src="/images/IG88.png" alt=""/></Center>, md: null, lg: null, xl: null})}
         </Stack>
         
         </VStack>
