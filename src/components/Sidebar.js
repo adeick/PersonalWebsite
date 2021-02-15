@@ -65,7 +65,7 @@ const Sidebar = (props) => {
                 <Link href='/'><a>
                   <Sidebox text="Home" icon={useColorModeValue("/images/mandalorian.png", "/images/vader2.png")}/>
                 </a></Link>
-                <Link href="./favorites"><a>
+                <Link href="/favorites"><a>
                   <Sidebox text="Favorites" icon="/images/testtube.png"/>
                 </a></Link>
                 <Sidebox isDisabled={true} text="Locked" icon="/images/lock.png"/> 
@@ -78,10 +78,10 @@ const Sidebar = (props) => {
                   </a>
                 </Link>
                 <Sidebox text="GitHub" as="a" href="https://github.com/adeick" target="_blank" icon="/images/purplecat.png"/>
-                <Link href='./resume'><a>
+                <Link href='../resume'><a>
                   <Sidebox text="Resume" icon="/images/clipboard.png"/>
                 </a></Link> 
-                <Link href="./favorites"><a>
+                <Link href="../favorites"><a>
                   <Sidebox text="Favorites" icon="/images/testtube.png"/>
                 </a></Link>
               </Stack>
