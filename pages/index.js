@@ -31,9 +31,9 @@ const Index = () => {
         <Text as="b" fontSize={[30, 30, 60, 80]} w="100%" fontFamily="Lexend Deca" mb="20px">
         Hello, I'm Andrew Deick!
         </Text>
-        <Text fontSize={[25, 25, 40, 40]} fontFamily="Lexend Deca">
-          I am a Software Engineer at Iowa State, and love learning new skills. Currently, my interests are in Virtual Reality, 
-          Front-End Development, and Machine Learning. Check out <Link href='./favorites'><a><Text as="u" color={useColorModeValue("green.500", "green.300")}>Favorites</Text></a></Link> for more!
+        <Text fontSize={[25, 25, 40, 40]} fontFamily="Newsreader">
+          I am a Software Engineer at Iowa State, and enjoy learning new skills. Currently, my interests are in Virtual Reality, 
+          Front-End Development, and Machine Learning. Check out <Link href='./favorites'><a><Text as="u" fontFamily="Lexend Deca" color={useColorModeValue("green.500", "green.300")}>Favorites</Text></a></Link> for more!
         </Text>
         <Flex mt="20px" w="100%" bg={useColorModeValue("blue.100", "gray.900")} justifyContent="center" alignItems="center" position="absolute" bottom="0" pb="30px">
         {useBreakpointValue({md: 
