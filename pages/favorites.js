@@ -405,7 +405,12 @@ const Favorites = () => {
                       <Button colorScheme="teal" isDisabled={useBreakpointValue({base: true, md: false})} onClick={() => {
                         unityModal.onOpen();
                         setTimeout(() => {
+                          try{
                           document.getElementById("rocketBoost").contentWindow.focus();
+                          }
+                          catch {
+                            
+                          }
                         }, 3000)
                       }}>
                           {useBreakpointValue({base: "💻 Required", md: "🚀 Play!"})}
