@@ -50,11 +50,11 @@ const GitHubTutorial = () => {
         <Flex bg="orange.100" borderRadius="10px" my="30px" border="3px solid black" w="100%" py="5px"
         alignItems="center" hidden={useBreakpointValue({base: false, md: true})}
         px="10px">
-            <Icon as={AiOutlineWarning}/>
-            <Text as="b" fontSize={[18, 18, 20, 20]} pl="5px">
+            <Icon as={AiOutlineWarning} color="black"/>
+            <Text as="b" fontSize={[18, 18, 20, 20]} pl="5px" color="black">
             Note: 
             </Text>
-            <Text fontSize={[18, 18, 20, 20]} pl="5px">
+            <Text fontSize={[18, 18, 20, 20]} pl="5px" color="black">
             A desktop or laptop computer is required to use GitHub Desktop
             </Text>
         </Flex>
@@ -63,7 +63,7 @@ const GitHubTutorial = () => {
         Before we get started...
         </Text>
 
-        <Flex bg={useColorModeValue("blue.200", "gray.900")} borderRadius="10px" my="30px" border="3px solid black" w="100%" py="5px"
+        <Flex bg={useColorModeValue("blue.200", "gray.700")} borderRadius="10px" my="30px" border="3px solid" w="100%" py="5px"
         alignItems="center"
         px="10px">
         <VStack>
@@ -87,7 +87,7 @@ const GitHubTutorial = () => {
 
         <Accordion allowToggle w="100%" defaultIndex={null}>
             <AccordionItem mb="5px">
-              <AccordionButton bg="blue.100" borderY="2px solid">
+              <AccordionButton bg={useColorModeValue("blue.100","gray.900")} borderY="2px solid">
                 <Flex id="git" alignItems="center">
                 <Image src="/images/git.png" alt="git" w="30px"/>
                     <Text ml="5px" fontSize={["15px", "15px", "15px", "20px"]} textAlign="left" fontFamily="Lexend Deca">
@@ -97,7 +97,7 @@ const GitHubTutorial = () => {
                 <Spacer/>
                 <AccordionIcon />
               </AccordionButton>
-              <AccordionPanel bg="blue.100">
+              <AccordionPanel bg={useColorModeValue("blue.100","gray.900")}>
                 <Flex justifyContent="center" w="100%" wrap="wrap">
                 <Text fontSize={[18, 18, 20, 20]} pl="30px" fontFamily="Newsreader">
                 Git is a version control software. This means that it saves all the old versions 
@@ -108,9 +108,9 @@ const GitHubTutorial = () => {
               </AccordionPanel>
             </AccordionItem>
             <AccordionItem mb="5px">
-              <AccordionButton bg="blue.100" borderY="2px solid">
+              <AccordionButton bg={useColorModeValue("blue.100","gray.900")} borderY="2px solid">
                 <Flex id="git" alignItems="center">
-                <Image src="/images/github.png" alt="git" w="45px"/>
+                <Image src="/images/github.png" alt="git" w="30px"/>
                     <Text ml="5px" fontSize={["15px", "15px", "15px", "20px"]} textAlign="left" fontFamily="Lexend Deca">
                     What is GitHub?
                     </Text>  
@@ -118,7 +118,7 @@ const GitHubTutorial = () => {
                 <Spacer/>
                 <AccordionIcon />
               </AccordionButton>
-              <AccordionPanel bg="blue.100">
+              <AccordionPanel bg={useColorModeValue("blue.100","gray.900")}>
                 <Flex justifyContent="center" w="100%" wrap="wrap">
                 <Text fontSize={[18, 18, 20, 20]} pl="30px" fontFamily="Newsreader">
                 GitHub is a service that helps you use Git collaboratively. You put code on 
@@ -131,7 +131,7 @@ const GitHubTutorial = () => {
               </AccordionPanel>
             </AccordionItem>
             <AccordionItem mb="5px">
-              <AccordionButton bg="blue.100" borderY="2px solid">
+              <AccordionButton bg={useColorModeValue("blue.100","gray.900")} borderY="2px solid">
                 <Flex id="git" alignItems="center">
                 <Image src="/images/purplecat.png" alt="git" w="30px"/>
                     <Text ml="5px" fontSize={["15px", "15px", "15px", "20px"]} textAlign="left" fontFamily="Lexend Deca">
@@ -141,7 +141,7 @@ const GitHubTutorial = () => {
                 <Spacer/>
                 <AccordionIcon />
               </AccordionButton>
-              <AccordionPanel bg="blue.100">
+              <AccordionPanel bg={useColorModeValue("blue.100","gray.900")}>
                 <Flex justifyContent="center" w="100%" wrap="wrap">
                 <Text fontSize={[18, 18, 20, 20]} pl="30px" fontFamily="Newsreader">
                 GitHub Desktop is an application that makes it easier to use GitHub. If GitHub is the Google
@@ -152,7 +152,7 @@ const GitHubTutorial = () => {
               </AccordionPanel>
             </AccordionItem>
             <AccordionItem mb="5px">
-              <AccordionButton bg="blue.100" borderY="2px solid">
+              <AccordionButton bg={useColorModeValue("blue.100","gray.900")} borderY="2px solid">
                 <Flex id="git" alignItems="center">
                 <Image src="/images/question.png" alt="git" w="30px"/>
                     <Text ml="5px" fontSize={["15px", "15px", "15px", "20px"]} textAlign="left" fontFamily="Lexend Deca">
@@ -162,7 +162,7 @@ const GitHubTutorial = () => {
                 <Spacer/>
                 <AccordionIcon />
               </AccordionButton>
-              <AccordionPanel bg="blue.100">
+              <AccordionPanel bg={useColorModeValue("blue.100","gray.900")}>
                 <Flex justifyContent="center" w="100%" wrap="wrap">
                 <Text fontSize={[18, 18, 20, 20]} pl="30px" fontFamily="Newsreader">
                 Repo is an abbreviation for repository, which is a collection of code that serves a 
@@ -174,7 +174,7 @@ const GitHubTutorial = () => {
               </AccordionPanel>
             </AccordionItem>
             <AccordionItem mb="5px">
-              <AccordionButton bg="blue.100" borderY="2px solid">
+              <AccordionButton bg={useColorModeValue("blue.100","gray.900")} borderY="2px solid">
                 <Flex id="git" alignItems="center">
                 <Image src="/images/book.png" alt="git" w="30px"/>
                     <Text ml="5px" fontSize={["15px", "15px", "15px", "20px"]} textAlign="left" fontFamily="Lexend Deca">
@@ -184,7 +184,7 @@ const GitHubTutorial = () => {
                 <Spacer/>
                 <AccordionIcon />
               </AccordionButton>
-              <AccordionPanel bg="blue.100">
+              <AccordionPanel bg={useColorModeValue("blue.100","gray.900")}>
                 <Flex justifyContent="center" w="100%" wrap="wrap">
                 <Text fontSize={[18, 18, 20, 20]} pl="30px" fontFamily="Newsreader">
                 GitHub is enormous, and its repositories cover a wide range of disciplines. Perhaps
@@ -219,7 +219,7 @@ const GitHubTutorial = () => {
              If you're not sure if you're signed in, you can look under "File > Options". You should see a 
              screen like this if you are signed in.
         </Text>
-        <Image borderRadius="10px" src="/images/GitHubSignIn.png" alt="Green Code Example"/>
+        <Image borderRadius="10px" src="/images/GitHubSignIn.png" alt="Sign In Example"/>
         <Text as="b" fontSize={[25, 25, 30, 40]} pt="10px" textAlign="left" fontFamily="Lexend Deca" w="100%">
         4. Locate your Desired Repository
         </Text>
@@ -229,18 +229,27 @@ const GitHubTutorial = () => {
             GitHub for a repository that interests you. <br/><br/>
             Now, click the green <Text fontFamily="Lexend Deca" color="green.500" as="b">Code</Text> button to open the clone menu.
         </Text>
+        <Image src="/images/GitHubCodeExample.png" alt="Green Code Example"/>
         <Text as="b" fontSize={[25, 25, 30, 40]} pt="10px" textAlign="left" fontFamily="Lexend Deca" w="100%">
         5. Clone The Repository
         </Text>
-        <Text fontSize={[18, 18, 20, 20]} pl="30px" fontFamily="Newsreader">
-            <Text fontFamily="Lexend Deca" as="b">Method 1: Open With GitHub Desktop</Text><br/>
-            Click "Open with GitHub Desktop", and a Dialog Box should open, as shown below. 
-            If it does not, then use Method 2.
+        <Text fontSize={[18, 18, 20, 20]} pl="30px" fontFamily="Newsreader" w="100%">
+            {/* <Text fontFamily="Lexend Deca" as="b">Method 1: Open With GitHub Desktop</Text><br/> */}
+            Click "Open with GitHub Desktop", and a Dialog Box will open, as shown below. 
         </Text>
         <Image borderRadius="10px" src="/images/GitHubDialogExample.png" alt="Dialogue Example"/>
-        <Text fontSize={[18, 18, 20, 20]} pl="30px" fontFamily="Newsreader">
+        <Text fontSize={[18, 18, 20, 20]} pl="30px" pt="10px" fontFamily="Newsreader">
             Click on "Open GitHubDesktop.exe", which should bring you to the following screen in GitHub Desktop:
         </Text> 
+        <Image borderRadius="10px" src="/images/GitHubCloneExample.png" alt="Clone Example"/>
+        <Text fontSize={[18, 18, 20, 20]} pl="30px" pt="10px" fontFamily="Newsreader">
+            Choose your local path (the C drive is usually a good place), and click the 
+            blue <Text fontFamily="Lexend Deca" color="blue.500" as="b">Clone</Text> button to save the repository 
+            to your local device.
+        </Text> 
+        <Text as="b" fontSize={[25, 25, 30, 40]} pt="10px" textAlign="center" fontFamily="Lexend Deca" w="100%">
+        🎉 Voila! You have cloned your first GitHub repository.
+        </Text>
         </VStack>
         </VStack>
       </Flex>
