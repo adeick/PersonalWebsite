@@ -202,9 +202,10 @@ const GitHubTutorial = () => {
         </Text>
         <Text fontSize={[18, 18, 20, 20]} pl="30px" fontFamily="Newsreader">
             If you haven't done it already, you'll need to install GitHub Desktop. You can download it
-            for Windows and Mac right <a href="https://desktop.github.com/"><Text color="purple.500" as="u">here</Text></a>. 
+            for Windows and Mac right <a href="https://desktop.github.com/"><Text color="purple.500" 
+            fontFamily="Lexend Deca" as="u">here</Text></a>. 
         </Text>
-        <Image src="/images/GitHubDesktop.png" alt="GitHub Desktop Download"/>
+        <Image borderRadius="10px"  src="/images/GitHubDesktop.png" alt="GitHub Desktop Download"/>
         <Text fontSize={[18, 18, 20, 20]} pl="30px" pt="30px" fontFamily="Newsreader">
             Click "Open" when it finishes downloading, and follow all steps as the setup wizard demonstrates.
         </Text>
@@ -213,9 +214,33 @@ const GitHubTutorial = () => {
         </Text>
         <Text fontSize={[18, 18, 20, 20]} pl="30px" fontFamily="Newsreader">
             If you don't have a GitHub account, create one <a href="a.	https://github.com/join?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home">
-            <Text color="purple.500" as="u">here</Text></a>. Login to GitHub on your browser,
-             and also login to GitHub Desktop, if you're not already signed in.
+            <Text fontFamily="Lexend Deca" color="purple.500" as="u">here</Text></a>. Login to GitHub on your browser,
+             and also login to GitHub Desktop, if you're not already signed in.<br/><br/>
+             If you're not sure if you're signed in, you can look under "File > Options". You should see a 
+             screen like this if you are signed in.
         </Text>
+        <Image borderRadius="10px" src="/images/GitHubSignIn.png" alt="Green Code Example"/>
+        <Text as="b" fontSize={[25, 25, 30, 40]} pt="10px" textAlign="left" fontFamily="Lexend Deca" w="100%">
+        4. Locate your Desired Repository
+        </Text>
+        <Text fontSize={[18, 18, 20, 20]} pl="30px" fontFamily="Newsreader">
+            You may already have a GitHub account in mind that you want to clone. If so, navigate to that 
+            repository using Google or GitHub's search functionality. If not, I encourage you to explore 
+            GitHub for a repository that interests you. <br/><br/>
+            Now, click the green <Text fontFamily="Lexend Deca" color="green.500" as="b">Code</Text> button to open the clone menu.
+        </Text>
+        <Text as="b" fontSize={[25, 25, 30, 40]} pt="10px" textAlign="left" fontFamily="Lexend Deca" w="100%">
+        5. Clone The Repository
+        </Text>
+        <Text fontSize={[18, 18, 20, 20]} pl="30px" fontFamily="Newsreader">
+            <Text fontFamily="Lexend Deca" as="b">Method 1: Open With GitHub Desktop</Text><br/>
+            Click "Open with GitHub Desktop", and a Dialog Box should open, as shown below. 
+            If it does not, then use Method 2.
+        </Text>
+        <Image borderRadius="10px" src="/images/GitHubDialogExample.png" alt="Dialogue Example"/>
+        <Text fontSize={[18, 18, 20, 20]} pl="30px" fontFamily="Newsreader">
+            Click on "Open GitHubDesktop.exe", which should bring you to the following screen in GitHub Desktop:
+        </Text> 
         </VStack>
         </VStack>
       </Flex>
