@@ -6,6 +6,8 @@ import { FiGithub, FiLinkedin, FiMail } from 'react-icons/fi'
 import { RiPagesLine } from 'react-icons/ri'
 
 import { AiOutlineWarning } from 'react-icons/ai'
+import { DiGit } from 'react-icons/di'
+
 
 import {
   Image,
@@ -30,7 +32,6 @@ const GitHubTutorial = () => {
   <div id="Website">
     <Sidebar />
       <Flex bg={useColorModeValue("blue.100", "gray.900")} justifyContent="center"
-      h={window.innerHeight} 
       w="85vw" right="0" position="absolute" className="Background" 
       backgroundImage={
         useColorModeValue(
@@ -40,8 +41,8 @@ const GitHubTutorial = () => {
       px={["20px", "20px", "40px", "80px"]} py="4%">
         <VStack>
         <Flex w="100%" alignItems="center" justifyContent="center">
-        <Text as="b" fontSize={[20, 20, 30, 60]} textAlign="center" fontFamily="Lexend Deca" mb="20px">
-        How to Clone a GitHub Repository<br/> with GitHub Desktop
+        <Text as="b" fontSize={[25, 25, 30, 60]} textAlign="center" fontFamily="Lexend Deca" mb="20px">
+        How to Clone a GitHub Repository with GitHub Desktop
         </Text>
         </Flex>
         <VStack w="100%" h="100%" spacing="0px" maxW="750px">
@@ -77,7 +78,7 @@ const GitHubTutorial = () => {
         </Flex>
 
         <Text as="b" fontSize={[25, 25, 30, 40]} textAlign="left" fontFamily="Lexend Deca" w="100%">
-        1. What is GitHub Desktop?
+        1. Cloning and Repos and Git, Oh My!
         </Text>
         <Text fontSize={[18, 18, 20, 20]} pl="30px" fontFamily="Newsreader">
             Depending on your level of coding experience, you've probably had different levels of exposure to Git version control. 
@@ -85,23 +86,136 @@ const GitHubTutorial = () => {
         </Text>
 
         <Accordion allowToggle w="100%" defaultIndex={null}>
-            <AccordionItem>
-              <AccordionButton borderY="4px solid">
-                <Box flex="1" textAlign="center" id="interests">
-                  <Text fontSize={["15px", "30px", "30px", "40px"]} fontFamily="Lexend Deca" my="10px" mx={["20px", "20px", "40px", "80px"]}>
-                  What is Git?
-                  </Text>  
-                </Box>
+            <AccordionItem mb="5px">
+              <AccordionButton bg="blue.100" borderY="2px solid">
+                <Flex id="git" alignItems="center">
+                <Image src="/images/git.png" alt="git" w="30px"/>
+                    <Text ml="5px" fontSize={["15px", "15px", "15px", "20px"]} textAlign="left" fontFamily="Lexend Deca">
+                    What is Git?
+                    </Text>  
+                </Flex>
+                <Spacer/>
                 <AccordionIcon />
               </AccordionButton>
-              <AccordionPanel>
-                <Flex pb={4} justifyContent="center" w="100%" wrap="wrap">
-                I'm glad you asked
+              <AccordionPanel bg="blue.100">
+                <Flex justifyContent="center" w="100%" wrap="wrap">
+                <Text fontSize={[18, 18, 20, 20]} pl="30px" fontFamily="Newsreader">
+                Git is a version control software. This means that it saves all the old versions 
+                of your project in a folder on your device. If you find a bug in the current version, 
+                you can look through the past versions to see what created the bug.
+                </Text>
+                </Flex>
+              </AccordionPanel>
+            </AccordionItem>
+            <AccordionItem mb="5px">
+              <AccordionButton bg="blue.100" borderY="2px solid">
+                <Flex id="git" alignItems="center">
+                <Image src="/images/github.png" alt="git" w="45px"/>
+                    <Text ml="5px" fontSize={["15px", "15px", "15px", "20px"]} textAlign="left" fontFamily="Lexend Deca">
+                    What is GitHub?
+                    </Text>  
+                </Flex>
+                <Spacer/>
+                <AccordionIcon />
+              </AccordionButton>
+              <AccordionPanel bg="blue.100">
+                <Flex justifyContent="center" w="100%" wrap="wrap">
+                <Text fontSize={[18, 18, 20, 20]} pl="30px" fontFamily="Newsreader">
+                GitHub is a service that helps you use Git collaboratively. You put code on 
+                GitHub, which allows other people to see and use it. It's also a security measure, 
+                since if your computer crashes, then your code will already be safely on the cloud. 
+                There are alternatives to GitHub, like GitLab and GitKraken, but they are not as
+                 popular or as ubiquitous as GitHub.
+                </Text>
+                </Flex>
+              </AccordionPanel>
+            </AccordionItem>
+            <AccordionItem mb="5px">
+              <AccordionButton bg="blue.100" borderY="2px solid">
+                <Flex id="git" alignItems="center">
+                <Image src="/images/purplecat.png" alt="git" w="30px"/>
+                    <Text ml="5px" fontSize={["15px", "15px", "15px", "20px"]} textAlign="left" fontFamily="Lexend Deca">
+                    What is GitHub Desktop?
+                    </Text>  
+                </Flex>
+                <Spacer/>
+                <AccordionIcon />
+              </AccordionButton>
+              <AccordionPanel bg="blue.100">
+                <Flex justifyContent="center" w="100%" wrap="wrap">
+                <Text fontSize={[18, 18, 20, 20]} pl="30px" fontFamily="Newsreader">
+                GitHub Desktop is an application that makes it easier to use GitHub. If GitHub is the Google
+                Search Engine, then GitHub desktop is like Google Chrome. Another popular alternative to GitHub Desktop is an 
+                application called GitBash, but it's challenging to learn and intimidating for novice programmers.
+                </Text>
+                </Flex>
+              </AccordionPanel>
+            </AccordionItem>
+            <AccordionItem mb="5px">
+              <AccordionButton bg="blue.100" borderY="2px solid">
+                <Flex id="git" alignItems="center">
+                <Image src="/images/question.png" alt="git" w="30px"/>
+                    <Text ml="5px" fontSize={["15px", "15px", "15px", "20px"]} textAlign="left" fontFamily="Lexend Deca">
+                    Repos and Cloning... What does it mean?
+                    </Text>  
+                </Flex>
+                <Spacer/>
+                <AccordionIcon />
+              </AccordionButton>
+              <AccordionPanel bg="blue.100">
+                <Flex justifyContent="center" w="100%" wrap="wrap">
+                <Text fontSize={[18, 18, 20, 20]} pl="30px" fontFamily="Newsreader">
+                Repo is an abbreviation for repository, which is a collection of code that serves a 
+                specific purpose. A repository can have thousands of files, or just one. Cloning a 
+                repository is the act of copying that code onto your local computer, whether you 
+                intend to run it, update it, or learn from it is all up to you!
+                </Text>
+                </Flex>
+              </AccordionPanel>
+            </AccordionItem>
+            <AccordionItem mb="5px">
+              <AccordionButton bg="blue.100" borderY="2px solid">
+                <Flex id="git" alignItems="center">
+                <Image src="/images/book.png" alt="git" w="30px"/>
+                    <Text ml="5px" fontSize={["15px", "15px", "15px", "20px"]} textAlign="left" fontFamily="Lexend Deca">
+                    Why would I ever use this?
+                    </Text>  
+                </Flex>
+                <Spacer/>
+                <AccordionIcon />
+              </AccordionButton>
+              <AccordionPanel bg="blue.100">
+                <Flex justifyContent="center" w="100%" wrap="wrap">
+                <Text fontSize={[18, 18, 20, 20]} pl="30px" fontFamily="Newsreader">
+                GitHub is enormous, and its repositories cover a wide range of disciplines. Perhaps
+                you are a researcher who wants to download software to analyze a graph, or maybe you 
+                want to install a video game. GitHub doesn't even need to be code, some people use it
+                to store recipes or write books collaboratively.
+                </Text>
                 </Flex>
               </AccordionPanel>
             </AccordionItem>
           </Accordion>
 
+          <Text as="b" fontSize={[25, 25, 30, 40]} pt="5px" textAlign="left" fontFamily="Lexend Deca" w="100%">
+        2. Downloading Desktop
+        </Text>
+        <Text fontSize={[18, 18, 20, 20]} pl="30px" fontFamily="Newsreader">
+            If you haven't done it already, you'll need to install GitHub Desktop. You can download it
+            for Windows and Mac right <a href="https://desktop.github.com/"><Text color="purple.500" as="u">here</Text></a>. 
+        </Text>
+        <Image src="/images/GitHubDesktop.png" alt="GitHub Desktop Download"/>
+        <Text fontSize={[18, 18, 20, 20]} pl="30px" pt="30px" fontFamily="Newsreader">
+            Click "Open" when it finishes downloading, and follow all steps as the setup wizard demonstrates.
+        </Text>
+        <Text as="b" fontSize={[25, 25, 30, 40]} pt="5px" textAlign="left" fontFamily="Lexend Deca" w="100%">
+        3. Create a GitHub account (or login)
+        </Text>
+        <Text fontSize={[18, 18, 20, 20]} pl="30px" fontFamily="Newsreader">
+            If you don't have a GitHub account, create one <a href="a.	https://github.com/join?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home">
+            <Text color="purple.500" as="u">here</Text></a>. Login to GitHub on your browser,
+             and also login to GitHub Desktop, if you're not already signed in.
+        </Text>
         </VStack>
         </VStack>
       </Flex>

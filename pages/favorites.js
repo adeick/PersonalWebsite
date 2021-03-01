@@ -84,7 +84,7 @@ const Favorites = () => {
 
   return(
     <div id="Website">
-      <Box w="200vw" h="100%"position="fixed" zIndex={-1} bg={useColorModeValue("blue.100", "gray.900")}/>
+      <Box w="200vw" h="100%" position="fixed" zIndex={-1} bg={useColorModeValue("blue.100", "gray.900")}/>
       <Sidebar />
       <Box bg={useColorModeValue("blue.100", "gray.900")} 
       backgroundImage={
