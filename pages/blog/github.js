@@ -62,7 +62,7 @@ const GitHubTutorial = () => {
         <Text fontSize={[15, 15, 15, 20]} textAlign="left" fontFamily="Lexend Deca" w="100%">
         Before we get started...
         </Text>
-
+{/* Requirements Box */}
         <Flex bg={useColorModeValue("blue.200", "gray.700")} borderRadius="10px" my="30px" border="3px solid" w="100%" py="5px"
         alignItems="center"
         px="10px">
@@ -76,7 +76,9 @@ const GitHubTutorial = () => {
             </Text>
             </VStack>
         </Flex>
-
+        {/* Step 1 */}
+        <Box bg={useColorModeValue("blue.200", "gray.700")} borderRadius="10px" my="30px" border="3px solid" w="100%" py="5px"
+        px="10px">
         <Text as="b" fontSize={[25, 25, 30, 40]} textAlign="left" fontFamily="Lexend Deca" w="100%">
         1. Cloning and Repos and Git, Oh My!
         </Text>
@@ -110,7 +112,7 @@ const GitHubTutorial = () => {
             <AccordionItem mb="5px">
               <AccordionButton bg={useColorModeValue("blue.100","gray.900")} borderY="2px solid">
                 <Flex id="git" alignItems="center">
-                <Image src="/images/github.png" alt="git" w="30px"/>
+                <Image src={useColorModeValue("/images/github.png","/images/githubwhite.webp")} alt="git" w="30px"/>
                     <Text ml="5px" fontSize={["15px", "15px", "15px", "20px"]} textAlign="left" fontFamily="Lexend Deca">
                     What is GitHub?
                     </Text>  
@@ -196,7 +198,10 @@ const GitHubTutorial = () => {
               </AccordionPanel>
             </AccordionItem>
           </Accordion>
-
+          </Box>
+        {/* Step 2 */}
+        <Box bg={useColorModeValue("blue.200", "gray.700")} borderRadius="10px" my="30px" border="3px solid" w="100%" py="5px"
+        px="10px">
           <Text as="b" fontSize={[25, 25, 30, 40]} pt="5px" textAlign="left" fontFamily="Lexend Deca" w="100%">
         2. Downloading Desktop
         </Text>
@@ -209,44 +214,58 @@ const GitHubTutorial = () => {
         <Text fontSize={[18, 18, 20, 20]} pl="30px" pt="30px" fontFamily="Newsreader">
             Click "Open" when it finishes downloading, and follow all steps as the setup wizard demonstrates.
         </Text>
-        <Text as="b" fontSize={[25, 25, 30, 40]} pt="5px" textAlign="left" fontFamily="Lexend Deca" w="100%">
-        3. Create a GitHub account (or login)
-        </Text>
-        <Text fontSize={[18, 18, 20, 20]} pl="30px" fontFamily="Newsreader">
-            If you don't have a GitHub account, create one <a href="a.	https://github.com/join?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home">
-            <Text fontFamily="Lexend Deca" color="purple.500" as="u">here</Text></a>. Login to GitHub on your browser,
-             and also login to GitHub Desktop, if you're not already signed in.<br/><br/>
-             If you're not sure if you're signed in, you can look under "File > Options". You should see a 
-             screen like this if you are signed in.
-        </Text>
-        <Image borderRadius="10px" src="/images/GitHubSignIn.png" alt="Sign In Example"/>
-        <Text as="b" fontSize={[25, 25, 30, 40]} pt="10px" textAlign="left" fontFamily="Lexend Deca" w="100%">
-        4. Locate your Desired Repository
-        </Text>
-        <Text fontSize={[18, 18, 20, 20]} pl="30px" fontFamily="Newsreader">
-            You may already have a GitHub account in mind that you want to clone. If so, navigate to that 
-            repository using Google or GitHub's search functionality. If not, I encourage you to explore 
-            GitHub for a repository that interests you. <br/><br/>
-            Now, click the green <Text fontFamily="Lexend Deca" color="green.500" as="b">Code</Text> button to open the clone menu.
-        </Text>
-        <Image src="/images/GitHubCodeExample.png" alt="Green Code Example"/>
-        <Text as="b" fontSize={[25, 25, 30, 40]} pt="10px" textAlign="left" fontFamily="Lexend Deca" w="100%">
-        5. Clone The Repository
-        </Text>
-        <Text fontSize={[18, 18, 20, 20]} pl="30px" fontFamily="Newsreader" w="100%">
-            {/* <Text fontFamily="Lexend Deca" as="b">Method 1: Open With GitHub Desktop</Text><br/> */}
-            Click "Open with GitHub Desktop", and a Dialog Box will open, as shown below. 
-        </Text>
-        <Image borderRadius="10px" src="/images/GitHubDialogExample.png" alt="Dialogue Example"/>
-        <Text fontSize={[18, 18, 20, 20]} pl="30px" pt="10px" fontFamily="Newsreader">
-            Click on "Open GitHubDesktop.exe", which should bring you to the following screen in GitHub Desktop:
-        </Text> 
-        <Image borderRadius="10px" src="/images/GitHubCloneExample.png" alt="Clone Example"/>
-        <Text fontSize={[18, 18, 20, 20]} pl="30px" pt="10px" fontFamily="Newsreader">
-            Choose your local path (the C drive is usually a good place), and click the 
-            blue <Text fontFamily="Lexend Deca" color="blue.500" as="b">Clone</Text> button to save the repository 
-            to your local device.
-        </Text> 
+        </Box>
+        {/* Step 3 */}
+        <Box bg={useColorModeValue("blue.200", "gray.700")} borderRadius="10px" my="30px" border="3px solid" w="100%" py="5px" px="10px">
+            <Text as="b" fontSize={[25, 25, 30, 40]} pt="5px" textAlign="left" fontFamily="Lexend Deca" w="100%">
+            3. Create a GitHub account (or login)
+            </Text>
+            <Text fontSize={[18, 18, 20, 20]} pl="30px" fontFamily="Newsreader">
+                If you don't have a GitHub account, create one <a href="a.	https://github.com/join?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home">
+                <Text fontFamily="Lexend Deca" color="purple.500" as="u">here</Text></a>. Login to GitHub on your browser,
+                and also login to GitHub Desktop, if you're not already signed in.<br/><br/>
+                If you're not sure if you're signed in, you can look under "File > Options". You should see a 
+                screen like this if you are signed in.
+            </Text>
+            <Image borderRadius="10px" src="/images/GitHubSignIn.png" alt="Sign In Example"/>
+        </Box>
+        {/* Step 4 */}
+        <Box bg={useColorModeValue("blue.200", "gray.700")} borderRadius="10px" my="30px" border="3px solid" w="100%" py="5px"
+        px="10px">
+            <Text as="b" fontSize={[25, 25, 30, 40]} pt="10px" textAlign="left" fontFamily="Lexend Deca" w="100%">
+            4. Locate your Desired Repository
+            </Text>
+            <Text fontSize={[18, 18, 20, 20]} pl="30px" fontFamily="Newsreader">
+                You may already have a GitHub account in mind that you want to clone. If so, navigate to that 
+                repository using Google or GitHub's search functionality. If not, I encourage you to explore 
+                GitHub for a repository that interests you. <br/><br/>
+                Now, click the green <Text fontFamily="Lexend Deca" color="green.500" as="b">Code</Text> button to open the clone menu.
+            </Text>
+            <Image src="/images/GitHubCodeExample.png" alt="Green Code Example"/>
+        </Box>
+        {/* Step 5 */}
+        <Box bg={useColorModeValue("blue.200", "gray.700")} borderRadius="10px" my="30px" border="3px solid" w="100%" py="5px"
+        px="10px">
+        <VStack>
+            <Text as="b" fontSize={[25, 25, 30, 40]} pt="10px" textAlign="left" fontFamily="Lexend Deca" w="100%">
+            5. Clone The Repository
+            </Text>
+            <Text fontSize={[18, 18, 20, 20]} pl="30px" fontFamily="Newsreader" w="100%">
+                {/* <Text fontFamily="Lexend Deca" as="b">Method 1: Open With GitHub Desktop</Text><br/> */}
+                Click "Open with GitHub Desktop", and a Dialog Box will open, as shown below. 
+            </Text>
+            <Image borderRadius="10px" src="/images/GitHubDialogExample.png" alt="Dialogue Example"/>
+            <Text fontSize={[18, 18, 20, 20]} pl="30px" pt="10px" fontFamily="Newsreader">
+                Click on "Open GitHubDesktop.exe", which should bring you to the following screen in GitHub Desktop:
+            </Text> 
+            <Image borderRadius="10px" src="/images/GitHubCloneExample.png" alt="Clone Example"/>
+            <Text fontSize={[18, 18, 20, 20]} pl="30px" pt="10px" fontFamily="Newsreader">
+                Choose your local path (the C drive is usually a good place), and click the 
+                blue <Text fontFamily="Lexend Deca" color="blue.500" as="b">Clone</Text> button to save the repository 
+                to your local device.
+            </Text>
+        </VStack>
+        </Box> 
         <Text as="b" fontSize={[25, 25, 30, 40]} pt="10px" textAlign="center" fontFamily="Lexend Deca" w="100%">
         🎉 Voila! You have cloned your first GitHub repository.
         </Text>
