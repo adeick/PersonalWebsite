@@ -20,7 +20,7 @@ import {
   Text,
   useColorMode,
   useColorModeValue,
-  VStack, Spacer, Icon,
+  VStack, HStack, Spacer, Icon,
   useBreakpointValue, 
   Alert, AlertIcon, AlertTitle, AlertDescription,
   Accordion, AccordionItem, AccordionButton, AccordionPanel, AccordionIcon,
@@ -31,16 +31,19 @@ const GitHubTutorial = () => {
   return(
   <div id="Website">
     <Sidebar />
-      <Flex bg={useColorModeValue("blue.100", "gray.900")} justifyContent="center"
+      <Flex bg={useColorModeValue("blue.100", "gray.900")} justifyContent="center" flexDirection="column"
       w="85vw" right="0" position="absolute" className="Background" 
       backgroundImage={
         useColorModeValue(
         `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='88' height='88' viewBox='0 0 88 88'%3E%3Cg fill='%234072fb' fill-opacity='0.09'%3E%3Cpath fill-rule='evenodd' d='M29.42 29.41c.36-.36.58-.85.58-1.4V0h-4v26H0v4h28c.55 0 1.05-.22 1.41-.58h.01zm0 29.18c.36.36.58.86.58 1.4V88h-4V62H0v-4h28c.56 0 1.05.22 1.41.58zm29.16 0c-.36.36-.58.85-.58 1.4V88h4V62h26v-4H60c-.55 0-1.05.22-1.41.58h-.01zM62 26V0h-4v28c0 .55.22 1.05.58 1.41.37.37.86.59 1.41.59H88v-4H62zM18 36c0-1.1.9-2 2-2h10a2 2 0 1 1 0 4H20a2 2 0 0 1-2-2zm0 16c0-1.1.9-2 2-2h10a2 2 0 1 1 0 4H20a2 2 0 0 1-2-2zm16-26a2 2 0 0 1 2-2 2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4zm16 0a2 2 0 0 1 2-2 2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4zM34 58a2 2 0 0 1 2-2 2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4zm16 0a2 2 0 0 1 2-2 2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4zM34 78a2 2 0 0 1 2-2 2 2 0 0 1 2 2v6a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-6zm16 0a2 2 0 0 1 2-2 2 2 0 0 1 2 2v6a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-6zM34 4a2 2 0 0 1 2-2 2 2 0 0 1 2 2v6a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4zm16 0a2 2 0 0 1 2-2 2 2 0 0 1 2 2v6a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4zm-8 82a2 2 0 1 1 4 0v2h-4v-2zm0-68a2 2 0 1 1 4 0v10a2 2 0 1 1-4 0V18zM66 4a2 2 0 1 1 4 0v8a2 2 0 1 1-4 0V4zm0 72a2 2 0 1 1 4 0v8a2 2 0 1 1-4 0v-8zm-48 0a2 2 0 1 1 4 0v8a2 2 0 1 1-4 0v-8zm0-72a2 2 0 1 1 4 0v8a2 2 0 1 1-4 0V4zm24-4h4v2a2 2 0 1 1-4 0V0zm0 60a2 2 0 1 1 4 0v10a2 2 0 1 1-4 0V60zm14-24c0-1.1.9-2 2-2h10a2 2 0 1 1 0 4H58a2 2 0 0 1-2-2zm0 16c0-1.1.9-2 2-2h10a2 2 0 1 1 0 4H58a2 2 0 0 1-2-2zm-28-6a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm8 26a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm16 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM36 20a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm16 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm-8-8a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0 68a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm16-34a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm16-12a2 2 0 1 0 0 4 6 6 0 1 1 0 12 2 2 0 1 0 0 4 10 10 0 1 0 0-20zm-64 0a2 2 0 1 1 0 4 6 6 0 1 0 0 12 2 2 0 1 1 0 4 10 10 0 1 1 0-20zm56-12a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0 48a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm-48 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0-48a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm24 32a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-4a6 6 0 1 0 0-12 6 6 0 0 0 0 12zm36-36a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-4a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM10 44c0-1.1.9-2 2-2h8a2 2 0 1 1 0 4h-8a2 2 0 0 1-2-2zm56 0c0-1.1.9-2 2-2h8a2 2 0 1 1 0 4h-8a2 2 0 0 1-2-2zm8 24c0-1.1.9-2 2-2h8a2 2 0 1 1 0 4h-8a2 2 0 0 1-2-2zM3 68c0-1.1.9-2 2-2h8a2 2 0 1 1 0 4H5a2 2 0 0 1-2-2zm0-48c0-1.1.9-2 2-2h8a2 2 0 1 1 0 4H5a2 2 0 0 1-2-2zm71 0c0-1.1.9-2 2-2h8a2 2 0 1 1 0 4h-8a2 2 0 0 1-2-2zm6 66a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-4a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM8 86a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-4a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0-68A6 6 0 1 1 8 2a6 6 0 0 1 0 12zm0-4a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm36 36a2 2 0 1 0 0-4 2 2 0 0 0 0 4z'/%3E%3C/g%3E%3C/svg%3E")`,        
         `url("data:image/svg+xml,%3Csvg width='80' height='88' viewBox='0 0 80 88' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M22 21.91V26h-2c-9.94 0-18 8.06-18 18 0 9.943 8.058 18 18 18h2v4.09c8.012.722 14.785 5.738 18 12.73 3.212-6.99 9.983-12.008 18-12.73V62h2c9.94 0 18-8.06 18-18 0-9.943-8.058-18-18-18h-2v-4.09c-8.012-.722-14.785-5.738-18-12.73-3.212 6.99-9.983 12.008-18 12.73zM54 58v4.696c-5.574 1.316-10.455 4.428-14 8.69-3.545-4.262-8.426-7.374-14-8.69V58h-5.993C12.27 58 6 51.734 6 44c0-7.732 6.275-14 14.007-14H26v-4.696c5.574-1.316 10.455-4.428 14-8.69 3.545 4.262 8.426 7.374 14 8.69V30h5.993C67.73 30 74 36.266 74 44c0 7.732-6.275 14-14.007 14H54zM42 88c0-9.94 8.06-18 18-18h2v-4.09c8.016-.722 14.787-5.738 18-12.73v7.434c-3.545 4.262-8.426 7.374-14 8.69V74h-5.993C52.275 74 46 80.268 46 88h-4zm-4 0c0-9.943-8.058-18-18-18h-2v-4.09c-8.012-.722-14.785-5.738-18-12.73v7.434c3.545 4.262 8.426 7.374 14 8.69V74h5.993C27.73 74 34 80.266 34 88h4zm4-88c0 9.943 8.058 18 18 18h2v4.09c8.012.722 14.785 5.738 18 12.73v-7.434c-3.545-4.262-8.426-7.374-14-8.69V14h-5.993C52.27 14 46 7.734 46 0h-4zM0 34.82c3.213-6.992 9.984-12.008 18-12.73V18h2c9.94 0 18-8.06 18-18h-4c0 7.732-6.275 14-14.007 14H14v4.696c-5.574 1.316-10.455 4.428-14 8.69v7.433z' fill='%23151313' fill-opacity='0.35' fill-rule='evenodd'/%3E%3C/svg%3E")`
         )}
-      px={["20px", "20px", "40px", "80px"]} py="4%">
+      //px={["20px", "20px", "40px", "80px"]} py="4%">
+      >
         <VStack>
-        <Flex w="100%" alignItems="center" justifyContent="center">
+        <Flex w="100%" alignItems="center" justifyContent="center"
+        px={["20px", "20px", "40px", "80px"]} pt="4%">
+        
         <Text as="b" fontSize={[25, 25, 30, 60]} textAlign="center" fontFamily="Lexend Deca" mb="20px">
         How to Clone a GitHub Repository with GitHub Desktop
         </Text>
@@ -285,9 +288,9 @@ const GitHubTutorial = () => {
         🎉 Voila! You have cloned your first GitHub repository.
         </Text>
         <Accordion allowToggle w="100%" defaultIndex={null}>
-            <AccordionItem mb="5px" border="0">
+            <AccordionItem mb="5px" border="0" w="100%">
               <AccordionButton w="100%" alignItems="center" justifyContent="center" border="0">
-                <Flex id="git" bg={useColorModeValue("blue.100","gray.900")} maxW="300px" alignItems="center" border="0">
+                <Flex id="more" maxW="300px" alignItems="center" border="0">
                 {/* <Image src="/images/git.png" alt="git" w="30px"/> */}
                     <Text ml="5px" fontSize={["15px", "15px", "15px", "20px"]} fontFamily="Lexend Deca">
                     Want to know more?
@@ -296,7 +299,7 @@ const GitHubTutorial = () => {
                     <AccordionIcon />
                 </Flex>
               </AccordionButton>
-              <AccordionPanel bg={useColorModeValue("blue.100","gray.900")}>
+              <AccordionPanel w="100%">
               <Box bg={useColorModeValue("blue.200", "gray.700")} borderRadius="10px" my="30px" border="3px solid" w="100%" py="5px"
         px="10px">
         <VStack>
@@ -310,9 +313,9 @@ const GitHubTutorial = () => {
                 If you are installing software from GitHub that you intend to use, there are often instructions relevant to that 
                 repository in a README file. An example README is featured in Figure 6.
             </Text>
-            <Image borderRadius="10px" src="/images/GitHubDialogExample.png" alt="README Example"/>
-            <Text fontSize={13} textAlign="left" w="100%" pl={["5px", "20px", "80px", "120px"]} fontFamily="Newsreader">
-                <Text fontFamily="Newsreader" as="b">Figure 6</Text>: <Text fontFamily="Newsreader" as="i">LottieFiles README</Text>
+            <Image borderRadius="10px 10px 0 0" src="/images/ChakraREADME.png" alt="README Example"/>
+            <Text fontSize={13} textAlign="left" w="100%" pl="5px" fontFamily="Newsreader">
+                <Text fontFamily="Newsreader" as="b">Figure 6</Text>: <Text fontFamily="Newsreader" as="i">Chakra README</Text>
             </Text>
             <Text fontSize={[18, 18, 20, 20]} pl="30px" pt="10px" fontFamily="Newsreader">
                 However, if you're using GitHub, it's possible, even probable that you are attempting to collaborate on someone else's 
@@ -325,30 +328,39 @@ const GitHubTutorial = () => {
                 push and pull straight from the main/master branch. If you are collaborating, you should learn the functions of the following buttons:
                 <br/>
                 <br/><Text color="blue.500" as="b">Commit to ...</Text> Think of this button like saving your files to GitHub Desktop. 
-                Before you commit, GitHub Desktop will show you all the files you changed and what those changes are in the viewing panel.
-                <br/><Text color="blue.500" as="b">🗘 Fetch</Text> (or Fetch Origin): Refreshes GitHub Desktop, in case the repository online changed.
-                <br/><Text color="blue.500" as="b">↓ Pull</Text>: This means that the online version of the repository has new changes that don't exist
+                Before you commit, GitHub Desktop will show you all the files you changed and what those changes are in the viewing panel. 
+                Figure 8 depicts the commit button, as well as a sample Summary and Description.
+                <br/><br/><Text color="blue.500" as="b">🗘 Fetch</Text>: Refreshes GitHub Desktop, in case the repository online changed.
+                <br/><br/><Text color="blue.500" as="b">↓ Pull</Text>: This means that the online version of the repository has new changes that don't exist
                  on your device. If you click this button, then GitHub will load those changes onto your computer.
-                <br/><Text color="blue.500" as="b">↑ Push</Text>: If you see this button, it's because you just "committed" code to GitHub Desktop.
-                You should now press this button to send your code to GitHub, it will keep your code safe and allow other people to see your changes.
+                <br/><br/><Text color="blue.500" as="b">↑ Push</Text>: If you see this button, it's because you just "committed" code to GitHub Desktop.
+                You should now press this button to send your code to GitHub, it will keep your code safe and allow other people to see your changes. (Figure 7)
             </Text> 
-            <Image borderRadius="10px" src="/images/GitHubCloneExample.png" alt="Clone Example"/>
-            <Text fontSize={13} textAlign="left" w="100%" pl={["5px", "20px", "45px", "60px"]} fontFamily="Newsreader">
-                <Text fontFamily="Newsreader" as="b">Figure 5</Text>: <Text fontFamily="Newsreader" as="i">GitHub Desktop Clone Menu</Text>
-            </Text>
-            <Text fontSize={[18, 18, 20, 20]} pl="30px" pt="10px" fontFamily="Newsreader">
-                Choose your local path (the C drive is usually a good place), and click the 
-                blue <Text fontFamily="Lexend Deca" color="blue.500" as="b">Clone</Text> button to save the repository 
-                to your local device.
-            </Text>
+            <Image borderRadius="10px" src="/images/GitHubPush.png" alt="Push Example"/>
+            <HStack>
+                <Text fontSize={13} textAlign="left" w="100%" px={["5px", "20px", "45px", "60px"]} fontFamily="Newsreader">
+                    <Text fontFamily="Newsreader" as="b">Figure 7</Text>: <Text fontFamily="Newsreader" as="i">(top) GitHub Desktop Push Button</Text>
+                    <br/><br/>
+                    <Text fontFamily="Newsreader" as="b">Figure 8</Text>: <Text fontFamily="Newsreader" as="i">(right) GitHub Desktop Commit Button</Text>
+                </Text>  
+                <Image borderRadius="10px" src="/images/GitHubCommit.png" alt="Commit Example"/>
+            </HStack>
+            <Text as="b" fontSize={[25, 25, 30, 40]} pt="10px" textAlign="center" fontFamily="Lexend Deca" w="100%">
+        🎉🎉🎉
+        </Text>
         </VStack>
         </Box> 
+        
               </AccordionPanel>
             </AccordionItem>
-        </Accordion>
+        </Accordion>      
         </VStack>
         </VStack>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#0099ff" fill-opacity="1" d="M0,224L48,229.3C96,235,192,245,288,240C384,235,480,213,576,197.3C672,181,768,171,864,181.3C960,192,1056,224,1152,213.3C1248,203,1344,149,1392,122.7L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
       </Flex>
+      
   </div>
 )};
 
