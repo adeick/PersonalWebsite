@@ -211,8 +211,8 @@ const GitHubTutorial = () => {
             fontFamily="Lexend Deca" as="u">here</Text></a>. 
         </Text>
         <Image borderRadius="10px"  src="/images/GitHubDesktop.png" alt="GitHub Desktop Download"/>
-        <Text fontSize={[10, 10, 13, 13]} pl="5px" fontFamily="Newsreader">
-                <Text fontFamily="Newsreader" as="b">Figure 1</Text>: <Text fontFamily="Newsreader" as="i">Longer Figure Description</Text>
+        <Text fontSize={13} pl="5px" fontFamily="Newsreader">
+                <Text fontFamily="Newsreader" as="b">Figure 1</Text>: <Text fontFamily="Newsreader" as="i">GitHub Desktop Website</Text>
             </Text>
         <Text fontSize={[18, 18, 20, 20]} pl="30px" pt="30px" fontFamily="Newsreader">
             Click "Open" when it finishes downloading, and follow all steps as the setup wizard demonstrates.
@@ -228,11 +228,11 @@ const GitHubTutorial = () => {
                 <Text fontFamily="Lexend Deca" color="purple.500" as="u">here</Text></a>. Login to GitHub on your browser,
                 and also login to GitHub Desktop, if you're not already signed in.<br/><br/>
                 If you're not sure if you're signed in, you can look under "File > Options". You should see a 
-                screen like this if you are signed in.
+                screen like Figure 2 if you are signed in.
             </Text>
             <Image borderRadius="10px" src="/images/GitHubSignIn.png" alt="Sign In Example"/>
-            <Text fontSize={[10, 10, 13, 13]} pl="5px" fontFamily="Newsreader">
-                <Text fontFamily="Newsreader" as="b">Figure 2</Text>: <Text fontFamily="Newsreader" as="i">Longer Figure Description</Text>
+            <Text fontSize={13} pl="5px" fontFamily="Newsreader">
+                <Text fontFamily="Newsreader" as="b">Figure 2</Text>: <Text fontFamily="Newsreader" as="i">GitHub Desktop Options</Text>
             </Text>
         </Box>
         {/* Step 4 */}
@@ -245,11 +245,11 @@ const GitHubTutorial = () => {
                 You may already have a GitHub account in mind that you want to clone. If so, navigate to that 
                 repository using Google or GitHub's search functionality. If not, I encourage you to explore 
                 GitHub for a repository that interests you. <br/><br/>
-                Now, click the green <Text fontFamily="Lexend Deca" color="green.500" as="b">Code</Text> button to open the clone menu.
+                Now, click the green <Text fontFamily="Lexend Deca" color="green.500" as="b">Code</Text> button to open the clone menu to match Figure 3:
             </Text>
             <Image src="/images/GitHubCodeExample.png" alt="Green Code Example"/>
-            <Text fontSize={[10, 10, 13, 13]} pl="5px" fontFamily="Newsreader">
-                <Text fontFamily="Newsreader" as="b">Figure 3</Text>: <Text fontFamily="Newsreader" as="i">Longer Figure Description</Text>
+            <Text fontSize={13} pl="5px" fontFamily="Newsreader">
+                <Text fontFamily="Newsreader" as="b">Figure 3</Text>: <Text fontFamily="Newsreader" as="i">Sample Repository</Text>
             </Text>
         </Box>
         {/* Step 5 */}
@@ -261,18 +261,18 @@ const GitHubTutorial = () => {
             </Text>
             <Text fontSize={[18, 18, 20, 20]} pl="30px" fontFamily="Newsreader" w="100%">
                 {/* <Text fontFamily="Lexend Deca" as="b">Method 1: Open With GitHub Desktop</Text><br/> */}
-                Click "Open with GitHub Desktop", and a Dialog Box will open, as shown below. 
+                Click "Open with GitHub Desktop", and a Dialog Box will open, as shown in Figure 4: 
             </Text>
             <Image borderRadius="10px" src="/images/GitHubDialogExample.png" alt="Dialogue Example"/>
-            <Text fontSize={[10, 10, 13, 13]} textAlign="left" w="100%" pl={["5px", "20px", "60px", "80px"]} fontFamily="Newsreader">
-                <Text fontFamily="Newsreader" as="b">Figure 4</Text>: <Text fontFamily="Newsreader" as="i">Longer Figure Description</Text>
+            <Text fontSize={13} textAlign="left" w="100%" pl={["5px", "20px", "80px", "120px"]} fontFamily="Newsreader">
+                <Text fontFamily="Newsreader" as="b">Figure 4</Text>: <Text fontFamily="Newsreader" as="i">GitHub Dialog Box</Text>
             </Text>
             <Text fontSize={[18, 18, 20, 20]} pl="30px" pt="10px" fontFamily="Newsreader">
-                Click on "Open GitHubDesktop.exe", which should bring you to the following screen in GitHub Desktop:
+                Click on "Open GitHubDesktop.exe", which should bring you to the following screen in GitHub Desktop, as shown in Figure 5:
             </Text> 
             <Image borderRadius="10px" src="/images/GitHubCloneExample.png" alt="Clone Example"/>
-            <Text fontSize={[10, 10, 13, 13]} textAlign="left" w="100%" pl={["5px", "20px", "45px", "60px"]} fontFamily="Newsreader">
-                <Text fontFamily="Newsreader" as="b">Figure 5</Text>: <Text fontFamily="Newsreader" as="i">Longer Figure Description</Text>
+            <Text fontSize={13} textAlign="left" w="100%" pl={["5px", "20px", "45px", "60px"]} fontFamily="Newsreader">
+                <Text fontFamily="Newsreader" as="b">Figure 5</Text>: <Text fontFamily="Newsreader" as="i">GitHub Desktop Clone Menu</Text>
             </Text>
             <Text fontSize={[18, 18, 20, 20]} pl="30px" pt="10px" fontFamily="Newsreader">
                 Choose your local path (the C drive is usually a good place), and click the 
@@ -284,6 +284,68 @@ const GitHubTutorial = () => {
         <Text as="b" fontSize={[25, 25, 30, 40]} pt="10px" textAlign="center" fontFamily="Lexend Deca" w="100%">
         🎉 Voila! You have cloned your first GitHub repository.
         </Text>
+        <Accordion allowToggle w="100%" defaultIndex={null}>
+            <AccordionItem mb="5px" border="0">
+              <AccordionButton w="100%" alignItems="center" justifyContent="center" border="0">
+                <Flex id="git" bg={useColorModeValue("blue.100","gray.900")} maxW="300px" alignItems="center" border="0">
+                {/* <Image src="/images/git.png" alt="git" w="30px"/> */}
+                    <Text ml="5px" fontSize={["15px", "15px", "15px", "20px"]} fontFamily="Lexend Deca">
+                    Want to know more?
+                    </Text>  
+                    <Spacer/>
+                    <AccordionIcon />
+                </Flex>
+              </AccordionButton>
+              <AccordionPanel bg={useColorModeValue("blue.100","gray.900")}>
+              <Box bg={useColorModeValue("blue.200", "gray.700")} borderRadius="10px" my="30px" border="3px solid" w="100%" py="5px"
+        px="10px">
+        <VStack>
+            <Text as="b" fontSize={[25, 25, 30, 40]} pt="10px" textAlign="left" fontFamily="Lexend Deca" w="100%">
+            Bonus: Use the Repository!
+            </Text>
+            <Text fontSize={[18, 18, 20, 20]} pl="30px" fontFamily="Newsreader" w="100%">
+                {/* <Text fontFamily="Lexend Deca" as="b">Method 1: Open With GitHub Desktop</Text><br/> */}
+                You now have cloned the repository to your computer. What happens now will vary drastically depending on what you want
+                to do with the software. If you are interested in downloading some files to read, all you need to do is open the files.
+                If you are installing software from GitHub that you intend to use, there are often instructions relevant to that 
+                repository in a README file. An example README is featured in Figure 6.
+            </Text>
+            <Image borderRadius="10px" src="/images/GitHubDialogExample.png" alt="README Example"/>
+            <Text fontSize={13} textAlign="left" w="100%" pl={["5px", "20px", "80px", "120px"]} fontFamily="Newsreader">
+                <Text fontFamily="Newsreader" as="b">Figure 6</Text>: <Text fontFamily="Newsreader" as="i">LottieFiles README</Text>
+            </Text>
+            <Text fontSize={[18, 18, 20, 20]} pl="30px" pt="10px" fontFamily="Newsreader">
+                However, if you're using GitHub, it's possible, even probable that you are attempting to collaborate on someone else's 
+                project. If it's a large project, you will be creating new branches and 
+                using pull requests, which is out of the scope of this article. You can learn more <a  target="_blank" 
+                href="https://dev.to/inezabonte/introduction-to-branches-and-pull-requests-for-beginners-3kjc"><Text as="u" color="blue.500">here</Text></a>.
+                If it's a small project, then they will likely <a 
+                href="https://docs.github.com/en/github/setting-up-and-managing-your-github-user-account/inviting-collaborators-to-a-personal-repository" target="_blank">
+                <Text as="u"> add you as a collaborator on GitHub </Text></a> and you will be able to 
+                push and pull straight from the main/master branch. If you are collaborating, you should learn the functions of the following buttons:
+                <br/>
+                <br/><Text color="blue.500" as="b">Commit to ...</Text> Think of this button like saving your files to GitHub Desktop. 
+                Before you commit, GitHub Desktop will show you all the files you changed and what those changes are in the viewing panel.
+                <br/><Text color="blue.500" as="b">🗘 Fetch</Text> (or Fetch Origin): Refreshes GitHub Desktop, in case the repository online changed.
+                <br/><Text color="blue.500" as="b">↓ Pull</Text>: This means that the online version of the repository has new changes that don't exist
+                 on your device. If you click this button, then GitHub will load those changes onto your computer.
+                <br/><Text color="blue.500" as="b">↑ Push</Text>: If you see this button, it's because you just "committed" code to GitHub Desktop.
+                You should now press this button to send your code to GitHub, it will keep your code safe and allow other people to see your changes.
+            </Text> 
+            <Image borderRadius="10px" src="/images/GitHubCloneExample.png" alt="Clone Example"/>
+            <Text fontSize={13} textAlign="left" w="100%" pl={["5px", "20px", "45px", "60px"]} fontFamily="Newsreader">
+                <Text fontFamily="Newsreader" as="b">Figure 5</Text>: <Text fontFamily="Newsreader" as="i">GitHub Desktop Clone Menu</Text>
+            </Text>
+            <Text fontSize={[18, 18, 20, 20]} pl="30px" pt="10px" fontFamily="Newsreader">
+                Choose your local path (the C drive is usually a good place), and click the 
+                blue <Text fontFamily="Lexend Deca" color="blue.500" as="b">Clone</Text> button to save the repository 
+                to your local device.
+            </Text>
+        </VStack>
+        </Box> 
+              </AccordionPanel>
+            </AccordionItem>
+        </Accordion>
         </VStack>
         </VStack>
       </Flex>
