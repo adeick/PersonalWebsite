@@ -191,7 +191,7 @@ const GitHubTutorial = () => {
                 <Text fontSize={[18, 18, 20, 20]} pl="30px" fontFamily="Newsreader">
                 GitHub is enormous, and its repositories cover a wide range of disciplines. Perhaps
                 you are a researcher who wants to download software to analyze a graph, or maybe you 
-                want to install a video game. GitHub doesn't even need to be code, some people use it
+                want to install a video game. GitHub doesn't even need to be code; some people use it
                 to store recipes or write books collaboratively.
                 </Text>
                 </Flex>
@@ -207,7 +207,7 @@ const GitHubTutorial = () => {
         </Text>
         <Text fontSize={[18, 18, 20, 20]} pl="30px" fontFamily="Newsreader">
             If you haven't done it already, you'll need to install GitHub Desktop. You can download it
-            for Windows and Mac right <a href="https://desktop.github.com/"><Text color="purple.500" 
+            for Windows and Mac right <a target="_blank" href="https://desktop.github.com/"><Text color="purple.500" 
             fontFamily="Lexend Deca" as="u">here</Text></a>. 
         </Text>
         <Image borderRadius="10px"  src="/images/GitHubDesktop.png" alt="GitHub Desktop Download"/>
@@ -221,7 +221,7 @@ const GitHubTutorial = () => {
             3. Create a GitHub account (or login)
             </Text>
             <Text fontSize={[18, 18, 20, 20]} pl="30px" fontFamily="Newsreader">
-                If you don't have a GitHub account, create one <a href="a.	https://github.com/join?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home">
+                If you don't have a GitHub account, create one <a  target="_blank" href="https://github.com/join?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home">
                 <Text fontFamily="Lexend Deca" color="purple.500" as="u">here</Text></a>. Login to GitHub on your browser,
                 and also login to GitHub Desktop, if you're not already signed in.<br/><br/>
                 If you're not sure if you're signed in, you can look under "File > Options". You should see a 
