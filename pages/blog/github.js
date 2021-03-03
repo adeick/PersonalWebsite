@@ -211,6 +211,10 @@ const GitHubTutorial = () => {
             fontFamily="Lexend Deca" as="u">here</Text></a>. 
         </Text>
         <Image borderRadius="10px"  src="/images/GitHubDesktop.png" alt="GitHub Desktop Download"/>
+        <Text fontSize={[8, 8, 10, 10]} pl="5px" fontFamily="Newsreader">
+                <Text fontFamily="Newsreader" as="b">Figure #</Text>
+                <Text fontFamily="Newsreader" as="i">Longer Figure Description</Text>
+            </Text>
         <Text fontSize={[18, 18, 20, 20]} pl="30px" pt="30px" fontFamily="Newsreader">
             Click "Open" when it finishes downloading, and follow all steps as the setup wizard demonstrates.
         </Text>
@@ -228,6 +232,10 @@ const GitHubTutorial = () => {
                 screen like this if you are signed in.
             </Text>
             <Image borderRadius="10px" src="/images/GitHubSignIn.png" alt="Sign In Example"/>
+            <Text fontSize={[8, 8, 10, 10]} pl="5px" fontFamily="Newsreader">
+                <Text fontFamily="Newsreader" as="b">Figure #</Text>
+                <Text fontFamily="Newsreader" as="i">Longer Figure Description</Text>
+            </Text>
         </Box>
         {/* Step 4 */}
         <Box bg={useColorModeValue("blue.200", "gray.700")} borderRadius="10px" my="30px" border="3px solid" w="100%" py="5px"
@@ -242,6 +250,10 @@ const GitHubTutorial = () => {
                 Now, click the green <Text fontFamily="Lexend Deca" color="green.500" as="b">Code</Text> button to open the clone menu.
             </Text>
             <Image src="/images/GitHubCodeExample.png" alt="Green Code Example"/>
+            <Text fontSize={[10, 10, 13, 13]} pl="5px" fontFamily="Newsreader">
+                <Text fontFamily="Newsreader" as="b">Figure #</Text>
+                <Text fontFamily="Newsreader" as="i">Longer Figure Description</Text>
+            </Text>
         </Box>
         {/* Step 5 */}
         <Box bg={useColorModeValue("blue.200", "gray.700")} borderRadius="10px" my="30px" border="3px solid" w="100%" py="5px"
@@ -259,6 +271,10 @@ const GitHubTutorial = () => {
                 Click on "Open GitHubDesktop.exe", which should bring you to the following screen in GitHub Desktop:
             </Text> 
             <Image borderRadius="10px" src="/images/GitHubCloneExample.png" alt="Clone Example"/>
+            <Text fontSize={[10, 10, 13, 13]} textAlign="left" w="100%" pl={["5px", "20px", "45px", "60px"]} fontFamily="Newsreader">
+                <Text fontFamily="Newsreader" as="b">Figure #</Text>
+                <Text fontFamily="Newsreader" as="i">Longer Figure Description</Text>
+            </Text>
             <Text fontSize={[18, 18, 20, 20]} pl="30px" pt="10px" fontFamily="Newsreader">
                 Choose your local path (the C drive is usually a good place), and click the 
                 blue <Text fontFamily="Lexend Deca" color="blue.500" as="b">Clone</Text> button to save the repository 
