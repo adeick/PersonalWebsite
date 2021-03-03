@@ -211,9 +211,8 @@ const GitHubTutorial = () => {
             fontFamily="Lexend Deca" as="u">here</Text></a>. 
         </Text>
         <Image borderRadius="10px"  src="/images/GitHubDesktop.png" alt="GitHub Desktop Download"/>
-        <Text fontSize={[8, 8, 10, 10]} pl="5px" fontFamily="Newsreader">
-                <Text fontFamily="Newsreader" as="b">Figure #</Text>
-                <Text fontFamily="Newsreader" as="i">Longer Figure Description</Text>
+        <Text fontSize={[10, 10, 13, 13]} pl="5px" fontFamily="Newsreader">
+                <Text fontFamily="Newsreader" as="b">Figure 1</Text>: <Text fontFamily="Newsreader" as="i">Longer Figure Description</Text>
             </Text>
         <Text fontSize={[18, 18, 20, 20]} pl="30px" pt="30px" fontFamily="Newsreader">
             Click "Open" when it finishes downloading, and follow all steps as the setup wizard demonstrates.
@@ -232,9 +231,8 @@ const GitHubTutorial = () => {
                 screen like this if you are signed in.
             </Text>
             <Image borderRadius="10px" src="/images/GitHubSignIn.png" alt="Sign In Example"/>
-            <Text fontSize={[8, 8, 10, 10]} pl="5px" fontFamily="Newsreader">
-                <Text fontFamily="Newsreader" as="b">Figure #</Text>
-                <Text fontFamily="Newsreader" as="i">Longer Figure Description</Text>
+            <Text fontSize={[10, 10, 13, 13]} pl="5px" fontFamily="Newsreader">
+                <Text fontFamily="Newsreader" as="b">Figure 2</Text>: <Text fontFamily="Newsreader" as="i">Longer Figure Description</Text>
             </Text>
         </Box>
         {/* Step 4 */}
@@ -251,8 +249,7 @@ const GitHubTutorial = () => {
             </Text>
             <Image src="/images/GitHubCodeExample.png" alt="Green Code Example"/>
             <Text fontSize={[10, 10, 13, 13]} pl="5px" fontFamily="Newsreader">
-                <Text fontFamily="Newsreader" as="b">Figure #</Text>
-                <Text fontFamily="Newsreader" as="i">Longer Figure Description</Text>
+                <Text fontFamily="Newsreader" as="b">Figure 3</Text>: <Text fontFamily="Newsreader" as="i">Longer Figure Description</Text>
             </Text>
         </Box>
         {/* Step 5 */}
@@ -267,13 +264,15 @@ const GitHubTutorial = () => {
                 Click "Open with GitHub Desktop", and a Dialog Box will open, as shown below. 
             </Text>
             <Image borderRadius="10px" src="/images/GitHubDialogExample.png" alt="Dialogue Example"/>
+            <Text fontSize={[10, 10, 13, 13]} textAlign="left" w="100%" pl={["5px", "20px", "60px", "80px"]} fontFamily="Newsreader">
+                <Text fontFamily="Newsreader" as="b">Figure 4</Text>: <Text fontFamily="Newsreader" as="i">Longer Figure Description</Text>
+            </Text>
             <Text fontSize={[18, 18, 20, 20]} pl="30px" pt="10px" fontFamily="Newsreader">
                 Click on "Open GitHubDesktop.exe", which should bring you to the following screen in GitHub Desktop:
             </Text> 
             <Image borderRadius="10px" src="/images/GitHubCloneExample.png" alt="Clone Example"/>
             <Text fontSize={[10, 10, 13, 13]} textAlign="left" w="100%" pl={["5px", "20px", "45px", "60px"]} fontFamily="Newsreader">
-                <Text fontFamily="Newsreader" as="b">Figure #</Text>
-                <Text fontFamily="Newsreader" as="i">Longer Figure Description</Text>
+                <Text fontFamily="Newsreader" as="b">Figure 5</Text>: <Text fontFamily="Newsreader" as="i">Longer Figure Description</Text>
             </Text>
             <Text fontSize={[18, 18, 20, 20]} pl="30px" pt="10px" fontFamily="Newsreader">
                 Choose your local path (the C drive is usually a good place), and click the 
