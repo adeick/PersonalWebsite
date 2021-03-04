@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Sidebar from '../../src/components/Sidebar';
+import Footer from '../../src/components/Footer';
 import Link from 'next/link';
 
 import { FiGithub, FiLinkedin, FiMail } from 'react-icons/fi'
@@ -19,7 +20,7 @@ import {
   Drawer,
   Text,
   useColorMode,
-  useColorModeValue,
+  useColorModeValue, Stack, 
   VStack, HStack, Spacer, Icon,
   useBreakpointValue, 
   Alert, AlertIcon, AlertTitle, AlertDescription,
@@ -41,11 +42,14 @@ const GitHubTutorial = () => {
       //px={["20px", "20px", "40px", "80px"]} py="4%">
       >
         <VStack>
-        <Flex w="100%" alignItems="center" justifyContent="center"
+        <Flex w="100%" alignItems="center" justifyContent="center" flexDirection="column"
         px={["20px", "20px", "40px", "80px"]} pt="4%">
         
         <Text as="b" fontSize={[25, 25, 30, 60]} textAlign="center" fontFamily="Lexend Deca" mb="20px">
         How to Clone a GitHub Repository with GitHub Desktop
+        </Text>
+        <Text fontSize={[18, 18, 20, 20]} as="i" pl="30px" fontFamily="Newsreader">
+            A Guide for New Programmers or Curious Hobbyists
         </Text>
         </Flex>
         <VStack w="100%" h="100%" spacing="0px" maxW="750px">
@@ -91,7 +95,7 @@ const GitHubTutorial = () => {
         </Text>
 
         <Accordion allowToggle w="100%" defaultIndex={null}>
-            <AccordionItem mb="5px">
+            <AccordionItem mb="5px" border="0" >
               <AccordionButton bg={useColorModeValue("blue.100","gray.900")} borderY="2px solid">
                 <Flex id="git" alignItems="center">
                 <Image src="/images/git.png" alt="git" w="30px"/>
@@ -102,7 +106,7 @@ const GitHubTutorial = () => {
                 <Spacer/>
                 <AccordionIcon />
               </AccordionButton>
-              <AccordionPanel bg={useColorModeValue("blue.100","gray.900")}>
+              <AccordionPanel bg={useColorModeValue("blue.100","gray.900")} borderRadius="0 0 15px 15px">
                 <Flex justifyContent="center" w="100%" wrap="wrap">
                 <Text fontSize={[18, 18, 20, 20]} pl="30px" fontFamily="Newsreader">
                 Git is a version control software. This means that it saves all the old versions 
@@ -112,7 +116,7 @@ const GitHubTutorial = () => {
                 </Flex>
               </AccordionPanel>
             </AccordionItem>
-            <AccordionItem mb="5px">
+            <AccordionItem mb="5px" border="0" >
               <AccordionButton bg={useColorModeValue("blue.100","gray.900")} borderY="2px solid">
                 <Flex id="git" alignItems="center">
                 <Image src={useColorModeValue("/images/github.png","/images/githubwhite.webp")} alt="git" w="30px"/>
@@ -123,7 +127,7 @@ const GitHubTutorial = () => {
                 <Spacer/>
                 <AccordionIcon />
               </AccordionButton>
-              <AccordionPanel bg={useColorModeValue("blue.100","gray.900")}>
+              <AccordionPanel bg={useColorModeValue("blue.100","gray.900")} borderRadius="0 0 15px 15px">
                 <Flex justifyContent="center" w="100%" wrap="wrap">
                 <Text fontSize={[18, 18, 20, 20]} pl="30px" fontFamily="Newsreader">
                 GitHub is a service that helps you use Git collaboratively. You put code on 
@@ -135,7 +139,7 @@ const GitHubTutorial = () => {
                 </Flex>
               </AccordionPanel>
             </AccordionItem>
-            <AccordionItem mb="5px">
+            <AccordionItem mb="5px" border="0" >
               <AccordionButton bg={useColorModeValue("blue.100","gray.900")} borderY="2px solid">
                 <Flex id="git" alignItems="center">
                 <Image src="/images/purplecat.png" alt="git" w="30px"/>
@@ -146,7 +150,7 @@ const GitHubTutorial = () => {
                 <Spacer/>
                 <AccordionIcon />
               </AccordionButton>
-              <AccordionPanel bg={useColorModeValue("blue.100","gray.900")}>
+              <AccordionPanel bg={useColorModeValue("blue.100","gray.900")} borderRadius="0 0 15px 15px">
                 <Flex justifyContent="center" w="100%" wrap="wrap">
                 <Text fontSize={[18, 18, 20, 20]} pl="30px" fontFamily="Newsreader">
                 GitHub Desktop is an application that makes it easier to use GitHub. If GitHub is the Google
@@ -156,7 +160,7 @@ const GitHubTutorial = () => {
                 </Flex>
               </AccordionPanel>
             </AccordionItem>
-            <AccordionItem mb="5px">
+            <AccordionItem mb="5px" border="0" >
               <AccordionButton bg={useColorModeValue("blue.100","gray.900")} borderY="2px solid">
                 <Flex id="git" alignItems="center">
                 <Image src="/images/question.png" alt="git" w="30px"/>
@@ -167,7 +171,7 @@ const GitHubTutorial = () => {
                 <Spacer/>
                 <AccordionIcon />
               </AccordionButton>
-              <AccordionPanel bg={useColorModeValue("blue.100","gray.900")}>
+              <AccordionPanel bg={useColorModeValue("blue.100","gray.900")} borderRadius="0 0 15px 15px">
                 <Flex justifyContent="center" w="100%" wrap="wrap">
                 <Text fontSize={[18, 18, 20, 20]} pl="30px" fontFamily="Newsreader">
                 Repo is an abbreviation for repository, which is a collection of code that serves a 
@@ -178,7 +182,7 @@ const GitHubTutorial = () => {
                 </Flex>
               </AccordionPanel>
             </AccordionItem>
-            <AccordionItem mb="5px">
+            <AccordionItem mb="5px" border="0" >
               <AccordionButton bg={useColorModeValue("blue.100","gray.900")} borderY="2px solid">
                 <Flex id="git" alignItems="center">
                 <Image src="/images/book.png" alt="git" w="30px"/>
@@ -189,7 +193,7 @@ const GitHubTutorial = () => {
                 <Spacer/>
                 <AccordionIcon />
               </AccordionButton>
-              <AccordionPanel bg={useColorModeValue("blue.100","gray.900")}>
+              <AccordionPanel bg={useColorModeValue("blue.100","gray.900")} borderRadius="0 0 15px 15px">
                 <Flex justifyContent="center" w="100%" wrap="wrap">
                 <Text fontSize={[18, 18, 20, 20]} pl="30px" fontFamily="Newsreader">
                 GitHub is enormous, and its repositories cover a wide range of disciplines. Perhaps
@@ -337,28 +341,27 @@ const GitHubTutorial = () => {
                 You should now press this button to send your code to GitHub, it will keep your code safe and allow other people to see your changes. (Figure 7)
             </Text> 
             <Image borderRadius="10px" src="/images/GitHubPush.png" alt="Push Example"/>
-            <HStack>
+            <Stack direction={useBreakpointValue({base:"column", md: "row"})}>
                 <Text fontSize={13} textAlign="left" w="100%" px={["5px", "20px", "45px", "60px"]} fontFamily="Newsreader">
-                    <Text fontFamily="Newsreader" as="b">Figure 7</Text>: <Text fontFamily="Newsreader" as="i">(top) GitHub Desktop Push Button</Text>
+                    <Text fontFamily="Newsreader" as="b">Figure 7</Text>: <Text fontFamily="Newsreader" as="i">(above) GitHub Desktop Push Button</Text>
                     <br/><br/>
-                    <Text fontFamily="Newsreader" as="b">Figure 8</Text>: <Text fontFamily="Newsreader" as="i">(right) GitHub Desktop Commit Button</Text>
+                    <Text fontFamily="Newsreader" as="b">Figure 8</Text>: <Text fontFamily="Newsreader" as="i">{useBreakpointValue({base: "(below)", md: "(right)"})} GitHub Desktop Commit Button</Text>
                 </Text>  
                 <Image borderRadius="10px" src="/images/GitHubCommit.png" alt="Commit Example"/>
-            </HStack>
-            <Text as="b" fontSize={[25, 25, 30, 40]} pt="10px" textAlign="center" fontFamily="Lexend Deca" w="100%">
-        🎉🎉🎉
-        </Text>
+            </Stack>
         </VStack>
         </Box> 
-        
+        <Flex w="100%">
+        <Text as="b" fontSize={[25, 25, 30, 40]} pt="10px" textAlign="center" fontFamily="Lexend Deca" w="100%">
+        🎉🎉🎉
+        </Text>
+        </Flex>
               </AccordionPanel>
             </AccordionItem>
         </Accordion>      
         </VStack>
         </VStack>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <path fill="#0099ff" fill-opacity="1" d="M0,224L48,229.3C96,235,192,245,288,240C384,235,480,213,576,197.3C672,181,768,171,864,181.3C960,192,1056,224,1152,213.3C1248,203,1344,149,1392,122.7L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-        </svg>
+        <Footer text="Made by Andrew Deick"/>
       </Flex>
       
   </div>

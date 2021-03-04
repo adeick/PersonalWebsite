@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import Head from 'next/head';
 import Sidebar from '../src/components/Sidebar';
+import Footer from '../src/components/Footer';
 import FavoritesBox from '../src/components/FavoritesBox';
 import BB8Lottie from '../src/components/BB8Lottie';
 import ArrowLottie from '../src/components/ArrowLottie';
@@ -511,6 +512,7 @@ const Favorites = () => {
           <BB8Lottie/>
           }
         </Flex>
+        <Footer text="Made by Andrew Deick"/>
       </Box>
     </div>
   );
