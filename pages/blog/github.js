@@ -48,7 +48,7 @@ const GitHubTutorial = () => {
         <Text as="b" fontSize={[25, 25, 30, 60]} textAlign="center" fontFamily="Lexend Deca" mb="20px">
         How to Clone a GitHub Repository with GitHub Desktop
         </Text>
-        <Text fontSize={[18, 18, 20, 20]} as="i" pl="30px" fontFamily="Newsreader">
+        <Text fontSize={[18, 18, 20, 20]} as="i" pl="30px" textAlign="center" fontFamily="Newsreader">
             A Guide for New Programmers or Curious Hobbyists
         </Text>
         </Flex>
