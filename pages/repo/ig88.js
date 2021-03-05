@@ -43,12 +43,24 @@ const IG = () => {
         </Text>
         <Stack direction={useBreakpointValue({base: "column", md:"row"})} p="0">
           {useBreakpointValue({md: <Image w={["0px", "0px", "150px", "150px"]} src="/images/IG88.png" alt=""/>, base: null})}
+          <VStack>
+            <Text fontSize={[15, 15, 20, 20]} fontFamily="Newsletter">
+              IG-88 is a spunky Discord bot with a fast processor and an even faster trigger finger. The only thing more accurate than his aim is his sarcasm, dispensed in heavy doses.
+              Besides entertaining us, he has a number of useful abilities: generating random numbers, initiating polls, and saving information into his database of a brain. (SQLite) <br/><br/>
+              Don't confuse him with IG-11.
+            </Text>
+            <Stack direction={["column", "row"]} spacing={["6px", "24px"]}>
+              <Link href="../repo">
+              <Button>
+                Back to Repositories
+              </Button>
+              </Link>
+              <Button as="a" href="https://github.com/adeick/IG88DiscordBot" target="_blank">
+                View on GitHub
+              </Button>
+            </Stack>
+          </VStack>
 
-          <Text fontSize={[15, 15, 20, 20]} fontFamily="Newsletter">
-            IG-88 is a spunky Discord bot with a fast processor and an even faster trigger finger. The only thing more accurate than his aim is his sarcasm, dispensed in heavy doses.
-            Besides entertaining us, he has a number of useful abilities: generating random numbers, initiating polls, and saving information into his database of a brain. (SQLite) <br/><br/>
-            Don't confuse him with IG-11.
-          </Text>
           {useBreakpointValue({base: <Center><Image mt="30px" w={["130px", "200px", "0px", "0px"]} src="/images/IG88.png" alt=""/></Center>, md: null, lg: null, xl: null})}
         </Stack>
         
