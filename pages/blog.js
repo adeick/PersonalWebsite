@@ -51,7 +51,7 @@ const Blog = () => {
             </Flex>
             </BlogBox>
             <BlogBox text="Discord Bots" href='../blog/bot'>
-            <Image w="100%" objectFit="cover" src={useColorModeValue("/images/C3PO.png","/images/K2SOtalk.jpg")} alt="Discord Bots"/>
+            <Image w="100%" objectFit="cover" src={useColorModeValue("/images/C3PO.png","/images/K2SO.jpg")} alt="Discord Bots"/>
             </BlogBox>
         </Flex>
         </VStack>

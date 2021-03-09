@@ -68,6 +68,9 @@ const Sidebar = (props) => {
                 <Link href="/favorites"><a>
                   <Sidebox text="Favorites" icon="/images/testtube.png"/>
                 </a></Link>
+                <Link href="/blog"><a>
+                  <Sidebox text="Blog" icon="/images/pencil.png"/>
+                </a></Link>
                 <Sidebox isDisabled={true} text="Locked" icon="/images/lock.png"/> 
               </Stack>
             </>

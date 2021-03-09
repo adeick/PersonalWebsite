@@ -8,6 +8,7 @@ import { RiPagesLine } from 'react-icons/ri'
 
 import { AiOutlineWarning } from 'react-icons/ai'
 import { DiGit } from 'react-icons/di'
+import { ArrowBackIcon  } from '@chakra-ui/icons'
 
 
 import {
@@ -359,6 +360,13 @@ const GitHubTutorial = () => {
               </AccordionPanel>
             </AccordionItem>
         </Accordion>      
+        <Box w="100%">
+          <Link passHref href="../blog">
+          <Button as="a" variant="ghost" leftIcon={<ArrowBackIcon/>} ml="20px">
+            Back to Blog
+          </Button>
+          </Link>
+        </Box>
         </VStack>
         </VStack>
         <Footer text="Made by Andrew Deick"/>

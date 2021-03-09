@@ -9,6 +9,8 @@ import { RiPagesLine } from 'react-icons/ri'
 import { AiOutlineWarning } from 'react-icons/ai'
 import { DiGit } from 'react-icons/di'
 
+import { ArrowBackIcon  } from '@chakra-ui/icons'
+
 
 import {
   Image,
@@ -54,6 +56,17 @@ const BotDescription = () => {
         </Flex>
         <VStack w="100%" h="100%" spacing="0px" maxW="750px">
             <Image src="/images/K2SOtalk.jpg" alt="K2SO" borderRadius="20px" />
+            <Text fontFamily="Newsreader" textAlign="left" p="30px" fontSize="30px" w="100%">
+              Yet to be written.
+            </Text>
+
+          <Box w="100%">
+          <Link passHref href="../blog">
+          <Button as="a" variant="ghost" leftIcon={<ArrowBackIcon/>} ml="20px">
+            Back to Blog
+          </Button>
+          </Link>
+        </Box>
         </VStack>
         </VStack>
         <Footer text="Made by Andrew Deick"/>
