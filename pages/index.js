@@ -27,7 +27,7 @@ const Index = () => {
   <div id="Website">
     <Sidebar />
       <Flex bg={useColorModeValue("blue.100", "gray.900")} flexDirection="column"
-      minHeight={window.innerHeight} 
+      minHeight={window.innerHeight *1.2} 
       w="85vw" right="0" position="absolute" className="Background" 
       backgroundImage={
         useColorModeValue(
