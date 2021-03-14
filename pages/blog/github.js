@@ -99,7 +99,7 @@ const GitHubTutorial = () => {
             <AccordionItem mb="5px" border="0" >
               <AccordionButton bg={useColorModeValue("blue.100","gray.900")} borderY="2px solid">
                 <Flex id="git" alignItems="center">
-                <Image src="/images/git.png" alt="git" w="30px"/>
+                <Image src="/images/instructions/git.png" alt="git" w="30px"/>
                     <Text ml="5px" fontSize={["15px", "15px", "15px", "20px"]} textAlign="left" fontFamily="Lexend Deca">
                     What is Git?
                     </Text>  
@@ -120,7 +120,7 @@ const GitHubTutorial = () => {
             <AccordionItem mb="5px" border="0" >
               <AccordionButton bg={useColorModeValue("blue.100","gray.900")} borderY="2px solid">
                 <Flex id="git" alignItems="center">
-                <Image src={useColorModeValue("/images/github.png","/images/githubwhite.webp")} alt="git" w="30px"/>
+                <Image src={useColorModeValue("/images/instructions/github.png","/images/instructions/githubwhite.webp")} alt="git" w="30px"/>
                     <Text ml="5px" fontSize={["15px", "15px", "15px", "20px"]} textAlign="left" fontFamily="Lexend Deca">
                     What is GitHub?
                     </Text>  
@@ -143,7 +143,7 @@ const GitHubTutorial = () => {
             <AccordionItem mb="5px" border="0" >
               <AccordionButton bg={useColorModeValue("blue.100","gray.900")} borderY="2px solid">
                 <Flex id="git" alignItems="center">
-                <Image src="/images/purplecat.png" alt="git" w="30px"/>
+                <Image src="/images/instructions/purplecat.png" alt="git" w="30px"/>
                     <Text ml="5px" fontSize={["15px", "15px", "15px", "20px"]} textAlign="left" fontFamily="Lexend Deca">
                     What is GitHub Desktop?
                     </Text>  
@@ -164,7 +164,7 @@ const GitHubTutorial = () => {
             <AccordionItem mb="5px" border="0" >
               <AccordionButton bg={useColorModeValue("blue.100","gray.900")} borderY="2px solid">
                 <Flex id="git" alignItems="center">
-                <Image src="/images/question.png" alt="git" w="30px"/>
+                <Image src="/images/instructions/question.png" alt="git" w="30px"/>
                     <Text ml="5px" fontSize={["15px", "15px", "15px", "20px"]} textAlign="left" fontFamily="Lexend Deca">
                     Repos and Cloning... What does it mean?
                     </Text>  
@@ -186,7 +186,7 @@ const GitHubTutorial = () => {
             <AccordionItem mb="5px" border="0" >
               <AccordionButton bg={useColorModeValue("blue.100","gray.900")} borderY="2px solid">
                 <Flex id="git" alignItems="center">
-                <Image src="/images/book.png" alt="git" w="30px"/>
+                <Image src="/images/instructions/book.png" alt="git" w="30px"/>
                     <Text ml="5px" fontSize={["15px", "15px", "15px", "20px"]} textAlign="left" fontFamily="Lexend Deca">
                     Why would I ever use this?
                     </Text>  
@@ -218,7 +218,7 @@ const GitHubTutorial = () => {
             for Windows and Mac right <a target="_blank" href="https://desktop.github.com/"><Text color="purple.500" 
             fontFamily="Lexend Deca" as="u">here</Text></a>. 
         </Text>
-        <Image borderRadius="10px"  src="/images/GitHubDesktop.png" alt="GitHub Desktop Download"/>
+        <Image borderRadius="10px"  src="/images/instructions/GitHubDesktop.png" alt="GitHub Desktop Download"/>
         <Text fontSize={13} pl="5px" fontFamily="Newsreader">
                 <Text fontFamily="Newsreader" as="b">Figure 1</Text>: <Text fontFamily="Newsreader" as="i">GitHub Desktop Website</Text>
             </Text>
@@ -235,10 +235,10 @@ const GitHubTutorial = () => {
                 If you don't have a GitHub account, create one <a  target="_blank" href="https://github.com/join?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home">
                 <Text fontFamily="Lexend Deca" color="purple.500" as="u">here</Text></a>. Login to GitHub on your browser,
                 and also login to GitHub Desktop, if you're not already signed in.<br/><br/>
-                If you're not sure if you're signed in, you can look under "File > Options". You should see a 
+                If you're not sure if you're signed in, you can look under "File &gt; Options". You should see a 
                 screen like Figure 2 if you are signed in.
             </Text>
-            <Image borderRadius="10px" src="/images/GitHubSignIn.png" alt="Sign In Example"/>
+            <Image borderRadius="10px" src="/images/instructions/GitHubSignIn.png" alt="Sign In Example"/>
             <Text fontSize={13} pl="5px" fontFamily="Newsreader">
                 <Text fontFamily="Newsreader" as="b">Figure 2</Text>: <Text fontFamily="Newsreader" as="i">GitHub Desktop Options</Text>
             </Text>
@@ -255,7 +255,7 @@ const GitHubTutorial = () => {
                 GitHub for a repository that interests you. <br/><br/>
                 Now, click the green <Text fontFamily="Lexend Deca" color="green.500" as="b">Code</Text> button to open the clone menu to match Figure 3:
             </Text>
-            <Image src="/images/GitHubCodeExample.png" alt="Green Code Example"/>
+            <Image src="/images/instructions/GitHubCodeExample.png" alt="Green Code Example"/>
             <Text fontSize={13} pl="5px" fontFamily="Newsreader">
                 <Text fontFamily="Newsreader" as="b">Figure 3</Text>: <Text fontFamily="Newsreader" as="i">Sample Repository</Text>
             </Text>
@@ -271,14 +271,14 @@ const GitHubTutorial = () => {
                 {/* <Text fontFamily="Lexend Deca" as="b">Method 1: Open With GitHub Desktop</Text><br/> */}
                 Click "Open with GitHub Desktop", and a Dialog Box will open, as shown in Figure 4: 
             </Text>
-            <Image borderRadius="10px" src="/images/GitHubDialogExample.png" alt="Dialogue Example"/>
+            <Image borderRadius="10px" src="/images/instructions/GitHubDialogExample.png" alt="Dialogue Example"/>
             <Text fontSize={13} textAlign="left" w="100%" pl={["5px", "20px", "80px", "120px"]} fontFamily="Newsreader">
                 <Text fontFamily="Newsreader" as="b">Figure 4</Text>: <Text fontFamily="Newsreader" as="i">GitHub Dialog Box</Text>
             </Text>
             <Text fontSize={[18, 18, 20, 20]} pl="30px" pt="10px" fontFamily="Newsreader">
                 Click on "Open GitHubDesktop.exe", which should bring you to the following screen in GitHub Desktop, as shown in Figure 5:
             </Text> 
-            <Image borderRadius="10px" src="/images/GitHubCloneExample.png" alt="Clone Example"/>
+            <Image borderRadius="10px" src="/images/instructions/GitHubCloneExample.png" alt="Clone Example"/>
             <Text fontSize={13} textAlign="left" w="100%" pl={["5px", "20px", "45px", "60px"]} fontFamily="Newsreader">
                 <Text fontFamily="Newsreader" as="b">Figure 5</Text>: <Text fontFamily="Newsreader" as="i">GitHub Desktop Clone Menu</Text>
             </Text>
@@ -296,7 +296,7 @@ const GitHubTutorial = () => {
             <AccordionItem mb="5px" border="0" w="100%">
               <AccordionButton w="100%" alignItems="center" justifyContent="center" border="0">
                 <Flex id="more" maxW="300px" alignItems="center" border="0">
-                {/* <Image src="/images/git.png" alt="git" w="30px"/> */}
+                {/* <Image src="/images/instructions/git.png" alt="git" w="30px"/> */}
                     <Text ml="5px" fontSize={["15px", "15px", "15px", "20px"]} fontFamily="Lexend Deca">
                     Want to know more?
                     </Text>  
@@ -318,7 +318,7 @@ const GitHubTutorial = () => {
                 If you are installing software from GitHub that you intend to use, there are often instructions relevant to that 
                 repository in a README file. An example README is featured in Figure 6.
             </Text>
-            <Image borderRadius="10px 10px 0 0" src="/images/ChakraREADME.png" alt="README Example"/>
+            <Image borderRadius="10px 10px 0 0" src="/images/instructions/ChakraREADME.png" alt="README Example"/>
             <Text fontSize={13} textAlign="left" w="100%" pl="5px" fontFamily="Newsreader">
                 <Text fontFamily="Newsreader" as="b">Figure 6</Text>: <Text fontFamily="Newsreader" as="i">Chakra README</Text>
             </Text>
@@ -341,14 +341,14 @@ const GitHubTutorial = () => {
                 <br/><br/><Text color="blue.500" as="b">↑ Push</Text>: If you see this button, it's because you just "committed" code to GitHub Desktop.
                 You should now press this button to send your code to GitHub, it will keep your code safe and allow other people to see your changes. (Figure 7)
             </Text> 
-            <Image borderRadius="10px" src="/images/GitHubPush.png" alt="Push Example"/>
+            <Image borderRadius="10px" src="/images/instructions/GitHubPush.png" alt="Push Example"/>
             <Stack direction={useBreakpointValue({base:"column", md: "row"})}>
                 <Text fontSize={13} textAlign="left" w="100%" px={["5px", "20px", "45px", "60px"]} fontFamily="Newsreader">
                     <Text fontFamily="Newsreader" as="b">Figure 7</Text>: <Text fontFamily="Newsreader" as="i">(above) GitHub Desktop Push Button</Text>
                     <br/><br/>
                     <Text fontFamily="Newsreader" as="b">Figure 8</Text>: <Text fontFamily="Newsreader" as="i">{useBreakpointValue({base: "(below)", md: "(right)"})} GitHub Desktop Commit Button</Text>
                 </Text>  
-                <Image borderRadius="10px" src="/images/GitHubCommit.png" alt="Commit Example"/>
+                <Image borderRadius="10px" src="/images/instructions/GitHubCommit.png" alt="Commit Example"/>
             </Stack>
         </VStack>
         </Box> 

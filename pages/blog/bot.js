@@ -55,7 +55,7 @@ const BotDescription = () => {
         </Text>
         </Flex>
         <VStack w="100%" h="100%" spacing="0px" maxW="750px">
-            <Image src="/images/K2SOtalk.jpg" alt="K2SO" borderRadius="20px" />
+            <Image src="/images/description/K2SOtalk.jpg" alt="K2SO" borderRadius="20px" />
             <Text fontFamily="Newsreader" textAlign="left" p="30px" fontSize="30px" w="100%">
               Yet to be written.
             </Text>
