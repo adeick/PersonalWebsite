@@ -80,6 +80,58 @@ const BotDescription = () => {
             </Text>
           </Box>
 
+          <Box bg={useColorModeValue("blue.200", "gray.700")} borderRadius="10px" my="30px" border="3px solid" w="100%" py="5px" px="10px">
+            <HStack spacing="24px" w="100%">
+              <Text as="b" fontSize={[25, 25, 30, 40]} pt="5px" pl="25px" textAlign="left" fontFamily="Lexend Deca">
+            What do Discord Bots Do? 🤖
+            </Text>
+            {/* <Image src="/images/description/discord.webp" alt="DiscordLogo" borderRadius="20px" w={["40px", "50px", "80px", "80px"]}/> */}
+            </HStack>
+            
+            <Text fontSize={[18, 18, 20, 20]} pl="30px" fontFamily="Newsreader">
+                Discord bots have a variety of functions. Some bots are built with the purpose of running their own games,
+                like trivia bots or the popular PokeCord bot. Others fill administrative functions, such as language moderating or muting
+                users on command. There are bots that can play music off of YouTube or Spotify, and bots that perform other helpful functions.
+            </Text>
+            <Image borderRadius="10px" src="/images/description/DiscordBotExample.png" alt="Discord Bot Example"/>
+            <Text fontSize={13} pl="5px" fontFamily="Newsreader">
+                <Text fontFamily="Newsreader" as="b">Figure 2</Text>: <Text fontFamily="Newsreader" as="i">Example of a bot interaction</Text>
+            </Text>
+          </Box>
+
+          <Box bg={useColorModeValue("blue.200", "gray.700")} borderRadius="10px" my="30px" border="3px solid" w="100%" py="5px" px="10px">
+            <Text as="b" fontSize={[25, 25, 30, 40]} pt="5px" pl="25px" textAlign="left" fontFamily="Lexend Deca">
+            Pieces of the Puzzle 🧩
+            </Text>
+            
+            <HStack>
+            <VStack>
+            <Image borderRadius="10px" src="/images/description/server.png" alt="Server"/>
+            <Text as="b" fontSize={[21, 21, 25, 25]} px="8px"pt="5px" textAlign="center" fontFamily="Lexend Deca">Server</Text> 
+            </VStack>
+            <Text fontSize={[18, 18, 20, 20]} fontFamily="Newsreader">
+                A server is, simply put, the computer where your bot lives. You can "host" a server on your 
+                own computer, but typically servers are specialized computers that are available 24/7. Servers 
+                are often used by a "Client" computer.
+            </Text>            
+            </HStack>
+            
+            <HStack>
+            <Text fontSize={[18, 18, 20, 20]} fontFamily="Newsreader">
+                A "Client" refers to the computer you use to interact with a server.
+            </Text> 
+            <VStack>
+            <Image borderRadius="10px" src="/images/description/laptop.webp" alt="Client"/>
+            <Text as="b" fontSize={[21, 21, 25, 25]} px="8px"pt="5px" textAlign="center" fontFamily="Lexend Deca">Client</Text> 
+            </VStack>           
+            </HStack>
+
+            {/* <Image borderRadius="10px" src="/images/description/DiscordBotExample.png" alt="Discord Bot Example"/>
+            <Text fontSize={13} pl="5px" fontFamily="Newsreader">
+                <Text fontFamily="Newsreader" as="b">Figure 2</Text>: <Text fontFamily="Newsreader" as="i">Example of a bot interaction</Text>
+            </Text> */}
+          </Box>
+
           <Box w="100%">
           <Link passHref href="../blog">
           <Button as="a" variant="ghost" leftIcon={<ArrowBackIcon/>} ml="20px">
