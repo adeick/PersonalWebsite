@@ -59,6 +59,26 @@ const BotDescription = () => {
             <Text fontFamily="Newsreader" textAlign="left" p="30px" fontSize="30px" w="100%">
               Yet to be written.
             </Text>
+            {/* What's Discord */}
+          <Box bg={useColorModeValue("blue.200", "gray.700")} borderRadius="10px" my="30px" border="3px solid" w="100%" py="5px" px="10px">
+            <HStack spacing="24px" w="100%">
+              <Text as="b" fontSize={[25, 25, 30, 40]} pt="5px" pl="25px" textAlign="left" fontFamily="Lexend Deca">
+            What is Discord?
+            </Text>
+            <Image src="/images/description/discord.webp" alt="DiscordLogo" borderRadius="20px" w={["40px", "50px", "80px", "80px"]}/>
+            </HStack>
+            
+            <Text fontSize={[18, 18, 20, 20]} pl="30px" fontFamily="Newsreader">
+                Discord is a social media platform that was released in 2015. It was originally marketed as a way to play games cooperatively.
+                Since then, it has broadened its appeal and is widely used by all sorts of people, ranging from study groups to book clubs 
+                to programming teams. There are a few complexities to Discord, but mostly we are concerned with Discord's text channels,
+                which is the primary way to interact with Discord bots.
+            </Text>
+            <Image borderRadius="10px" src="/images/instructions/GitHubSignIn.png" alt="Sign In Example"/>
+            <Text fontSize={13} pl="5px" fontFamily="Newsreader">
+                <Text fontFamily="Newsreader" as="b">Figure 2</Text>: <Text fontFamily="Newsreader" as="i">GitHub Desktop Options</Text>
+            </Text>
+          </Box>
 
           <Box w="100%">
           <Link passHref href="../blog">
