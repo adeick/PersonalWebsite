@@ -57,7 +57,7 @@ const BotDescription = () => {
         <VStack w="100%" h="100%" spacing="0px" maxW="750px">
             <Image src="/images/description/K2SOtalk.jpg" alt="K2SO" borderRadius="20px" />
             <Text fontFamily="Newsreader" textAlign="left" p="30px" fontSize="30px" w="100%">
-              Yet to be written.
+              Writing Still in Progress
             </Text>
             {/* What's Discord */}
           <Box bg={useColorModeValue("blue.200", "gray.700")} borderRadius="10px" my="30px" border="3px solid" w="100%" py="5px" px="10px">
@@ -74,9 +74,9 @@ const BotDescription = () => {
                 to programming teams. There are a few complexities to Discord, but mostly we are concerned with Discord's text channels,
                 which is the primary way to interact with Discord bots.
             </Text>
-            <Image borderRadius="10px" src="/images/instructions/GitHubSignIn.png" alt="Sign In Example"/>
+            <Image borderRadius="10px" src="/images/description/DiscordExample.png" alt="Discord Example"/>
             <Text fontSize={13} pl="5px" fontFamily="Newsreader">
-                <Text fontFamily="Newsreader" as="b">Figure 2</Text>: <Text fontFamily="Newsreader" as="i">GitHub Desktop Options</Text>
+                <Text fontFamily="Newsreader" as="b">Figure 1</Text>: <Text fontFamily="Newsreader" as="i">Example of a text conversation</Text>
             </Text>
           </Box>
 
