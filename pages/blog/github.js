@@ -50,7 +50,7 @@ const GitHubTutorial = () => {
         How to Clone a GitHub Repository with GitHub Desktop
         </Text>
         <Text fontSize={[18, 18, 20, 20]} as="i" pl="30px" textAlign="center" fontFamily="Newsreader">
-            A Guide for New Programmers or Curious Hobbyists
+            Instructions for New Programmers or Curious Hobbyists
         </Text>
         </Flex>
         <VStack w="100%" h="100%" spacing="0px" maxW="750px">
