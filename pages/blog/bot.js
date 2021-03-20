@@ -27,6 +27,7 @@ import {
   useBreakpointValue, 
   Alert, AlertIcon, AlertTitle, AlertDescription,
   Accordion, AccordionItem, AccordionButton, AccordionPanel, AccordionIcon,
+  Divider,
 } from '@chakra-ui/react';
 //import UncontrolledLottie from '../components/UncontrolledLottie';
 
@@ -103,28 +104,45 @@ const BotDescription = () => {
             <Text as="b" fontSize={[25, 25, 30, 40]} pt="5px" pl="25px" textAlign="left" fontFamily="Lexend Deca">
             Pieces of the Puzzle 🧩
             </Text>
-            
             <HStack>
-            <VStack>
-            <Image borderRadius="10px" src="/images/description/server.png" alt="Server"/>
-            <Text as="b" fontSize={[21, 21, 25, 25]} px="8px"pt="5px" textAlign="center" fontFamily="Lexend Deca">Server</Text> 
-            </VStack>
-            <Text fontSize={[18, 18, 20, 20]} fontFamily="Newsreader">
-                A server is, simply put, the computer where your bot lives. You can "host" a server on your 
-                own computer, but typically servers are specialized computers that are available 24/7. Servers 
-                are often used by a "Client" computer.
-            </Text>            
+            <Box bg={useColorModeValue("blue.300", "gray.600")} minW="40%" borderRadius="10px" my="30px" border="3px solid" py="5px" px="10px">
+            <Text as="b" fontSize={[21, 21, 25, 25]} px="8px"pt="5px" textAlign="center" fontFamily="Lexend Deca">
+              Client-Server Model</Text> 
+              <Image borderRadius="10px" src="/images/description/ClientServerModel.png" alt="Client-Server Model"/>
+            </Box>
+            <Text fontSize={[18, 18, 20, 20]} fontFamily="Newsreader" p="10px">
+                The Client-Server Model is a relationship between two computers. The first computer, known as the <b>client</b>,
+                requests information from the second computer, (the <b>server</b>). The server sends a response based on what 
+                was requested. 
+            </Text> 
             </HStack>
             
+            <Divider my="10px" />
             <HStack>
-            <Text fontSize={[18, 18, 20, 20]} fontFamily="Newsreader">
-                A "Client" refers to the computer you use to interact with a server.
+            <Text fontSize={[18, 18, 20, 20]} fontFamily="Newsreader" px="10px" py="18px">
+                The device always acts as a client in the client-server relationship. You, the user,
+                makes a request. (This could be as simple as opening an app or searching on Google).
+                The appropriate server will then respond to your request with data (new messages, updates,
+                search results, etc.) 
             </Text> 
             <VStack>
             <Image borderRadius="10px" src="/images/description/laptop.webp" alt="Client"/>
-            <Text as="b" fontSize={[21, 21, 25, 25]} px="8px"pt="5px" textAlign="center" fontFamily="Lexend Deca">Client</Text> 
+            <Text as="b" fontSize={[21, 21, 25, 25]} px="8px"pt="5px" textAlign="center" fontFamily="Lexend Deca">Device</Text> 
             </VStack>           
             </HStack>
+
+            <Divider my="10px" />
+            <HStack>
+            <VStack>
+            <Image borderRadius="10px" src="/images/description/server.png" alt="Hosting Service"/>
+            <Text as="b" fontSize={[21, 21, 25, 25]} px="8px"pt="5px" textAlign="center" fontFamily="Lexend Deca">Hosting Service</Text> 
+            </VStack>
+            <Text fontSize={[18, 18, 20, 20]} fontFamily="Newsreader">
+                The Server is, simply put, the computer where your bot lives. You can "host" a server on your 
+                own computer, but typically servers are specialized computers that are available 24/7. 
+            </Text>            
+            </HStack>
+            
 
             {/* <Image borderRadius="10px" src="/images/description/DiscordBotExample.png" alt="Discord Bot Example"/>
             <Text fontSize={13} pl="5px" fontFamily="Newsreader">
