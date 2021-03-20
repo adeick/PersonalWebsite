@@ -109,10 +109,13 @@ const BotDescription = () => {
             <Text as="b" fontSize={[21, 21, 25, 25]} px="8px"pt="5px" textAlign="center" fontFamily="Lexend Deca">
               Client-Server Model</Text> 
               <Image borderRadius="10px" src="/images/description/ClientServerModel.png" alt="Client-Server Model"/>
+              <Text fontSize={13} pl="5px" fontFamily="Newsreader">
+                <Text fontFamily="Newsreader" as="b">Figure 3</Text>: <Text fontFamily="Newsreader" as="i">The Client-Server Model</Text>
+            </Text>
             </Box>
             <Text fontSize={[18, 18, 20, 20]} fontFamily="Newsreader" p="10px">
-                The Client-Server Model is a relationship between two computers. The first computer, known as the <b>client</b>,
-                requests information from the second computer, (the <b>server</b>). The server sends a response based on what 
+                The Client-Server Model (Figure 3) is a relationship between two computers. The first computer, known as the <b>client</b>,
+                makes requests to the second computer, (the <b>server</b>). The server sends a response based on what 
                 was requested. 
             </Text> 
             </HStack>
@@ -120,10 +123,10 @@ const BotDescription = () => {
             <Divider my="10px" />
             <HStack>
             <Text fontSize={[18, 18, 20, 20]} fontFamily="Newsreader" px="10px" py="18px">
-                The device always acts as a client in the client-server relationship. You, the user,
-                makes a request. (This could be as simple as opening an app or searching on Google).
-                The appropriate server will then respond to your request with data (new messages, updates,
-                search results, etc.) 
+                Your device always acts as a client in the client-server relationship.
+                When you send a message or use a search engine, you are telling your 
+                device to create a request. The appropriate server will respond to 
+                your request and provide the pertinent data. 
             </Text> 
             <VStack>
             <Image borderRadius="10px" src="/images/description/laptop.webp" alt="Client"/>
@@ -134,21 +137,60 @@ const BotDescription = () => {
             <Divider my="10px" />
             <HStack>
             <VStack>
-            <Image borderRadius="10px" src="/images/description/server.png" alt="Hosting Service"/>
-            <Text as="b" fontSize={[21, 21, 25, 25]} px="8px"pt="5px" textAlign="center" fontFamily="Lexend Deca">Hosting Service</Text> 
+            <Image borderRadius="10px" src="/images/description/discord.webp" alt="Discord"/>
+            <Text as="b" fontSize={[21, 21, 25, 25]} px="8px"pt="5px" textAlign="center" fontFamily="Lexend Deca">Discord</Text> 
             </VStack>
             <Text fontSize={[18, 18, 20, 20]} fontFamily="Newsreader">
-                The Server is, simply put, the computer where your bot lives. You can "host" a server on your 
-                own computer, but typically servers are specialized computers that are available 24/7. 
+                Discord always acts as the server in the client-server model.
+                Clients (like your device) will send an 'update' request, and
+                Discord will send the data (for example, new messages) to the Discord app 
+                on your device, which will decipher the data and display it to you. 
             </Text>            
             </HStack>
-            
 
-            {/* <Image borderRadius="10px" src="/images/description/DiscordBotExample.png" alt="Discord Bot Example"/>
+            <Divider my="10px" />
+            <HStack>
+            <Text fontSize={[18, 18, 20, 20]} fontFamily="Newsreader">
+                The Hosting Service is the computer where your bot lives, and is 
+                the most complex system. Although you can host a bot on your device,
+                most bots are hosted on an external
+                server that runs 24/7. In this regard, the hosting service acts as 
+                a server that you can access from your device.  
+<br/>
+                On the other hand, the hosting service acts as a client to Discord.
+                The hosting service makes requests to Discord, and Discord responds
+                to those requests. 
+            </Text>  
+            <VStack>
+            <Image borderRadius="10px" src="/images/description/server.png" alt="Hosting Service"/>
+            <Text as="b" fontSize={[21, 21, 25, 25]} px="8px"pt="5px" textAlign="center" fontFamily="Lexend Deca">Hosting Service</Text> 
+            </VStack>          
+            </HStack>
+          </Box>
+
+          <Box bg={useColorModeValue("blue.200", "gray.700")} borderRadius="10px" my="30px" border="3px solid" w="100%" py="5px" px="10px">
+            <HStack spacing="24px" w="100%">
+              <Text as="b" fontSize={[25, 25, 30, 40]} pt="5px" pl="25px" textAlign="left" fontFamily="Lexend Deca">
+            The Pieces Combined 🖼️
+            </Text>
+            </HStack>
+            
+            <Text fontSize={[18, 18, 20, 20]} pl="30px" fontFamily="Newsreader">
+                Client-Server Relationships are the backbone of almost all digital communications. Figure # 
+                shows a simple model containing with only three systems. In reality, a bot could communicate with
+                hundreds of other systems.
+            </Text>
+            <Image borderRadius="10px" src="/images/description/DescriptionCombined.png" alt="Combined Representation"/>
             <Text fontSize={13} pl="5px" fontFamily="Newsreader">
                 <Text fontFamily="Newsreader" as="b">Figure 2</Text>: <Text fontFamily="Newsreader" as="i">Example of a bot interaction</Text>
-            </Text> */}
+            </Text>
+            <Image borderRadius="10px" src="/images/description/DescriptionExpanded.png" alt="Expanded Representation"/>
+            <Text fontSize={13} pl="5px" fontFamily="Newsreader">
+                <Text fontFamily="Newsreader" as="b">Figure 2</Text>: <Text fontFamily="Newsreader" as="i">Example of a bot interaction</Text>
+            </Text>
+
           </Box>
+
 
           <Box w="100%">
           <Link passHref href="../blog">
