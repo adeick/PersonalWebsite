@@ -176,17 +176,19 @@ const BotDescription = () => {
             </HStack>
             
             <Text fontSize={[18, 18, 20, 20]} pl="30px" fontFamily="Newsreader">
-                Client-Server Relationships are the backbone of almost all digital communications. Figure # 
-                shows a simple model containing with only three systems. In reality, a bot could communicate with
-                hundreds of other systems.
+                Client-Server Relationships are the backbone of almost all digital communications. Figure 4 
+                shows a simple model containing with only three systems.
             </Text>
             <Image borderRadius="10px" src="/images/description/DescriptionCombined.png" alt="Combined Representation"/>
             <Text fontSize={13} pl="5px" fontFamily="Newsreader">
-                <Text fontFamily="Newsreader" as="b">Figure 2</Text>: <Text fontFamily="Newsreader" as="i">Example of a bot interaction</Text>
+                <Text fontFamily="Newsreader" as="b">Figure 4 </Text> (above): <Text fontFamily="Newsreader" as="i">A simple communication network</Text>
+            </Text>
+            <Text fontSize={[18, 18, 20, 20]} pl="30px" mt="30px" fontFamily="Newsreader">
+                In reality, a bots can communicate with dozens of such systems.
             </Text>
             <Image borderRadius="10px" src="/images/description/DescriptionExpanded.png" alt="Expanded Representation"/>
             <Text fontSize={13} pl="5px" fontFamily="Newsreader">
-                <Text fontFamily="Newsreader" as="b">Figure 2</Text>: <Text fontFamily="Newsreader" as="i">Example of a bot interaction</Text>
+                <Text fontFamily="Newsreader" as="b">Figure 5</Text>: <Text fontFamily="Newsreader" as="i">A realistic communication network</Text>
             </Text>
 
           </Box>
