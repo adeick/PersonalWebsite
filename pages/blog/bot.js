@@ -24,6 +24,7 @@ import {
   useColorMode,
   useColorModeValue, Stack, 
   VStack, HStack, Spacer, Icon,
+  Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton, useDisclosure,
   useBreakpointValue, 
   Alert, AlertIcon, AlertTitle, AlertDescription,
   Accordion, AccordionItem, AccordionButton, AccordionPanel, AccordionIcon,
@@ -32,6 +33,8 @@ import {
 //import UncontrolledLottie from '../components/UncontrolledLottie';
 
 const BotDescription = () => {
+  const sourcesModal = useDisclosure();
+
   return(
   <div id="Website">
     <Sidebar />
@@ -51,25 +54,22 @@ const BotDescription = () => {
         <Text as="b" fontSize={[25, 25, 30, 60]} textAlign="center" fontFamily="Lexend Deca" mb="20px">
         On the Topic of Discord Bots
         </Text>
-        <Text fontSize={[18, 18, 20, 20]} as="i" pl="30px" textAlign="center" fontFamily="Newsreader">
+        <Text fontSize={[15, 15, 20, 20]} as="i" pl="30px" textAlign="center" fontFamily="Newsreader">
             A Technical Description for New Programmers or Curious Hobbyists
         </Text>
         </Flex>
         <VStack w="100%" h="100%" spacing="0px" maxW="750px">
-            <Image src="/images/description/K2SOtalk.jpg" alt="K2SO" borderRadius="20px" />
-            <Text fontFamily="Newsreader" textAlign="left" p="30px" fontSize="30px" w="100%">
-              Writing Still in Progress
-            </Text>
+            <Image src="/images/description/K2SOtalk.jpg" alt="K2SO" borderRadius="20px" my="30px"/>
             {/* What's Discord */}
           <Box bg={useColorModeValue("blue.200", "gray.700")} borderRadius="10px" my="30px" border="3px solid" w="100%" py="5px" px="10px">
             <HStack spacing="24px" w="100%">
-              <Text as="b" fontSize={[25, 25, 30, 40]} pt="5px" pl="25px" textAlign="left" fontFamily="Lexend Deca">
+              <Text as="b" fontSize={[25, 25, 30, 40]} pt="5px" pl="25px" textAlign={["center", "left"]} fontFamily="Lexend Deca">
             What is Discord?
             </Text>
             <Image src="/images/description/discord.webp" alt="DiscordLogo" borderRadius="20px" w={["40px", "50px", "80px", "80px"]}/>
             </HStack>
             
-            <Text fontSize={[18, 18, 20, 20]} pl="30px" fontFamily="Newsreader">
+            <Text fontSize={[15, 15, 20, 20]} pl="30px" fontFamily="Newsreader">
                 Discord is a social media platform that was released in 2015. It was originally marketed as a way to play games cooperatively.
                 Since then, it has broadened its appeal and is widely used by all sorts of people, ranging from study groups to book clubs 
                 to programming teams. There are a few complexities to Discord, but mostly we are concerned with Discord's text channels,
@@ -83,13 +83,13 @@ const BotDescription = () => {
 
           <Box bg={useColorModeValue("blue.200", "gray.700")} borderRadius="10px" my="30px" border="3px solid" w="100%" py="5px" px="10px">
             <HStack spacing="24px" w="100%">
-              <Text as="b" fontSize={[25, 25, 30, 40]} pt="5px" pl="25px" textAlign="left" fontFamily="Lexend Deca">
+              <Text as="b" fontSize={[25, 25, 30, 40]} pt="5px" pl="25px" textAlign={["center", "left"]} fontFamily="Lexend Deca">
             What do Discord Bots Do? 🤖
             </Text>
             {/* <Image src="/images/description/discord.webp" alt="DiscordLogo" borderRadius="20px" w={["40px", "50px", "80px", "80px"]}/> */}
             </HStack>
             
-            <Text fontSize={[18, 18, 20, 20]} pl="30px" fontFamily="Newsreader">
+            <Text fontSize={[15, 15, 20, 20]} pl="30px" fontFamily="Newsreader">
                 Discord bots have a variety of functions. Some bots are built with the purpose of running their own games,
                 like trivia bots or the popular PokeCord bot. Others fill administrative functions, such as language moderating or muting
                 users on command. There are bots that can play music off of YouTube or Spotify, and bots that perform other helpful functions.
@@ -101,10 +101,12 @@ const BotDescription = () => {
           </Box>
 
           <Box bg={useColorModeValue("blue.200", "gray.700")} borderRadius="10px" my="30px" border="3px solid" w="100%" py="5px" px="10px">
-            <Text as="b" fontSize={[25, 25, 30, 40]} pt="5px" pl="25px" textAlign="left" fontFamily="Lexend Deca">
+            <HStack spacing="24px" w="100%">
+            <Text as="b" fontSize={[25, 25, 30, 40]} pt="5px" pl="25px" textAlign={["center", "left"]} fontFamily="Lexend Deca">
             Pieces of the Puzzle 🧩
             </Text>
-            <HStack>
+            </HStack>
+            <Stack direction={["column", "row"]}>
             <Box bg={useColorModeValue("blue.300", "gray.600")} minW="40%" borderRadius="10px" my="30px" border="3px solid" py="5px" px="10px">
             <Text as="b" fontSize={[21, 21, 25, 25]} px="8px"pt="5px" textAlign="center" fontFamily="Lexend Deca">
               Client-Server Model</Text> 
@@ -113,16 +115,16 @@ const BotDescription = () => {
                 <Text fontFamily="Newsreader" as="b">Figure 3</Text>: <Text fontFamily="Newsreader" as="i">The Client-Server Model</Text>
             </Text>
             </Box>
-            <Text fontSize={[18, 18, 20, 20]} fontFamily="Newsreader" p="10px">
+            <Text fontSize={[15, 15, 20, 20]} fontFamily="Newsreader" p="10px">
                 The Client-Server Model (Figure 3) is a relationship between two computers. The first computer, known as the <b>client</b>,
-                makes requests to the second computer, (the <b>server</b>). The server sends a response based on what 
+                makes requests to the second computer, (the <b>server</b>). The server responds based on what 
                 was requested. 
             </Text> 
-            </HStack>
+            </Stack>
             
             <Divider my="10px" />
             <HStack>
-            <Text fontSize={[18, 18, 20, 20]} fontFamily="Newsreader" px="10px" py="18px">
+            <Text fontSize={[15, 15, 20, 20]} fontFamily="Newsreader" px="10px" py="18px">
                 Your device always acts as a client in the client-server relationship.
                 When you send a message or use a search engine, you are telling your 
                 device to create a request. The appropriate server will respond to 
@@ -140,7 +142,7 @@ const BotDescription = () => {
             <Image borderRadius="10px" src="/images/description/discord.webp" alt="Discord"/>
             <Text as="b" fontSize={[21, 21, 25, 25]} px="8px"pt="5px" textAlign="center" fontFamily="Lexend Deca">Discord</Text> 
             </VStack>
-            <Text fontSize={[18, 18, 20, 20]} fontFamily="Newsreader">
+            <Text fontSize={[15, 15, 20, 20]} fontFamily="Newsreader">
                 Discord always acts as the server in the client-server model.
                 Clients (like your device) will send an 'update' request, and
                 Discord will send the data (for example, new messages) to the Discord app 
@@ -150,7 +152,7 @@ const BotDescription = () => {
 
             <Divider my="10px" />
             <HStack>
-            <Text fontSize={[18, 18, 20, 20]} fontFamily="Newsreader">
+            <Text fontSize={[15, 15, 20, 20]} fontFamily="Newsreader">
                 The Hosting Service is the computer where your bot lives, and is 
                 the most complex system. Although you can host a bot on your device,
                 most bots are hosted on an external
@@ -170,29 +172,97 @@ const BotDescription = () => {
 
           <Box bg={useColorModeValue("blue.200", "gray.700")} borderRadius="10px" my="30px" border="3px solid" w="100%" py="5px" px="10px">
             <HStack spacing="24px" w="100%">
-              <Text as="b" fontSize={[25, 25, 30, 40]} pt="5px" pl="25px" textAlign="left" fontFamily="Lexend Deca">
-            The Pieces Combined 🖼️
+              <Text as="b" fontSize={[25, 25, 30, 40]} pt="5px" pl={["10px", "10px", "25px", "25px"]} textAlign="left" fontFamily="Lexend Deca">
+            The Big Picture 🖼️
             </Text>
             </HStack>
             
-            <Text fontSize={[18, 18, 20, 20]} pl="30px" fontFamily="Newsreader">
+            <Text fontSize={[15, 15, 20, 20]} pl="30px" fontFamily="Newsreader">
                 Client-Server Relationships are the backbone of almost all digital communications. Figure 4 
-                shows a simple model containing with only three systems.
+                shows a simple model containing three systems.
             </Text>
             <Image borderRadius="10px" src="/images/description/DescriptionCombined.png" alt="Combined Representation"/>
             <Text fontSize={13} pl="5px" fontFamily="Newsreader">
                 <Text fontFamily="Newsreader" as="b">Figure 4 </Text> (above): <Text fontFamily="Newsreader" as="i">A simple communication network</Text>
             </Text>
-            <Text fontSize={[18, 18, 20, 20]} pl="30px" mt="30px" fontFamily="Newsreader">
-                In reality, a bots can communicate with dozens of such systems.
+            <Text fontSize={[15, 15, 20, 20]} pl="30px" mt="30px" fontFamily="Newsreader">
+                In reality, bots can communicate with dozens of such systems.
             </Text>
             <Image borderRadius="10px" src="/images/description/DescriptionExpanded.png" alt="Expanded Representation"/>
             <Text fontSize={13} pl="5px" fontFamily="Newsreader">
                 <Text fontFamily="Newsreader" as="b">Figure 5</Text>: <Text fontFamily="Newsreader" as="i">A realistic communication network</Text>
             </Text>
-
           </Box>
 
+          <Box bg={useColorModeValue("blue.200", "gray.700")} borderRadius="10px" my="30px" border="3px solid" w="100%" py="5px" px="10px">
+            <Text as="b" fontSize={[25, 25, 30, 40]} pt="5px" pl="25px" textAlign={["center", "left"]} fontFamily="Lexend Deca">
+              Application ⚙️
+            </Text>
+            <VStack>
+            <Image borderRadius="10px" src="/images/description/DiscordMathExample.png" alt="Combined Representation"/>
+            <Text fontSize={13} pl="5px" fontFamily="Newsreader">
+                <Text fontFamily="Newsreader" as="b">Figure 6 </Text>: <Text fontFamily="Newsreader" as="i">A Discord bot helping with math</Text>
+            </Text>
+            <Text fontSize={[15, 15, 20, 20]} pl="30px" fontFamily="Newsreader">
+                Let's break this down. George, the user, sends a message in the discord channel.
+                The Discord app on George's computer sends a request to the Discord server, asking
+                to post a new message. Discord responds to the request by updating its servers.
+                When IG-88 (the bot), sends an update request to the Discord server, the
+                server lets IG-88 know that George posted a message.
+              <br/><br/>
+                IG-88 looks at the content of the new message, and determines that this message is a 
+                command. He breaks down the command into simple components, and calculates
+                the answer. Then, he sends a request to the Discord servers to post his own message.
+                Discord accepts the request and updates its servers. Then, on George's next update
+                request, Discord will load IG-88's message on George's computer.
+            </Text>
+            </VStack>
+          </Box>
+
+          <Box bg={useColorModeValue("blue.200", "gray.700")} borderRadius="10px" my="30px" border="3px solid" w="100%" py="5px" px="10px">
+            <Text as="b" fontSize={[25, 25, 30, 40]} pt="5px" pl="25px" textAlign={["center", "left"]} fontFamily="Lexend Deca">
+            Recap 📚
+            </Text>
+            <VStack>
+            <Text fontSize={[15, 15, 20, 20]} pl="30px" fontFamily="Newsreader">
+                Almost all network services rely on client-server communications. A 
+                client makes a request, and the server will respond appropriately. Setting up an
+                automated client (a bot) can centralize a user experience and boost productivity.
+                <br/><br/>
+                Client-Server communications describe the mechanisms by which computers communicate.
+                If you're still interested in digital communications, I encourage you to read up on 
+                APIs (Application Programming Interfaces). APIs describe the <i>languages</i> by which computers
+                communicate. Learn More in the Sources popup!
+            </Text>
+            <Button bg={useColorModeValue("blue.300","gray.800")} onClick={() => {
+              sourcesModal.onOpen()
+            }}> 
+            Sources
+            </Button>
+
+            <Modal isOpen={sourcesModal.isOpen} onClose={sourcesModal.onClose}>
+              <ModalOverlay />
+              <ModalContent> 
+                <ModalHeader>
+                  Sources
+                </ModalHeader>
+                <ModalCloseButton />
+                <ModalBody>     
+                <Text color="blue.500">
+                          -	<a target="_blank" href="https://botscrew.com/blog/what-are-bots/">What are Bots? How Do Chatbots Work?</a>
+                <br/><br/>-	<a target="_blank" href="https://discord.com/developers/docs/intro">Introduction to Discord Developer Documentation </a>
+                <br/><br/>-	<a target="_blank" href="https://medium.com/@subhangdxt/beginners-guide-to-client-server-communication-8099cf0ac3af">Beginner's Guide to Client Server Communication</a>
+                <br/><br/>-	<a target="_blank" href="https://towardsdatascience.com/what-is-an-api-and-how-does-it-work-1dccd7a8219e">What is an API and how does it work?</a>
+                <br/><br/>-	<a target="_blank" href="https://www.protocol.com/discord">How Discord (somewhat accidentally) invented the future of the internet </a>
+                </Text>
+                </ModalBody>
+              </ModalContent>
+            </Modal>
+            </VStack>
+          </Box>
+          <Text as="b" fontSize={[25, 25, 30, 40]} pt="10px" textAlign="center" fontFamily="Lexend Deca" w="100%">
+          🎉🎉🎉
+          </Text>
 
           <Box w="100%">
           <Link passHref href="../blog">
