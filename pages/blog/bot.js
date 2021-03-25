@@ -25,6 +25,7 @@ import {
   useColorModeValue, Stack, 
   VStack, HStack, Spacer, Icon,
   Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton, useDisclosure,
+  Tabs, TabList, TabPanels, Tab, TabPanel,
   useBreakpointValue, 
   Alert, AlertIcon, AlertTitle, AlertDescription,
   Accordion, AccordionItem, AccordionButton, AccordionPanel, AccordionIcon,
@@ -248,13 +249,35 @@ const BotDescription = () => {
                 </ModalHeader>
                 <ModalCloseButton />
                 <ModalBody>     
-                <Text color="blue.500">
-                          -	<a target="_blank" href="https://botscrew.com/blog/what-are-bots/">What are Bots? How Do Chatbots Work?</a>
-                <br/><br/>-	<a target="_blank" href="https://discord.com/developers/docs/intro">Introduction to Discord Developer Documentation </a>
-                <br/><br/>-	<a target="_blank" href="https://medium.com/@subhangdxt/beginners-guide-to-client-server-communication-8099cf0ac3af">Beginner's Guide to Client Server Communication</a>
-                <br/><br/>-	<a target="_blank" href="https://towardsdatascience.com/what-is-an-api-and-how-does-it-work-1dccd7a8219e">What is an API and how does it work?</a>
-                <br/><br/>-	<a target="_blank" href="https://www.protocol.com/discord">How Discord (somewhat accidentally) invented the future of the internet </a>
-                </Text>
+                <Tabs isFitted variant="enclosed">
+                  <TabList mb="1em">
+                    <Tab>MLA</Tab>
+                    <Tab>URLs</Tab>
+                  </TabList>
+                  <TabPanels>
+                    <TabPanel>
+                    <Text color="black">
+                    “API Docs for Bots and Developers.” Discord Developer Portal, Discord, discord.com/developers/docs/intro. 
+         <br/><br/> Davis, Thomas. “What Is An API and How Does It Work?” Medium, Towards Data Science, 31 Dec. 2019, towardsdatascience.com/what-is-an-api-and-how-does-it-work-1dccd7a8219e.
+         <br/><br/> Dixit, Shubhang. “Beginners Guide to Client Server Communication.” Medium, Medium, 30 July 2019, medium.com/@subhangdxt/beginners-guide-to-client-server-communication-8099cf0ac3af. 
+         <br/><br/> Pierce, David. “How Discord (Somewhat Accidentally) Invented the Future of the Internet.” Protocol, Protocol - The People, Power and Politics of Tech, 1 Nov. 2020, www.protocol.com/discord. 
+         <br/><br/> “What Are Bots? How Do Chatbots Work?” BotsCrew, 22 Mar. 2021, botscrew.com/blog/what-are-bots/.
+
+                    </Text>
+                    </TabPanel>
+                    <TabPanel>
+                    <Text color="blue.500">
+                        -	<a target="_blank" href="https://discord.com/developers/docs/intro">Introduction to Discord Developer Documentation </a>
+              <br/><br/>-	<a target="_blank" href="https://towardsdatascience.com/what-is-an-api-and-how-does-it-work-1dccd7a8219e">What is an API and how does it work?</a>
+              <br/><br/>-	<a target="_blank" href="https://medium.com/@subhangdxt/beginners-guide-to-client-server-communication-8099cf0ac3af">Beginner's Guide to Client Server Communication</a>
+              <br/><br/>-	<a target="_blank" href="https://www.protocol.com/discord">How Discord (somewhat accidentally) invented the future of the internet </a>
+              <br/><br/>-	<a target="_blank" href="https://botscrew.com/blog/what-are-bots/">What are Bots? How Do Chatbots Work?</a>
+
+                    </Text>
+                    </TabPanel>
+                  </TabPanels>
+                </Tabs>
+                
                 </ModalBody>
               </ModalContent>
             </Modal>
