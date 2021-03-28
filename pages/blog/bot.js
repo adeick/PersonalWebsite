@@ -61,7 +61,24 @@ const BotDescription = () => {
         </Flex>
         <VStack w="100%" h="100%" spacing="0px" maxW="750px">
             <Image src="/images/description/K2SOtalk.jpg" alt="K2SO" borderRadius="20px" my="30px"/>
-            {/* What's Discord */}
+            {/* Intro */}
+            <Box bg={useColorModeValue("blue.200", "gray.700")} borderRadius="10px" my="30px" border="3px solid" w="100%" py="5px" px="10px">
+            <HStack spacing="24px" w="100%">
+              <Text as="b" fontSize={[25, 25, 30, 40]} pt="5px" pl="25px" textAlign={["center", "left"]} fontFamily="Lexend Deca">
+            Introduction
+            </Text>
+            </HStack>
+            
+            <Text fontSize={[15, 15, 20, 20]} pl="30px" fontFamily="Newsreader" sx={{ "text-indent": "30px" }}>
+              This is a description for novice programmers or non-programmers, about <b>how </b>bots
+              (specifically discord bots) work. This is <b>not</b> a
+              guide on how to make such a bot (you can find such a guide <u><a href="https://www.writebots.com/how-to-make-a-discord-bot/" target="_blank">here</a></u>.)
+              Instead, we will discuss what a bot is, what is does, and the underlying mechanics behind how it works.
+              By the end of this description, you should have an understanding of how bots communicate with third parties
+              (such as Discord) and the benefits associated with this type of network.
+            </Text>
+          </Box>
+
           <Box bg={useColorModeValue("blue.200", "gray.700")} borderRadius="10px" my="30px" border="3px solid" w="100%" py="5px" px="10px">
             <HStack spacing="24px" w="100%">
               <Text as="b" fontSize={[25, 25, 30, 40]} pt="5px" pl="25px" textAlign={["center", "left"]} fontFamily="Lexend Deca">
@@ -70,10 +87,10 @@ const BotDescription = () => {
             <Image src="/images/description/discord.webp" alt="DiscordLogo" borderRadius="20px" w={["40px", "50px", "80px", "80px"]}/>
             </HStack>
             
-            <Text fontSize={[15, 15, 20, 20]} pl="30px" fontFamily="Newsreader">
+            <Text fontSize={[15, 15, 20, 20]} pl="30px" fontFamily="Newsreader" sx={{ "text-indent": "30px" }}>
                 Discord is a social media platform that was released in 2015. It was originally marketed as a way to play games cooperatively.
                 Since then, it has broadened its appeal and is widely used by all sorts of people, ranging from study groups to book clubs 
-                to programming teams. There are a few complexities to Discord, but mostly we are concerned with Discord's text channels,
+                to programming teams. (Pierce) There are a few complexities to Discord, but mostly we are concerned with Discord's text channels,
                 which is the primary way to interact with Discord bots.
             </Text>
             <Image borderRadius="10px" src="/images/description/DiscordExample.png" alt="Discord Example"/>
@@ -90,7 +107,7 @@ const BotDescription = () => {
             {/* <Image src="/images/description/discord.webp" alt="DiscordLogo" borderRadius="20px" w={["40px", "50px", "80px", "80px"]}/> */}
             </HStack>
             
-            <Text fontSize={[15, 15, 20, 20]} pl="30px" fontFamily="Newsreader">
+            <Text fontSize={[15, 15, 20, 20]} pl="30px" fontFamily="Newsreader" sx={{ "text-indent": "30px" }}>
                 Discord bots have a variety of functions. Some bots are built with the purpose of running their own games,
                 like trivia bots or the popular PokeCord bot. Others fill administrative functions, such as language moderating or muting
                 users on command. There are bots that can play music off of YouTube or Spotify, and bots that perform other helpful functions.
@@ -117,15 +134,17 @@ const BotDescription = () => {
             </Text>
             </Box>
             <Text fontSize={[15, 15, 20, 20]} fontFamily="Newsreader" p="10px">
-                The Client-Server Model (Figure 3) is a relationship between two computers. The first computer, known as the <b>client</b>,
+                All Discord bots (and almost all bots in general) communicate according to the same model.
+                <br/><br/>
+                This model, known as the Client-Server Model (Figure 3) is a relationship between two computers. The first computer, known as the <b>client</b>,
                 makes requests to the second computer, (the <b>server</b>). The server responds based on what 
-                was requested. 
+                was requested. (Dixit)
             </Text> 
             </Stack>
             
             <Divider my="10px" />
             <HStack>
-            <Text fontSize={[15, 15, 20, 20]} fontFamily="Newsreader" px="10px" py="18px">
+            <Text fontSize={[15, 15, 20, 20]} fontFamily="Newsreader" px="10px" py="18px" sx={{ "text-indent": "30px" }}>
                 Your device always acts as a client in the client-server relationship.
                 When you send a message or use a search engine, you are telling your 
                 device to create a request. The appropriate server will respond to 
@@ -143,7 +162,7 @@ const BotDescription = () => {
             <Image borderRadius="10px" src="/images/description/discord.webp" alt="Discord"/>
             <Text as="b" fontSize={[21, 21, 25, 25]} px="8px"pt="5px" textAlign="center" fontFamily="Lexend Deca">Discord</Text> 
             </VStack>
-            <Text fontSize={[15, 15, 20, 20]} fontFamily="Newsreader">
+            <Text fontSize={[15, 15, 20, 20]} fontFamily="Newsreader" sx={{ "text-indent": "30px" }}>
                 Discord always acts as the server in the client-server model.
                 Clients (like your device) will send an 'update' request, and
                 Discord will send the data (for example, new messages) to the Discord app 
@@ -153,7 +172,7 @@ const BotDescription = () => {
 
             <Divider my="10px" />
             <HStack>
-            <Text fontSize={[15, 15, 20, 20]} fontFamily="Newsreader">
+            <Text fontSize={[15, 15, 20, 20]} fontFamily="Newsreader" sx={{ "text-indent": "30px" }}>
                 The Hosting Service is the computer where your bot lives, and is 
                 the most complex system. Although you can host a bot on your device,
                 most bots are hosted on an external
@@ -162,7 +181,8 @@ const BotDescription = () => {
 <br/>
                 On the other hand, the hosting service acts as a client to Discord.
                 The hosting service makes requests to Discord, and Discord responds
-                to those requests. 
+                to those requests. For this reason, a bot is sometimes called 
+                an <i>automated client</i>.
             </Text>  
             <VStack>
             <Image borderRadius="10px" src="/images/description/server.png" alt="Hosting Service"/>
@@ -178,7 +198,7 @@ const BotDescription = () => {
             </Text>
             </HStack>
             
-            <Text fontSize={[15, 15, 20, 20]} pl="30px" fontFamily="Newsreader">
+            <Text fontSize={[15, 15, 20, 20]} pl="30px" fontFamily="Newsreader" sx={{ "text-indent": "30px" }}>
                 Client-Server Relationships are the backbone of almost all digital communications. Figure 4 
                 shows a simple model containing three systems.
             </Text>
@@ -204,7 +224,7 @@ const BotDescription = () => {
             <Text fontSize={13} pl="5px" fontFamily="Newsreader">
                 <Text fontFamily="Newsreader" as="b">Figure 6 </Text>: <Text fontFamily="Newsreader" as="i">A Discord bot helping with math</Text>
             </Text>
-            <Text fontSize={[15, 15, 20, 20]} pl="30px" fontFamily="Newsreader">
+            <Text fontSize={[15, 15, 20, 20]} pl="30px" fontFamily="Newsreader" sx={{ "text-indent": "30px" }}>
                 Let's break this down. George, the user, sends a message in the discord channel.
                 The Discord app on George's computer sends a request to the Discord server, asking
                 to post a new message. Discord responds to the request by updating its servers.
@@ -225,7 +245,7 @@ const BotDescription = () => {
             Recap 📚
             </Text>
             <VStack>
-            <Text fontSize={[15, 15, 20, 20]} pl="30px" fontFamily="Newsreader">
+            <Text fontSize={[15, 15, 20, 20]} pl="30px" fontFamily="Newsreader" sx={{ "text-indent": "30px" }}>
                 Almost all network services rely on client-server communications. A 
                 client makes a request, and the server will respond appropriately. Setting up an
                 automated client (a bot) can centralize a user experience and boost productivity.
@@ -256,13 +276,16 @@ const BotDescription = () => {
                   </TabList>
                   <TabPanels>
                     <TabPanel>
-                    <Text color="black">
+                    <Text color="black" pl="30px" sx={{ "text-indent": "-30px" }}>
                     “API Docs for Bots and Developers.” Discord Developer Portal, Discord, discord.com/developers/docs/intro. 
-         <br/><br/> Davis, Thomas. “What Is An API and How Does It Work?” Medium, Towards Data Science, 31 Dec. 2019, towardsdatascience.com/what-is-an-api-and-how-does-it-work-1dccd7a8219e.
-         <br/><br/> Dixit, Shubhang. “Beginners Guide to Client Server Communication.” Medium, Medium, 30 July 2019, medium.com/@subhangdxt/beginners-guide-to-client-server-communication-8099cf0ac3af. 
-         <br/><br/> Pierce, David. “How Discord (Somewhat Accidentally) Invented the Future of the Internet.” Protocol, Protocol - The People, Power and Politics of Tech, 1 Nov. 2020, www.protocol.com/discord. 
-         <br/><br/> “What Are Bots? How Do Chatbots Work?” BotsCrew, 22 Mar. 2021, botscrew.com/blog/what-are-bots/.
-
+         <br/><br/></Text><Text color="black" pl="30px" sx={{ "text-indent": "-30px" }}>
+Davis, Thomas. “What Is An API and How Does It Work?” Medium, Towards Data Science, 31 Dec. 2019, towardsdatascience.com/what-is-an-api-and-how-does-it-work-1dccd7a8219e.
+         <br/><br/></Text><Text color="black" pl="30px" sx={{ "text-indent": "-30px" }}>
+            Dixit, Shubhang. “Beginners Guide to Client Server Communication.” Medium, Medium, 30 July 2019, medium.com/@subhangdxt/beginners-guide-to-client-server-communication-8099cf0ac3af. 
+         <br/><br/></Text><Text color="black" pl="30px" sx={{ "text-indent": "-30px" }}>
+            Pierce, David. “How Discord (Somewhat Accidentally) Invented the Future of the Internet.” Protocol, Protocol - The People, Power and Politics of Tech, 1 Nov. 2020, www.protocol.com/discord. 
+         <br/><br/></Text><Text color="black" pl="30px" sx={{ "text-indent": "-30px" }}>
+            “What Are Bots? How Do Chatbots Work?” BotsCrew, 22 Mar. 2021, botscrew.com/blog/what-are-bots/.
                     </Text>
                     </TabPanel>
                     <TabPanel>
