@@ -62,7 +62,7 @@ const BotDescription = () => {
         <VStack w="100%" h="100%" spacing="0px" maxW="750px">
             <Image src="/images/description/K2SOtalk.jpg" alt="K2SO" borderRadius="20px" my="30px"/>
             {/* Intro */}
-            <Box bg={useColorModeValue("blue.200", "gray.700")} borderRadius="10px" my="30px" border="3px solid" w="100%" py="5px" px="10px">
+            <Box bg={useColorModeValue("blue.300", "gray.600")} borderRadius="10px" my="30px" border="3px solid" w="100%" py="5px" px="10px">
             <HStack spacing="24px" w="100%">
               <Text as="b" fontSize={[25, 25, 30, 40]} pt="5px" pl="25px" textAlign={["center", "left"]} fontFamily="Lexend Deca">
             Introduction

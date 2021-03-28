@@ -41,8 +41,9 @@ const BlogBox = (props) => {
 
 
     return (
+        <Box m="50px">
         <Link passHref href={props.href ? props.href : '/repo'}><a>
-        <Flex h="350px" w="350px" bg="gray.900" m="50px" border="15px solid black" borderRadius="75px" position="relative" overflow="hidden"
+        <Flex h="350px" w="350px" bg="gray.900" border="15px solid black" borderRadius="75px" position="relative" overflow="hidden"
         justifyContent="center"
         onMouseOver={() => setHovering(true)}
         onMouseLeave={() => setHovering(false)}
@@ -58,6 +59,7 @@ const BlogBox = (props) => {
             </Flex>
         </Flex>
         </a></Link>
+        </Box>
     )
 }
 

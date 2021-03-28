@@ -53,7 +53,7 @@ const Blog = () => {
         <Text as="i" fontSize={[25, 25, 35, 35]} textAlign="center" fontFamily="Newsreader">
           I have become what I swore to destroy... a blogger.
         </Text>
-        <Flex maxW="80%" flexWrap="wrap" alignItems="center" justifyContent="center">
+        <Flex maxW="100%" flexWrap="wrap" alignItems="center" justifyContent="center">
             <BlogBox text="GitHub Desktop Instructions" href='../blog/github'>
             <Flex w="60%" alignItems="center" justifyContent="center">
             <Image w="100%" pb="48%" objectFit="cover" src="/images/purplecat.png" alt="GitHub Desktop"/>
