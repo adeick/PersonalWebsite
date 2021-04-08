@@ -31,7 +31,7 @@ const Footer = (props) => {
                         <IconButton size="sm"  target="_blank" as="a" mx="10px" variant={useColorModeValue("link","solid")} fontSize="20px" icon={<FiGithub />}href="https://github.com/adeick" aria-label="GitHub"/>
                         <IconButton size="sm"  target="_blank" as="a" mx="10px" variant={useColorModeValue("link","solid")} fontSize="20px" icon={<FiLinkedin/>} href="https://www.linkedin.com/in/adeick/"aria-label="LinkedIn"/>
                         <IconButton size="sm"  target="_blank" as="a" mx="10px" variant={useColorModeValue("link","solid")} fontSize="20px" icon={<FiMail/>} href="mailto:adeick@iastate.edu"aria-label="Email"/>
-  <Link href="../resume"><a><IconButton size="sm"              as="a"           variant={useColorModeValue("link","solid")} fontSize="20px" icon={<CgFileDocument/>} aria-label="Resume"/></a></Link>
+  <Link href="../resume"><IconButton size="sm"                 as="a"           variant={useColorModeValue("link","solid")} fontSize="20px" icon={<CgFileDocument/>} href="../resume" aria-label="Resume"/></Link>
 
             </HStack>
         </Flex>
