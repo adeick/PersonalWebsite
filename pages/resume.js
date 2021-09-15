@@ -17,8 +17,7 @@ const Resume = () => (
       <Text fontSize={[64, 64, 100, 128]} fontFamily="Lexend Deca" ml={["20px", "20px", "50px", "100px"]}>
           Resume
       </Text>
-      <Image src="/images/ResumeSpring2021-1.png" my={["10px", "20px", "50px", "50px"]}/>
-      <Image src="/images/ResumeSpring2021-2.png"/>
+      <Image src="/images/ResumeSummer2021.png" my={["10px", "20px", "50px", "50px"]}/>
     </Box>
   </div>
 );
