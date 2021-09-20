@@ -42,8 +42,7 @@ const Index = () => {
         </Text>
         <Text fontSize={[25, 25, 35, 35]} fontFamily="Newsreader">
           I am a Software Engineer at Iowa State, and love learning new skills. In the past, I've dabbled in Virtual Reality, 
-          Front-End Development, and Machine Learning. Right now, I'm psyched about space. Check out <Link href='./favorites'><a><Text as="u" fontFamily="Lexend Deca" color={useColorModeValue("green.500", "green.300")}>Favorites</Text></a></Link>
-          for more!
+          Front-End Development, and Machine Learning. Right now, I'm psyched about space. Check out <Link href='./favorites'><a><Text as="u" fontFamily="Lexend Deca" color={useColorModeValue("green.500", "green.300")}>Favorites</Text></a></Link> for more!
         </Text>
         </VStack>
         </Box>
