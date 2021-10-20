@@ -57,6 +57,9 @@ const Recipes = () => {
             <RecipeBox text="Apple Pie Biscuits" href='../recipes/applebiscuits'>
             <Text fontSize={50} pt="30px" h="100%" w="100%" textAlign="center">🍎🥧</Text>
             </RecipeBox>
+            <RecipeBox text="Lasagna" href='../recipes/lasagna'>
+            <Text fontSize={50} pt="30px" h="100%" w="100%" textAlign="center">🍝at</Text>
+            </RecipeBox>
         </Flex>
         </VStack>
         </Box>
