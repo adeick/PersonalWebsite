@@ -97,7 +97,7 @@ const Chili = () => {
               my="30px"
               border="3px solid"
               w="100%"
-            // py="5px"
+              // py="5px"
             >
               <Accordion allowToggle w="100%" defaultIndex={null}>
                 <AccordionItem border="0">
