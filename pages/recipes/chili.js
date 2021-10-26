@@ -23,6 +23,7 @@ import {
   useBreakpointValue,
   Stack,
   Center,
+  AspectRatio,
   Accordion,
   AccordionItem,
   AccordionButton,
@@ -80,7 +81,7 @@ const Chili = () => {
               Chili Beans, Tomatoes, Ground Beef, Onions
             </Text>
           </Flex>
-          <VStack w="100%" h="100%" maxW="750px">
+          <VStack w="100%" h="100%" maxW="750px" spacing="30px">
             <Text
               fontSize={[15, 15, 15, 20]}
               textAlign="left"
@@ -97,7 +98,6 @@ const Chili = () => {
               my="30px"
               border="3px solid"
               w="100%"
-              // py="5px"
             >
               <Accordion allowToggle w="100%" defaultIndex={null}>
                 <AccordionItem border="0">
@@ -182,6 +182,173 @@ const Chili = () => {
               </VStack>
             </Flex>
 
+            {/* Step 1 */}
+            <Flex
+              bg={useColorModeValue('blue.200', 'gray.700')}
+              borderRadius="10px"
+              my="30px"
+              border="3px solid"
+              w="100%"
+              py="5px"
+              alignItems="center"
+              px="10px"
+            >
+              <VStack>
+                <Text
+                  as="b"
+                  fontSize={[25, 25, 30, 40]}
+                  textAlign="left"
+                  fontFamily="Lexend Deca"
+                  w="100%"
+                >
+                  Step 1: Cook the meat and veggies
+                </Text>
+                <Text
+                  fontSize={[18, 18, 20, 20]}
+                  pl="30px"
+                  fontFamily="Newsreader"
+                >
+                  Sauté your onions (Cook for ~5 min) until they start
+                  to become translucent
+                  <br />
+                  Brown the ground beef. Drain the grease. If you have
+                  it available, you can season it with cumin
+                  (Recommend doing this after you drain, so the
+                  seasoning isn't drained out)
+                </Text>
+              </VStack>
+            </Flex>
+
+            {/* Step 2 */}
+            <Flex
+              bg={useColorModeValue('blue.200', 'gray.700')}
+              borderRadius="10px"
+              my="30px"
+              border="3px solid"
+              w="100%"
+              py="5px"
+              alignItems="center"
+              px="10px"
+            >
+              <VStack>
+                <Text
+                  as="b"
+                  fontSize={[25, 25, 30, 40]}
+                  textAlign="left"
+                  fontFamily="Lexend Deca"
+                  w="100%"
+                >
+                  Step 2: The Pot
+                </Text>
+                <Text
+                  fontSize={[18, 18, 20, 20]}
+                  pl="30px"
+                  fontFamily="Newsreader"
+                >
+                  Add all of the cans listed above (except the
+                  chipotle) and dump it into the pot.
+                  <br />
+                  Two cans of diced tomatoes (include the juice)
+                  <br />
+                  One can of crushed tomatoes
+                  <br />
+                  Two cans of chili beans (Don't drain! Normally you
+                  drain beans but chili beans have chili flavoring
+                  with them)
+                  <br />
+                  Can of green chilis
+                  <br />
+                  Add the Ground Beef and Onions to the pot
+                  <br />
+                  Dump about half the box of beef broth in the pot
+                  <br />
+                  Put the pot on the stove, about medium heat and set
+                  the timer for 30 min.
+                </Text>
+              </VStack>
+            </Flex>
+
+            {/* Step 3 */}
+            <Flex
+              bg={useColorModeValue('blue.200', 'gray.700')}
+              borderRadius="10px"
+              my="30px"
+              border="3px solid"
+              w="100%"
+              py="5px"
+              alignItems="center"
+              px="10px"
+            >
+              <VStack>
+                <Text
+                  as="b"
+                  fontSize={[25, 25, 30, 40]}
+                  textAlign="left"
+                  fontFamily="Lexend Deca"
+                  w="100%"
+                >
+                  Step 3: Chipotles!
+                </Text>
+                <Text
+                  fontSize={[18, 18, 20, 20]}
+                  pl="30px"
+                  fontFamily="Newsreader"
+                >
+                  The Chipotle Peppers are the "spicy" part of the
+                  chili. Chipotle is smoked jalapeno, which gives the
+                  chili a very tasty smoky flavor. When you open the
+                  can, don't touch the peppers with your fingers, just
+                  use the knife to lift it out of the can. The small
+                  cans I usually buy have probably around 7 or 8
+                  peppers in them, along with the sauce. If you are
+                  trying this for the first time, maybe only add one
+                  pepper (you can freeze the rest).
+                  <Text as="b">
+                    Make sure to cut the chipotle into tiny pieces
+                    before adding it to your chili!
+                  </Text>
+                  <br />
+                  After it's all cut up, just slide it off the cutting
+                  board into the pot and give it a good stir. If you
+                  have time, you can definitely do this in Step 2, I'm
+                  just usually too busy browning the meat and am
+                  impatient to get the chili on the stove.
+                </Text>
+              </VStack>
+            </Flex>
+
+            {/* Step 4 */}
+            <Flex
+              bg={useColorModeValue('blue.200', 'gray.700')}
+              borderRadius="10px"
+              my="30px"
+              border="3px solid"
+              w="100%"
+              pt="5px"
+              alignItems="center"
+
+            >
+              <VStack w="100%">
+                <Text
+                  as="b"
+                  fontSize={[25, 25, 30, 40]}
+                  textAlign="left"
+                  fontFamily="Lexend Deca"
+                  w="100%"
+                  px="10px"
+                >
+                  Step 4: Enjoy!
+                </Text>
+                <AspectRatio w="100%" ratio={4 / 3}>
+                  <Image
+                    src="/images/recipes/chili/bowl.jpg"
+                    objectFit="cover"
+                    borderRadius="0 0 10px 10px"
+                  />
+                </AspectRatio>
+              </VStack>
+            </Flex>
+
             <Box w="100%">
               <Link passHref href="../recipes">
                 <Button
@@ -196,23 +363,23 @@ const Chili = () => {
             </Box>
           </VStack>
         </VStack>
-        {/* 
-      <Box px={["20px", "20px", "40px", "80px"]}>
-        <VStack w="100%" h="100%" spacing="0px">
-        <Text as="b" fontSize={[30, 30, 50, 70]} w="100%" fontFamily="Lexend Deca" mb="20px">
-          Chili  
-        </Text>
-          <VStack w="100%">
-            <Text as="b" fontSize={[20, 20, 35, 50]} w="100%" fontFamily="Lexend Deca" mb="20px" pl="40px">
-                Ingredients  
-            </Text>
-            <Text fontSize={[15, 15, 20, 20]} w="100%" pl="80px" fontFamily="Newsletter">
-            </Text>
-            
-          </VStack>
-        
-        </VStack>
-        </Box> */}
+        {/*
+            <Box px={["20px", "20px", "40px", "80px"]}>
+              <VStack w="100%" h="100%" spacing="0px">
+              <Text as="b" fontSize={[30, 30, 50, 70]} w="100%" fontFamily="Lexend Deca" mb="20px">
+                Chili
+              </Text>
+                <VStack w="100%">
+                  <Text as="b" fontSize={[20, 20, 35, 50]} w="100%" fontFamily="Lexend Deca" mb="20px" pl="40px">
+                      Ingredients
+                  </Text>
+                  <Text fontSize={[15, 15, 20, 20]} w="100%" pl="80px" fontFamily="Newsletter">
+                  </Text>
+                  
+                </VStack>
+              
+              </VStack>
+              </Box> */}
         <Spacer />
         <Footer text="Created By Andrew Deick" />
       </Flex>

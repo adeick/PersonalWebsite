@@ -23,7 +23,7 @@ const RecipeBox = (props) => {
     // }, isOpen);
 
     return (
-        <Link passHref href={props.href ? props.href : '/repo'}><a>
+        <Link passHref href={props.href ? props.href : '/recipes'}><a>
         <Flex h="250px" w="350px" bg="gray.900" m="50px" border="15px solid black" borderRadius="75px" position="relative" overflow="hidden"
         onMouseOver={() => setHovering(true)}
         onMouseLeave={() => setHovering(false)}

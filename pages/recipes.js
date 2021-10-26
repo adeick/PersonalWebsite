@@ -73,15 +73,7 @@ const Recipes = () => {
               justifyContent="center"
             >
               <RecipeBox text="Chili" href="../recipes/chili">
-                <Text
-                  fontSize={50}
-                  pt="30px"
-                  h="100%"
-                  w="100%"
-                  textAlign="center"
-                >
-                  🥫🍲
-                </Text>
+                <Image w="100%" objectFit="cover" src="/images/recipes/chili/pot_crop.jpg" />
               </RecipeBox>
               <RecipeBox text="Baked Mac" href="../recipes/bakedmac">
                 <Text
