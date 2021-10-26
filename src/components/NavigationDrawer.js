@@ -1,5 +1,6 @@
 import React, { Component, useEffect } from 'react';
-import { Image, Center, VStack, Button, Box, Square, Circle , Collapse, Flex, Text, Tooltip, useDisclosure, useColorModeValue,
+import {
+    Image, Center, VStack, Button, Box, Square, Circle, Collapse, Flex, Text, Tooltip, useDisclosure, useColorModeValue,
     Drawer,
     DrawerBody,
     DrawerFooter,
@@ -14,20 +15,30 @@ import Link from 'next/link'
 const NavigationDrawer = (props) => {
 
     return (
-        <Drawer placement={useBreakpointValue({base: "bottom", md: "right"})} onClose={props.onClose} isOpen={props.isOpen} size="xs"//Change placement to switch between right and bottom
+        <Drawer
+            placement={useBreakpointValue({ base: "bottom", md: "right" })}
+            onClose={props.onClose}
+            isOpen={props.isOpen}
+            size="xs"
         >
             <DrawerOverlay>
-            <DrawerContent borderRadius={useBreakpointValue({base: "30px 30px 0 0", md: "20px 0 0 0"})}>
-                <DrawerHeader borderBottomWidth="1px">
-                <Text fontFamily="Russo One" fontSize="35px">Navigation 🪐</Text>
-                </DrawerHeader>
-                <DrawerBody>
-                <Link href='/'><Text fontFamily="Audiowide" fontSize="20px" as="a" href='/'>🏠 Home</Text></Link> <br/>
-                <Link href='/favorites'><Text fontFamily="Audiowide" fontSize="20px" as="a" href='/favorites'>⭐ Favorites</Text></Link> <br/>
-                <Link href='/repo/ig88'><Text fontFamily="Audiowide" fontSize="20px" as="a" href='/repo/ig88'>🤖 IG-88</Text></Link> <br/>
-                <Link href='/it-was-worth-a-try'><Text fontFamily="Audiowide" fontSize="20px" as="a" href='/it-was-worth-a-try'>🚧 Construction</Text></Link>
-                </DrawerBody>
-            </DrawerContent>
+                <DrawerContent borderRadius={useBreakpointValue({ base: "30px 30px 0 0", md: "20px 0 0 0" })}>
+                    <DrawerHeader borderBottomWidth="1px">
+                        <Text fontFamily="Russo One" fontSize="35px">Navigation 🪐</Text>
+                    </DrawerHeader>
+                    <DrawerBody>
+                        <Link href='/'><Text fontFamily="Audiowide" fontSize="20px" as="a" href='/'>🏠 Home</Text></Link>
+                        {' '}
+                        <br />
+                        <Link href='/favorites'><Text fontFamily="Audiowide" fontSize="20px" as="a" href='/favorites'>⭐ Favorites</Text></Link>
+                        {' '}
+                        <br />
+                        <Link href='/repo/ig88'><Text fontFamily="Audiowide" fontSize="20px" as="a" href='/repo/ig88'>🤖 IG-88</Text></Link>
+                        {' '}
+                        <br />
+                        <Link href='/it-was-worth-a-try'><Text fontFamily="Audiowide" fontSize="20px" as="a" href='/it-was-worth-a-try'>🚧 Construction</Text></Link>
+                    </DrawerBody>
+                </DrawerContent>
             </DrawerOverlay>
         </Drawer>
     )

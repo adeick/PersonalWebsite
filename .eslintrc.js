@@ -13,7 +13,6 @@ module.exports = {
   },
   plugins: ['react', 'prettier'],
   rules: {
-    'prettier/prettier': ['error'],
     'react/jsx-props-no-spreading': 0,
     'react/jsx-filename-extension': 0,
     'react/prop-types': 0,
@@ -27,6 +26,11 @@ module.exports = {
     'node/no-unpublished-require': 0,
     'max-classes-per-file': ['error', 2],
     'require-unicode-regexp': 0,
+    'no-unused-vars': 0,
+    'react/jsx-indent': 0,
+    'react/jsx-indent-props': 0,
+    'jsx-a11y/accessible-emoji': 0,
+
     camelcase: [
       'error',
       {
