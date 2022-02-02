@@ -401,13 +401,13 @@ const BakedMac = () => {
                 >
                   Step 4: Enjoy!
                 </Text>
-                <AspectRatio w="100%" ratio={4 / 3}>
+                {/* <AspectRatio w="100%" ratio={4 / 3}>
                   <Image
                     src="/images/recipes/chili/bowl.jpg"
                     objectFit="cover"
                     borderRadius="0 0 10px 10px"
                   />
-                </AspectRatio>
+                </AspectRatio> */}
               </VStack>
             </Flex>
 
