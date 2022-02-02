@@ -78,7 +78,7 @@ const Pancakes = () => {
                             textAlign="center"
                             fontFamily="Newsreader"
                         >
-                            Feeds ~2 people. Double or quatruple for more!
+                            Feeds ~2 people. Double or quadruple for more!
                         </Text>
                     </Flex>
                     <VStack w="100%" h="100%" maxW="750px" spacing="30px">
