@@ -76,7 +76,7 @@ const BakedMac = () => {
               textAlign="center"
               fontFamily="Newsreader"
             >
-              Makes one tasty pan of panko-topped baked mac'n'cheese.
+              Makes one tasty pan of panko-topped baked mac n cheese.
             </Text>
           </Flex>
           <VStack w="100%" h="100%" maxW="750px" spacing="30px">
