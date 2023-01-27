@@ -5,6 +5,8 @@ import Document, {
   Main,
   NextScript,
 } from 'next/document';
+import { ColorModeScript } from '@chakra-ui/react';
+import theme from "../src/styles/theme";
 
 class MyDocument extends Document {
   render() {
@@ -21,20 +23,21 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap"
             rel="stylesheet"
           />
-          <link 
-            href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" 
+          <link
+            href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap"
             rel="stylesheet"
           />
-          <link 
-            href="https://fonts.googleapis.com/css2?family=Goldman&display=swap" 
+          <link
+            href="https://fonts.googleapis.com/css2?family=Goldman&display=swap"
             rel="stylesheet"
           />
-          <link 
-            href="https://fonts.googleapis.com/css2?family=Newsreader&display=swap" 
+          <link
+            href="https://fonts.googleapis.com/css2?family=Newsreader&display=swap"
             rel="stylesheet"
           />
         </Head>
         <body>
+          <ColorModeScript initialColorMode={theme.config.initialColorMode} />
           <Main />
           <NextScript />
         </body>
